@@ -1,0 +1,31 @@
+**Terms and Conditions**
+
+Author: Connor Nee, AKA DubStepMad
+Contact Email: connoratvirgin@gmail.com
+Donate: https://www.paypal.me/ConnorNee97
+
+Date Release: 15/07/2017
+Copyright 2017 All Rights Reserved
+
+I release this program as free of charge, anyone trying to gain a profit or/and claming as there own will be dealt with lawfully.
+You must not do the following:
+
+* Modify.
+* Re-upload as your own.
+* Redistibute the code without special permission from the author.
+* Redistibute this program to gain a profit for yourself or a group.
+
+Images that have the TSR, TRVTC or background are owned by Truck Simulator Radio Virtual Trucking Community (TSRVTC).
+
+Images provided in the 'data' folder are originally from TruckersMP and have been modified.
+
+****NOTICE****
+
+I am not responsible for you gaining a ban by spamming in chat. 
+You have a choice to change the delay and have been given the default delay time (in seconds) in the help menu!
+
+
+============== Donate ==============
+If you would like to see future updates and help me make
+that possible please consider to make a donation: 
+https://www.paypal.me/ConnorNee97

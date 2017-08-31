@@ -1,0 +1,26 @@
+**Change Log & Future Updates**
+
+*This will only open once every new update!*
+
+Author: Connor Nee, AKA DubStepMad
+Contact Email: connoratvirgin@gmail.com
+Donate: https://www.paypal.me/ConnorNee97
+
+Date Release: 15/07/2017
+Copyright 2017 All Rights Reserved
+
+
+============== Donate ==============
+If you would like to see future updates and help me make
+that possible please consider to make a donation: 
+https://www.paypal.me/ConnorNee97
+
+
+============ Change Log ============
+* More re-coding.
+* Error handling.
+* Bug Fixes.
+
+
+========== Future Updates ==========
+* Able to set hotkey.
