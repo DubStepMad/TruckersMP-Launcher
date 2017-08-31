@@ -113,5 +113,19 @@ namespace tsrvtcnew
                 Properties.Settings.Default.Save();
             }
         }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.agreed == true)
+            {
+                Properties.Settings.Default.agreed = false;
+                Properties.Settings.Default.Save();
+            }
+            Properties.Settings.Default.launcherpath = "";
+            Properties.Settings.Default.Save();
+
+            Properties.Settings.Default.datapath = "";
+            Properties.Settings.Default.Save();
+        }
     }
 }

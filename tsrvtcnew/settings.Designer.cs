@@ -38,6 +38,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnclose = new System.Windows.Forms.Button();
             this.cb_tb = new System.Windows.Forms.CheckBox();
+            this.btn_reset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,6 +176,20 @@
             this.cb_tb.UseVisualStyleBackColor = false;
             this.cb_tb.CheckedChanged += new System.EventHandler(this.cb_tb_CheckedChanged);
             // 
+            // btn_reset
+            // 
+            this.btn_reset.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reset.ForeColor = System.Drawing.SystemColors.Menu;
+            this.btn_reset.Location = new System.Drawing.Point(458, 125);
+            this.btn_reset.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(46, 23);
+            this.btn_reset.TabIndex = 29;
+            this.btn_reset.Text = "Reset";
+            this.btn_reset.UseVisualStyleBackColor = false;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +197,7 @@
             this.BackgroundImage = global::tsrvtcnew.Properties.Resources.settings_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(554, 157);
+            this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.cb_tb);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.pictureBox1);
@@ -216,5 +232,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnclose;
         public System.Windows.Forms.CheckBox cb_tb;
+        private System.Windows.Forms.Button btn_reset;
     }
 }
