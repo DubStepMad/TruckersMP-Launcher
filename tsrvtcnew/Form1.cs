@@ -23,10 +23,10 @@ namespace tsrvtcnew
 
         public const int MYACTION_HOTKEY_ID = 1;
 
+        public static int timeconvert;
         public static bool setbusy = false;
-        public String mess;
         public static string Check = "";
-        public static string copy = "";
+        public static bool calc_check;
 
         public Form1()
         {
@@ -41,7 +41,6 @@ namespace tsrvtcnew
             // Compute the addition of each combination of the keys you want to be pressed
             // ALT+CTRL = 1 + 2 = 3 , CTRL+SHIFT = 2 + 4 = 6...
             RegisterHotKey(this.Handle, MYACTION_HOTKEY_ID, 2, (int)Keys.Y);
-            mess = txtmessage.Text;
         }
 
         private void Form1_Load(object sender, System.EventArgs e)
@@ -55,14 +54,13 @@ namespace tsrvtcnew
             Properties.Settings.Default.ccpanelcheck = false;
             Properties.Settings.Default.Save();
         }
-        
-        public static int timeconvert;
 
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == 0x0312 && m.WParam.ToInt32() == MYACTION_HOTKEY_ID && Properties.Settings.Default.ccpanelcheck == false)
             {
                 Clipboard.SetText(txtmessage.Text);
+
                 Thread.Sleep(1000);
 
                 if (!bw.IsBusy && setbusy == false)
@@ -83,7 +81,7 @@ namespace tsrvtcnew
                     setbusy = false;
                     this.bw.CancelAsync();
                     truckhorn();
-                    MessageBox.Show("Please enter a number into the timer field above 0 and click 'set'!");
+                    MessageBox.Show("Please enter a number into the timer field above 0!");
                     return;
                 }
             }
@@ -107,8 +105,8 @@ namespace tsrvtcnew
                     break;
                 }
                 else
-                {   
-                    timer.calculate(); /*Keyboard input and custom wait delay*/
+                {
+                    timer.calculate(); //Keyboard input and custom wait delay
                 }
             }
         }
@@ -141,13 +139,13 @@ namespace tsrvtcnew
 
             if (Properties.Settings.Default.launcherpath == "")
             {
-                MessageBox.Show("To launch Truckers MP you need to select the folder containing the launcher.exe!");
+                MessageBox.Show("To launch Truckers MP you need to select the folder containing the launcher.exe");
                 errorsound();
                 return;
             }
             if (!File.Exists(Path.Combine(Properties.Settings.Default.launcherpath, "launcher.exe")))
             {
-                MessageBox.Show("You have selected the wrong path, please choose the path containing 'launcher.exe'");
+                MessageBox.Show("You have selected the wrong path, please choose the path containing the TruckersMP launcher.exe");
                 errorsound();
                 return;
             }
@@ -198,36 +196,29 @@ namespace tsrvtcnew
                 errorsound();
                 return;
             }
-                foreach (string dirPath in Directory.GetDirectories(SourcePath, "*",
-                    SearchOption.AllDirectories))
-                    Directory.CreateDirectory(DesPath + dirPath.Remove(0, SourcePath.Length));
 
-                foreach (String newPath in Directory.GetFiles(SourcePath, "*.*",
-                        SearchOption.AllDirectories))
-                    File.Copy(newPath, DesPath + newPath.Remove(0, SourcePath.Length), true);
-                goodsound();
-                return;
+            foreach (string dirPath in Directory.GetDirectories(SourcePath, "*",
+                SearchOption.AllDirectories))
+                Directory.CreateDirectory(DesPath + dirPath.Remove(0, SourcePath.Length));
+
+            foreach (String newPath in Directory.GetFiles(SourcePath, "*.*",
+                    SearchOption.AllDirectories))
+                File.Copy(newPath, DesPath + newPath.Remove(0, SourcePath.Length), true);
+            goodsound();
+            return;
         }
 
+        //small button functions
+        //button hover overs and resets
         private void btnhelp_Click(object sender, EventArgs e)
         {
             Help hp = new tsrvtcnew.Help();
             hp.ShowDialog();
         }
-        private void btnsettime_Click(object sender, EventArgs e)
-        {
-            timeconvert = Int32.Parse(txttime.Text);
-        }
         private void button2_Click(object sender, EventArgs e)
         {
             settings ss = new tsrvtcnew.settings();
             ss.ShowDialog();
-        }
-        private void btnsave_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.message = txtmessage.Text;
-            Properties.Settings.Default.Save();
-            goodsound();
         }
         private void btnfb_Click(object sender, EventArgs e)
         {
@@ -245,7 +236,6 @@ namespace tsrvtcnew
         {
             Application.Exit();
         }
-
         private void button1_Leave(object sender, EventArgs e)
         {
             this.button1.BackgroundImage = ((Image)(Properties.Resources.leave_img));
@@ -265,7 +255,6 @@ namespace tsrvtcnew
         void btnmini_MouseMove(object sender, MouseEventArgs e)
         {
             this.btnmini.BackgroundImage = ((Image)(Properties.Resources.line_icon));
-
         }
         private void button_MouseMove(object sender, MouseEventArgs e)
         {
@@ -338,24 +327,24 @@ namespace tsrvtcnew
             button.BackgroundImage = ((Image)(Properties.Resources.settings_icon));
         }
 
+        //audio for buttons
         public static void goodsound()
         {
-            SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.good); /*sound for process completed*/
+            SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.good); //sound for process completed
             audio.Play();
         }
         public static void errorsound()
         {
-            SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.error); /*sound for error*/
+            SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.error); //sound for error
             audio.Play();
         }
         public static void truckhorn()
         {
-            SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.truck_horn); /*sound for truck horn*/
+            SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.truck_horn); //sound for truck horn
             audio.Play();
         }
 
-        public static bool calc_check;
-
+        //button checks
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -375,16 +364,23 @@ namespace tsrvtcnew
                 calc_check = true;
             }
         }
-        private void txtmessage_TextChanged(object sender, EventArgs e)
-        {
-            copy = txtmessage.Text;
-        }
 
         private void btnccpanel_Click(object sender, EventArgs e)
         {
             ccpanel newf = new ccpanel();
             newf.Show();
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txttime_TextChanged(object sender, EventArgs e)
+        {
+            timeconvert = Int32.Parse(txttime.Text);                //changed from having a set button to it being automatically updated
+        }
+
+        private void txtmessage_TextChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.message = txtmessage.Text;      //changed from having a save button to it being automatically updated
+            Properties.Settings.Default.Save();
         }
     }
 }

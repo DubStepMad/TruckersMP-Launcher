@@ -212,9 +212,9 @@
             this.btn_bf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bf.Font = new System.Drawing.Font("Hemi Head Rg", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_bf.Location = new System.Drawing.Point(426, 35);
+            this.btn_bf.Location = new System.Drawing.Point(413, 32);
             this.btn_bf.Name = "btn_bf";
-            this.btn_bf.Size = new System.Drawing.Size(95, 23);
+            this.btn_bf.Size = new System.Drawing.Size(117, 23);
             this.btn_bf.TabIndex = 27;
             this.btn_bf.Text = "Bugs/Feedback";
             this.btn_bf.UseVisualStyleBackColor = false;

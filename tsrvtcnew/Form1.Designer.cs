@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnhelp = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.btnfb = new System.Windows.Forms.Button();
@@ -42,7 +41,6 @@
             this.btnmini = new System.Windows.Forms.Button();
             this.btn_pp = new System.Windows.Forms.Button();
             this.txttime = new System.Windows.Forms.TextBox();
-            this.btnsettime = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -68,20 +66,6 @@
             this.btnhelp.Click += new System.EventHandler(this.btnhelp_Click);
             this.btnhelp.MouseLeave += new System.EventHandler(this.btnhelp_Leave);
             this.btnhelp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnhelp_MouseMove);
-            // 
-            // btnsave
-            // 
-            this.btnsave.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnsave, "btnsave");
-            this.btnsave.FlatAppearance.BorderSize = 0;
-            this.btnsave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnsave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnsave.Image = global::tsrvtcnew.Properties.Resources.save_icon;
-            this.btnsave.Name = "btnsave";
-            this.btnsave.UseVisualStyleBackColor = false;
-            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
-            this.btnsave.MouseLeave += new System.EventHandler(this.button_Leave);
-            this.btnsave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button_MouseMove);
             // 
             // pictureBox1
             // 
@@ -133,6 +117,7 @@
             // 
             resources.ApplyResources(this.txtmessage, "txtmessage");
             this.txtmessage.Name = "txtmessage";
+            this.txtmessage.TextChanged += new System.EventHandler(this.txtmessage_TextChanged);
             // 
             // textBox2
             // 
@@ -192,13 +177,7 @@
             // 
             resources.ApplyResources(this.txttime, "txttime");
             this.txttime.Name = "txttime";
-            // 
-            // btnsettime
-            // 
-            resources.ApplyResources(this.btnsettime, "btnsettime");
-            this.btnsettime.Name = "btnsettime";
-            this.btnsettime.UseVisualStyleBackColor = true;
-            this.btnsettime.Click += new System.EventHandler(this.btnsettime_Click);
+            this.txttime.TextChanged += new System.EventHandler(this.txttime_TextChanged);
             // 
             // textBox1
             // 
@@ -282,7 +261,6 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btnsettime);
             this.Controls.Add(this.txttime);
             this.Controls.Add(this.btn_pp);
             this.Controls.Add(this.btnmini);
@@ -294,7 +272,6 @@
             this.Controls.Add(this.btnfb);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnhelp);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
@@ -314,7 +291,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnhelp;
-        private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button btnfb;
@@ -325,7 +301,6 @@
 		private System.Windows.Forms.Button btnmini;
         private System.Windows.Forms.Button btn_pp;
         private System.Windows.Forms.TextBox txttime;
-        private System.Windows.Forms.Button btnsettime;
         private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.TextBox txtmessage;
         private System.Windows.Forms.Button button2;

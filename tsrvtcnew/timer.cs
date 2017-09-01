@@ -33,7 +33,6 @@ namespace tsrvtcnew
         }
         public static void timers()
         {
-
             Form1.setbusy = true;
             SendKeys.SendWait("y");
             SendKeys.SendWait("{BACKSPACE}");

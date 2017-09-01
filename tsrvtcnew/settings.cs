@@ -24,6 +24,10 @@ namespace tsrvtcnew
             {
                 cb_tb.Checked = false;
             }
+            else
+            {
+                MessageBox.Show("There as been an error loading the settings, please forward this message to the developer.");
+            }
         }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -33,14 +37,12 @@ namespace tsrvtcnew
 
         public void btnsave_Click(object sender, EventArgs e)
         {
-
             if (txtdatapath.Text == "")
             {
                 MessageBox.Show("Please select gui location before saving!");
                 Form1.errorsound();
                 return;
             }
-
             if (txtpath.Text == "")
             {
                 MessageBox.Show("Please select launcher location before saving!");
@@ -121,11 +123,20 @@ namespace tsrvtcnew
                 Properties.Settings.Default.agreed = false;
                 Properties.Settings.Default.Save();
             }
+            if (cb_tb.Checked == true)
+            {
+                cb_tb.Checked = false;
+                Properties.Settings.Default.tbchk = false;
+                Properties.Settings.Default.Save();
+            }
+
             Properties.Settings.Default.launcherpath = "";
             Properties.Settings.Default.Save();
 
             Properties.Settings.Default.datapath = "";
             Properties.Settings.Default.Save();
+
+            MessageBox.Show("All settings have been set to their Default setting.");
         }
     }
 }

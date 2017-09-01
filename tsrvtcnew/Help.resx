@@ -120,10 +120,11 @@
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>To replace the GUI follow these steps:
 
-[1] Click 'Launch MP' and do any updates if there is are any available.
-[2] Click 'Replace GUI' after the update has finished.
-[3] Click 'Launch ETS2' or ' Launch ATS' on the official launcher.
-[4] Enjoy a cold beer, have fun and it would be nice to donate so I could have one of my own too.
+[1] Select the folder containing the 'data' folder with the GUI within Settings Menu.
+[2] Click 'Launch MP' and do any updates if there is are any available.
+[3] Click 'Replace GUI' after the update has finished.
+[4] Click 'Launch ETS2' or ' Launch ATS' on the official launcher.
+[5] Enjoy a cold beer, have fun and it would be nice to donate so I could have one of my own too.
 
                        *Modfy the files in the 'data' folder if you wish to make your own GUI.*</value>
   </data>
