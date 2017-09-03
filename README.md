@@ -1,3 +1,5 @@
 # TruckersMP-Launcher
 
-Download of program will be available soon!
+# Download
+
+Download the latest version and/or source code from [here!](https://github.com/DubStepMad/TruckersMP-Launcher/releases)
