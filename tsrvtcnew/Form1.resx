@@ -471,6 +471,9 @@
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
     <value>35, 208</value>
   </data>
+  <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 25</value>
   </data>
@@ -568,7 +571,7 @@
     <value>70, 207</value>
   </data>
   <data name="btnccpanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 30</value>
+    <value>34, 26</value>
   </data>
   <data name="btnccpanel.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>

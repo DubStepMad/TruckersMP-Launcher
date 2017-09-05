@@ -30,7 +30,6 @@
         {
             this.txtguidesc = new System.Windows.Forms.TextBox();
             this.txtdatapath = new System.Windows.Forms.TextBox();
-            this.btnselectdata = new System.Windows.Forms.Button();
             this.txtdescrip = new System.Windows.Forms.TextBox();
             this.txtpath = new System.Windows.Forms.TextBox();
             this.btnselect = new System.Windows.Forms.Button();
@@ -61,20 +60,9 @@
             // 
             this.txtdatapath.Location = new System.Drawing.Point(137, 87);
             this.txtdatapath.Name = "txtdatapath";
+            this.txtdatapath.ReadOnly = true;
             this.txtdatapath.Size = new System.Drawing.Size(367, 20);
             this.txtdatapath.TabIndex = 18;
-            // 
-            // btnselectdata
-            // 
-            this.btnselectdata.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnselectdata.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnselectdata.Location = new System.Drawing.Point(510, 87);
-            this.btnselectdata.Name = "btnselectdata";
-            this.btnselectdata.Size = new System.Drawing.Size(31, 20);
-            this.btnselectdata.TabIndex = 17;
-            this.btnselectdata.Text = "...";
-            this.btnselectdata.UseVisualStyleBackColor = true;
-            this.btnselectdata.Click += new System.EventHandler(this.btnselectdata_Click);
             // 
             // txtdescrip
             // 
@@ -204,7 +192,6 @@
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.txtguidesc);
             this.Controls.Add(this.txtdatapath);
-            this.Controls.Add(this.btnselectdata);
             this.Controls.Add(this.txtdescrip);
             this.Controls.Add(this.txtpath);
             this.Controls.Add(this.btnselect);
@@ -224,7 +211,6 @@
 
         private System.Windows.Forms.TextBox txtguidesc;
         private System.Windows.Forms.TextBox txtdatapath;
-        private System.Windows.Forms.Button btnselectdata;
         private System.Windows.Forms.TextBox txtdescrip;
         private System.Windows.Forms.TextBox txtpath;
         private System.Windows.Forms.Button btnselect;

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace tsrvtcnew
@@ -13,6 +15,13 @@ namespace tsrvtcnew
 
         private void settings_Load(object sender, EventArgs e)
         {
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string fullPath = Path.Combine(exeDir, "custom gui");
+
+            Properties.Settings.Default.datapath = fullPath;
+            Properties.Settings.Default.Save();
+
             txtpath.Text = Properties.Settings.Default.launcherpath;
             txtdatapath.Text = Properties.Settings.Default.datapath;
 
@@ -23,10 +32,6 @@ namespace tsrvtcnew
             if (Properties.Settings.Default.tbchk == false)
             {
                 cb_tb.Checked = false;
-            }
-            else
-            {
-                MessageBox.Show("There as been an error loading the settings, please forward this message to the developer.");
             }
         }
 
@@ -51,8 +56,6 @@ namespace tsrvtcnew
             }
 
             Properties.Settings.Default.launcherpath = txtpath.Text;
-            Properties.Settings.Default.Save();
-
             Properties.Settings.Default.datapath = txtdatapath.Text;
             Properties.Settings.Default.Save();
 
@@ -64,12 +67,6 @@ namespace tsrvtcnew
             FolderBrowserDialog lfpath = new FolderBrowserDialog();
             if (lfpath.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 txtpath.Text = lfpath.SelectedPath;
-        }
-        private void btnselectdata_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog lfpath = new FolderBrowserDialog();
-            if (lfpath.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                txtdatapath.Text = lfpath.SelectedPath;
         }
         private void btnsave_Leave(object sender, EventArgs e)
         {
@@ -109,7 +106,7 @@ namespace tsrvtcnew
 
         private void cb_tb_CheckedChanged(object sender, EventArgs e)
         {
-            if (cb_tb.Checked = true)
+            if (cb_tb.Checked == true)
             {
                 Properties.Settings.Default.tbchk = true;
                 Properties.Settings.Default.Save();
@@ -131,9 +128,7 @@ namespace tsrvtcnew
             }
 
             Properties.Settings.Default.launcherpath = "";
-            Properties.Settings.Default.Save();
-
-            Properties.Settings.Default.datapath = "";
+            Properties.Settings.Default.message = "";
             Properties.Settings.Default.Save();
 
             MessageBox.Show("All settings have been set to their Default setting.");
