@@ -26,6 +26,6 @@ I appriciate the VTC's Owner (_**Senka Wolf**_) for helping me with design and i
 
 The Windows Installer is made with Advanced Installer on an open source license. Advanced Installer allowed me to create a feature complete installer in a user friendly environment with minimal effort. 
 
-This is a greate starting place for developers or small business to start from by creating an advanced installer with the friendly GUI.
+This is a great starting place for new/experienced developers or small business to start from by creating an advanced installer with the friendly GUI.
 
 If you would like to know more please visit their [website](http://www.advancedinstaller.com/)
