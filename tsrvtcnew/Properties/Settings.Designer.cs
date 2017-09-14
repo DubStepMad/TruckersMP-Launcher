@@ -83,15 +83,12 @@ namespace tsrvtcnew.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\TrucksBook Client")]
         public string tbpath {
             get {
                 return ((string)(this["tbpath"]));
-            }
-            set {
-                this["tbpath"] = value;
             }
         }
         
@@ -104,6 +101,18 @@ namespace tsrvtcnew.Properties {
             }
             set {
                 this["tbchk"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ETS2Location {
+            get {
+                return ((string)(this["ETS2Location"]));
+            }
+            set {
+                this["ETS2Location"] = value;
             }
         }
     }

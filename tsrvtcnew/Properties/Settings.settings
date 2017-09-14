@@ -17,11 +17,14 @@
     <Setting Name="ccpanelcheck" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="tbpath" Type="System.String" Scope="User">
+    <Setting Name="tbpath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\Program Files (x86)\TrucksBook Client</Value>
     </Setting>
     <Setting Name="tbchk" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ETS2Location" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

@@ -34,10 +34,10 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -80,7 +80,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <TargetZone>LocalIntranet</TargetZone>
+    <TargetZone>Internet</TargetZone>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -146,6 +146,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameHandle.cs" />
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,12 +160,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RegistryCheck.cs" />
     <Compile Include="settings.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="settings.Designer.cs">
       <DependentUpon>settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings1.cs" />
     <Compile Include="tc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +238,7 @@
   <ItemGroup>
     <Content Include="4_TSRLogo2.ico" />
     <Content Include="9dSsQy0.ico" />
+    <AdditionalFiles Include="lib\Newtonsoft.Json.dll" />
     <None Include="Resources\fb_icon-h.png" />
     <None Include="Resources\help_icon-h.png" />
     <None Include="Resources\settings_icon-h.png" />

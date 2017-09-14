@@ -135,55 +135,7 @@ namespace tsrvtcnew
 
         private void btnltmp_Click(object sender, EventArgs e)
         {
-            string curFile = (Path.Combine(Properties.Settings.Default.launcherpath, "launcher.exe"));
-            File.Exists(curFile);
-
-            if (Properties.Settings.Default.launcherpath == "")
-            {
-                MessageBox.Show("To launch Truckers MP you need to select the folder containing the launcher.exe");
-                errorsound();
-                return;
-            }
-            if (!File.Exists(Path.Combine(Properties.Settings.Default.launcherpath, "launcher.exe")))
-            {
-                MessageBox.Show("You have selected the wrong path, please choose the path containing the TruckersMP launcher.exe");
-                errorsound();
-                return;
-            }
-            if (Properties.Settings.Default.tbchk == true)
-            {
-                if (!File.Exists(Path.Combine(Properties.Settings.Default.tbpath, "TB Client.exe")))
-                {
-                    MessageBox.Show("Please install TrucksBook in the default location: C:/Program Files (x86)/TrucksBook Client");
-                    errorsound();
-                    return;
-                }
-                var processes = Process.GetProcessesByName("TB Client");
-
-                if (processes.Length == 0 && File.Exists(Path.Combine(Properties.Settings.Default.tbpath, "TB Client.exe")))
-                {
-                    Process.Start(Path.Combine(Properties.Settings.Default.tbpath, "TB Client.exe"));
-
-                    if (File.Exists(Path.Combine(Properties.Settings.Default.launcherpath, "launcher.exe")))
-                    {
-                        Process.Start(Path.Combine(Properties.Settings.Default.launcherpath, "launcher.exe"));
-                        goodsound();
-                        return;
-                    }
-                }
-                else
-                {
-                    Process.Start(Path.Combine(Properties.Settings.Default.launcherpath, "launcher.exe"));
-                    goodsound();
-                    return;
-                }
-            }
-            if (Properties.Settings.Default.tbchk == false)
-            {
-                Process.Start(Path.Combine(Properties.Settings.Default.launcherpath, "launcher.exe"));
-                goodsound();
-                return;
-            }
+            RegistryCheck.Read();
         }
 
         private void btnrgui_Click(object sender, EventArgs e)

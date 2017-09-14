@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
@@ -22,7 +23,6 @@ namespace tsrvtcnew
             Properties.Settings.Default.datapath = fullPath;
             Properties.Settings.Default.Save();
 
-            txtpath.Text = Properties.Settings.Default.launcherpath;
             txtdatapath.Text = Properties.Settings.Default.datapath;
 
             if (Properties.Settings.Default.tbchk == true)
@@ -48,14 +48,7 @@ namespace tsrvtcnew
                 Form1.errorsound();
                 return;
             }
-            if (txtpath.Text == "")
-            {
-                MessageBox.Show("Please select launcher location before saving!");
-                Form1.errorsound();
-                return;
-            }
 
-            Properties.Settings.Default.launcherpath = txtpath.Text;
             Properties.Settings.Default.datapath = txtdatapath.Text;
             Properties.Settings.Default.Save();
 
@@ -64,9 +57,7 @@ namespace tsrvtcnew
 
         private void btnselect_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog lfpath = new FolderBrowserDialog();
-            if (lfpath.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                txtpath.Text = lfpath.SelectedPath;
+            Process.Start("explorer.exe", Properties.Settings.Default.datapath);
         }
         private void btnsave_Leave(object sender, EventArgs e)
         {
