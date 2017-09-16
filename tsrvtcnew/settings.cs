@@ -16,6 +16,7 @@ namespace tsrvtcnew
 
         private void settings_Load(object sender, EventArgs e)
         {
+            //gets application directory
             string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
             string exeDir = Path.GetDirectoryName(exeFile);
             string fullPath = Path.Combine(exeDir, "custom gui");
@@ -29,9 +30,18 @@ namespace tsrvtcnew
             {
                 cb_tb.Checked = true;
             }
-            if (Properties.Settings.Default.tbchk == false)
+            else
             {
                 cb_tb.Checked = false;
+            }
+
+            if (Properties.Settings.Default.singleplayer == true)
+            {
+                cb_etssingle.Checked = true;
+            }
+            else
+            {
+                cb_etssingle.Checked = false;
             }
         }
 
@@ -57,7 +67,8 @@ namespace tsrvtcnew
 
         private void btnselect_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", Properties.Settings.Default.datapath);
+            String Dir = Properties.Settings.Default.datapath;
+            Process.Start("explorer.exe", Dir);
         }
         private void btnsave_Leave(object sender, EventArgs e)
         {
@@ -92,7 +103,7 @@ namespace tsrvtcnew
         }
         void btnclose_MouseMove(object sender, MouseEventArgs e)
         {
-            this.btnclose.BackgroundImage = ((Image)(Properties.Resources.crossbg));
+            this.btnclose.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
         }
 
         private void cb_tb_CheckedChanged(object sender, EventArgs e)
@@ -104,25 +115,32 @@ namespace tsrvtcnew
             }
         }
 
+        //resets the program to default... no checks so there can't be any errors coming back when resetting to defaults
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.agreed == true)
-            {
-                Properties.Settings.Default.agreed = false;
-                Properties.Settings.Default.Save();
-            }
-            if (cb_tb.Checked == true)
-            {
-                cb_tb.Checked = false;
-                Properties.Settings.Default.tbchk = false;
-                Properties.Settings.Default.Save();
-            }
+            cb_tb.Checked = false;
+            cb_etssingle.Checked = false;
 
+            Properties.Settings.Default.tbchk = false;
+            Properties.Settings.Default.singleplayer = false;
+            Properties.Settings.Default.agreed = false;
             Properties.Settings.Default.launcherpath = "";
             Properties.Settings.Default.message = "";
             Properties.Settings.Default.Save();
 
             MessageBox.Show("All settings have been set to their Default setting.");
+        }
+
+        private void cb_etssingle_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_etssingle.Checked == true)
+            {
+                Properties.Settings.Default.singleplayer = true;
+            }
+            else
+            {
+                Properties.Settings.Default.singleplayer = false;
+            }
         }
     }
 }

@@ -3,13 +3,9 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
-using System.Net;
-using Newtonsoft.Json.Linq;
-using System.Security.Cryptography;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Runtime.ConstrainedExecution;
-using System.Collections.Generic;
 using Microsoft.Win32;
 using System.Threading;
 
@@ -123,10 +119,14 @@ namespace tsrvtcnew
                     if (SteamExe != null)
                     {
                         Process.Start(SteamExe);
+                        Thread.Sleep(2000);         //wait is needed to allow steam to update and connect
                     }
                 }
             }
 
+            String gamelocation = Properties.Settings.Default.ETS2Location;
+
+            //allows a user who has trucksbook installed, run it before launching the game and connecting to MP
             if (Properties.Settings.Default.tbchk == true)
             {
                 if (!File.Exists(Path.Combine(Properties.Settings.Default.tbpath, "TB Client.exe")))
@@ -139,15 +139,20 @@ namespace tsrvtcnew
                 if (processes.Length == 0 && File.Exists(Path.Combine(Properties.Settings.Default.tbpath, "TB Client.exe")))
                 {
                     Process.Start(Path.Combine(Properties.Settings.Default.tbpath, "TB Client.exe"));
-                    Thread.Sleep(1500);
+                    Thread.Sleep(1500);     //allows trucksbook to launch without the 'game running' error
                 }
+            }
+
+            if (Properties.Settings.Default.singleplayer == true)
+            {
+                Process.Start(gamelocation + "\\bin\\win_x64\\eurotrucks2.exe");
+                Environment.Exit(0);
             }
 
             String binPath;
             String exe;
             String dll;
             String arguments = "";
-            String gamelocation = Properties.Settings.Default.ETS2Location;
             String mplocation = Properties.Settings.Default.launcherpath;
 
             //Lets get our games straight

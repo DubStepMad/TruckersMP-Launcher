@@ -131,6 +131,12 @@
     <Compile Include="ccpanel.Designer.cs">
       <DependentUpon>ccpanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ccpEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ccpEdit.Designer.cs">
+      <DependentUpon>ccpEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="CProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -175,8 +181,12 @@
       <DependentUpon>tc.cs</DependentUpon>
     </Compile>
     <Compile Include="timer.cs" />
+    <Compile Include="Update.cs" />
     <EmbeddedResource Include="ccpanel.resx">
       <DependentUpon>ccpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ccpEdit.resx">
+      <DependentUpon>ccpEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="devlogin.resx">
       <DependentUpon>devlogin.cs</DependentUpon>

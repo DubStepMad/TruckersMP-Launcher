@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settings));
             this.txtguidesc = new System.Windows.Forms.TextBox();
             this.txtdatapath = new System.Windows.Forms.TextBox();
             this.btnselect = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
             this.btnclose = new System.Windows.Forms.Button();
             this.cb_tb = new System.Windows.Forms.CheckBox();
             this.btn_reset = new System.Windows.Forms.Button();
+            this.cb_etssingle = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +117,7 @@
             this.btnclose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnclose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclose.Image = global::tsrvtcnew.Properties.Resources.cross_512;
+            this.btnclose.Image = global::tsrvtcnew.Properties.Resources.cross;
             this.btnclose.Location = new System.Drawing.Point(528, -1);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(27, 25);
@@ -154,13 +156,29 @@
             this.btn_reset.UseVisualStyleBackColor = false;
             this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
+            // cb_etssingle
+            // 
+            this.cb_etssingle.AutoSize = true;
+            this.cb_etssingle.BackColor = System.Drawing.Color.DarkGray;
+            this.cb_etssingle.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.cb_etssingle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_etssingle.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.cb_etssingle.Location = new System.Drawing.Point(97, 131);
+            this.cb_etssingle.Name = "cb_etssingle";
+            this.cb_etssingle.Size = new System.Drawing.Size(117, 17);
+            this.cb_etssingle.TabIndex = 30;
+            this.cb_etssingle.Text = "ETS 2 Single Player";
+            this.cb_etssingle.UseVisualStyleBackColor = false;
+            this.cb_etssingle.CheckedChanged += new System.EventHandler(this.cb_etssingle_CheckedChanged);
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::tsrvtcnew.Properties.Resources.settings_bg;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(554, 157);
+            this.Controls.Add(this.cb_etssingle);
             this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.cb_tb);
             this.Controls.Add(this.btnclose);
@@ -191,5 +209,6 @@
         private System.Windows.Forms.Button btnclose;
         public System.Windows.Forms.CheckBox cb_tb;
         private System.Windows.Forms.Button btn_reset;
+        public System.Windows.Forms.CheckBox cb_etssingle;
     }
 }

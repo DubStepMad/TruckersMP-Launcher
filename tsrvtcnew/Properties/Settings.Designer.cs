@@ -115,5 +115,17 @@ namespace tsrvtcnew.Properties {
                 this["ETS2Location"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool singleplayer {
+            get {
+                return ((bool)(this["singleplayer"]));
+            }
+            set {
+                this["singleplayer"] = value;
+            }
+        }
     }
 }

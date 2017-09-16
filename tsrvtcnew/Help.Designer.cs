@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Help));
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnhelpvids = new System.Windows.Forms.Button();
             this.btn_bf = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.btn_help_exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -49,23 +49,6 @@
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::tsrvtcnew.Properties.Resources.cross_512;
-            this.button1.Location = new System.Drawing.Point(555, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 25);
-            this.button1.TabIndex = 23;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave);
-            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
             // 
             // pictureBox1
             // 
@@ -130,6 +113,22 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "CC Panel";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox2.ShortcutsEnabled = false;
+            this.richTextBox2.ShowSelectionMargin = true;
+            this.richTextBox2.Size = new System.Drawing.Size(492, 155);
+            this.richTextBox2.TabIndex = 27;
+            this.richTextBox2.TabStop = false;
+            this.richTextBox2.Text = "**Testing Stages**";
             // 
             // tabPage3
             // 
@@ -198,22 +197,6 @@
             this.tabControl1.Size = new System.Drawing.Size(500, 181);
             this.tabControl1.TabIndex = 25;
             // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richTextBox2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox2.ShortcutsEnabled = false;
-            this.richTextBox2.ShowSelectionMargin = true;
-            this.richTextBox2.Size = new System.Drawing.Size(492, 155);
-            this.richTextBox2.TabIndex = 27;
-            this.richTextBox2.TabStop = false;
-            this.richTextBox2.Text = "**Testing Stages**";
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.richTextBox4);
@@ -241,6 +224,25 @@
             this.richTextBox4.TabStop = false;
             this.richTextBox4.Text = resources.GetString("richTextBox4.Text");
             // 
+            // btn_help_exit
+            // 
+            this.btn_help_exit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_help_exit.FlatAppearance.BorderSize = 0;
+            this.btn_help_exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_help_exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_help_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_help_exit.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_help_exit.Image = global::tsrvtcnew.Properties.Resources.cross;
+            this.btn_help_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_help_exit.Location = new System.Drawing.Point(564, 4);
+            this.btn_help_exit.Name = "btn_help_exit";
+            this.btn_help_exit.Size = new System.Drawing.Size(17, 17);
+            this.btn_help_exit.TabIndex = 53;
+            this.btn_help_exit.UseVisualStyleBackColor = false;
+            this.btn_help_exit.Click += new System.EventHandler(this.btn_help_exit_Click);
+            this.btn_help_exit.MouseLeave += new System.EventHandler(this.btn_help_exit_Leave);
+            this.btn_help_exit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_help_exit_MouseMove);
+            // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,11 +250,11 @@
             this.BackgroundImage = global::tsrvtcnew.Properties.Resources.helpmenu_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(587, 264);
+            this.Controls.Add(this.btn_help_exit);
             this.Controls.Add(this.btn_bf);
             this.Controls.Add(this.btnhelpvids);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -271,7 +273,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnhelpvids;
         private System.Windows.Forms.Button btn_bf;
@@ -284,5 +285,6 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.Button btn_help_exit;
     }
 }

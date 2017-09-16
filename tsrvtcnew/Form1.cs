@@ -143,9 +143,14 @@ namespace tsrvtcnew
             string SourcePath = (Properties.Settings.Default.datapath);
             string DesPath = ("C:/ProgramData/TruckersMP");
 
-            if (SourcePath == "")
+            //gets application directory
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string fullPath = Path.Combine(exeDir, "custom gui");
+
+            if (fullPath == null)
             {
-                MessageBox.Show("To replace the GUI please select the folder containg the data folder, not the data folder!");
+                MessageBox.Show("Application has not been installed correctly, please submit a bug report or re-install with admin permissions.");
                 errorsound();
                 return;
             }
@@ -195,7 +200,7 @@ namespace tsrvtcnew
         }
         void button1_MouseMove(object sender, MouseEventArgs e)
         {
-            this.button1.BackgroundImage = ((Image)(Properties.Resources.crossbg));
+            this.button1.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
         }
         private void btnmini_Click(object sender, EventArgs e)
         {
@@ -280,7 +285,7 @@ namespace tsrvtcnew
             button.BackgroundImage = ((Image)(Properties.Resources.settings_icon));
         }
 
-        //audio for buttons
+        //audio for events
         public static void goodsound()
         {
             SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.good); //sound for process completed
@@ -297,7 +302,7 @@ namespace tsrvtcnew
             audio.Play();
         }
 
-        //button checks
+        //timer checks, this must stay false unless user changes through the program
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -307,7 +312,6 @@ namespace tsrvtcnew
                 calc_check = false;
             }
         }
-
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton2.Checked)
@@ -318,6 +322,7 @@ namespace tsrvtcnew
             }
         }
 
+        //opens cconvoy control panel... 
         private void btnccpanel_Click(object sender, EventArgs e)
         {
             ccpanel newf = new ccpanel();

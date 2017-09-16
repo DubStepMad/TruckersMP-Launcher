@@ -123,8 +123,8 @@
 [1] Type your message into the message box.
 [2] Select the time you wish to have 'Seconds' or 'Minutes.
 [3] Enter a time delay you wish to use. 
-[4] Once in-game, press Y to open the chat and then hold Left-ALT + Y to start the the feature.
-[5] To stop, press Y to open chat and hold Left-ALT and Y again.
+[4] Once in-game, press Y to open the chat and then hold Left-Ctrl + Y to start the the feature.
+[5] To stop, press Y to open chat and hold Left-Ctrl and Y again.
 
                                                   *Wait 1 minute before starting again*</value>
   </data>

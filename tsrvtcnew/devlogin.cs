@@ -49,7 +49,7 @@ namespace tsrvtcnew
         }
         void button1_MouseMove(object sender, MouseEventArgs e)
         {
-            this.button1.BackgroundImage = ((Image)(Properties.Resources.crossbg));
+            this.button1.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
         }
     }
 }

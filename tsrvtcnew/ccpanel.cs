@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.ComponentModel;
 using System.Linq;
+using System.Diagnostics;
 
 namespace tsrvtcnew
 {
@@ -14,7 +15,7 @@ namespace tsrvtcnew
         private BackgroundWorker bw;
         public int a = 1;
 
-        // DLL libraries used to manage hotkeys
+        //DLL libraries used to manage hotkeys
         [DllImport("user32.dll")]
         public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
         [DllImport("user32.dll")]
@@ -24,6 +25,7 @@ namespace tsrvtcnew
         public static bool setbusy = false;
         public string message = "";
         public string ccpath = "";
+
         public ccpanel()
         {
             InitializeComponent();
@@ -150,788 +152,26 @@ namespace tsrvtcnew
                 }
                 else
                 {
-                    timer.ccpanel_action(); /*Keyboard input and custom wait delay*/
+                    timer.ccpanel_action(); //Keyboard input and custom wait delay
                 }
             }
         }
-        private void rb_welcome_CheckedChanged(object sender, EventArgs e)
-        {
 
+        //radio button passes tag which shortens this code by 49... can't believe I copied this 50 times and this is what it is now
+        private void anyRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radio = (RadioButton)sender;
+            string lineStart = (string)radio.Tag;
+            ReadLineAndDisplayText(lineStart);
+        }
+        private void ReadLineAndDisplayText(string lineStart)
+        {
             string line;
 
             StreamReader file = new StreamReader(ccpath);
             while ((line = file.ReadLine()) != null)
             {
-                if (line.StartsWith("welcomemessage:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_start_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("start:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_end_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("end:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point1_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point01:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point2_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point02:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point3_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point03:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point4_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point04:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point5_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point05:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point6_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point06:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point7_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point07:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point8_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point08:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point9_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point09:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point10_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point10:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point11_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point11:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point12_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point12:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point13_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point13:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point14_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point14:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point15_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point15:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point16_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point16:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point17_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point17:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point18_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point2=18:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point19_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point19:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point20_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point20:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point21_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point21:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point22_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point22:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point23_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point23:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point24_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point24:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point25_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point25:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point26_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point26:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point27_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point27:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point28_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point28:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point29_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point29:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point30_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point30:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point31_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point31:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point32_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point32:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point33_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point33:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point34_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point34:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point35_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point35:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point36_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point36:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point37_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point37:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point38_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point38:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point39_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point39:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point40_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point40:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point41_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point41:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point42_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point42:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point43_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point43:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point44_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void rb_point45_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point45:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point46_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point46:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point47_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point47:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point48_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point48:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point49_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point49:"))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
-        }
-        private void rb_point50_CheckedChanged(object sender, EventArgs e)
-        {
-
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith("point50:"))
+                if (line.StartsWith(lineStart))
                 {
                     message = (line.Split(':')[1]);
                     txtb_message.Text = message;
@@ -947,14 +187,13 @@ namespace tsrvtcnew
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void button1_Leave(object sender, EventArgs e)
         {
             this.button1.BackgroundImage = ((Image)(Properties.Resources.leave_img));
         }
         void button1_MouseMove(object sender, MouseEventArgs e)
         {
-            this.button1.BackgroundImage = ((Image)(Properties.Resources.crossbg));
+            this.button1.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
         }
         private void btnmini_Leave(object sender, EventArgs e)
         {
@@ -963,6 +202,21 @@ namespace tsrvtcnew
         void btnmini_MouseMove(object sender, MouseEventArgs e)
         {
             this.btnmini.BackgroundImage = ((Image)(Properties.Resources.line_icon));
+        }
+
+        private void vtn_ccp_edit_Click(object sender, EventArgs e)
+        {
+            string path = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+
+            if (path != "")
+            {
+                ccpath = path +  "\\Euro Truck Simulator 2\\profiles";
+                Process.Start("explorer.exe", ccpath);
+            }
+            if (path == "")
+            {
+                MessageBox.Show("Error locating documents folder, please run this program with admin perms!");
+            }
         }
     }
 }

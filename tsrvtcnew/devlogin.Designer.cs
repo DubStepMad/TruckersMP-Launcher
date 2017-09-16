@@ -73,7 +73,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::tsrvtcnew.Properties.Resources.cross_512;
+            this.button1.Image = global::tsrvtcnew.Properties.Resources.cross;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button1.Location = new System.Drawing.Point(331, 4);
             this.button1.Name = "button1";

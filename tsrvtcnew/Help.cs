@@ -10,19 +10,21 @@ namespace tsrvtcnew
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_help_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Leave(object sender, EventArgs e)
+        //transparent background for when the user leaves the hovering button
+        private void btn_help_exit_Leave(object sender, EventArgs e)
         {
-            this.button1.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.leave_img));
+            this.btn_help_exit.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.leave_img));
         }
 
-        void button1_MouseMove(object sender, MouseEventArgs e)
+        //hover-over image for basic buttons
+        void btn_help_exit_MouseMove(object sender, MouseEventArgs e)
         {
-            this.button1.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.hover_img));
+            this.btn_help_exit.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.cross_hover));
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;

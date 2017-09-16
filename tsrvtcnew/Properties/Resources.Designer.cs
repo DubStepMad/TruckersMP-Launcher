@@ -140,7 +140,8 @@ namespace tsrvtcnew.Properties {
         ///
         ///
         ///============ Change Log ============
-        ///* More re-coding [rest of string was truncated]&quot;;.
+        ///* More re-coding.
+        ///* Error handling. [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string changelog {
             get {
@@ -161,9 +162,9 @@ namespace tsrvtcnew.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cross_512 {
+        internal static System.Drawing.Bitmap cross {
             get {
-                object obj = ResourceManager.GetObject("cross_512", resourceCulture);
+                object obj = ResourceManager.GetObject("cross", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -171,9 +172,9 @@ namespace tsrvtcnew.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crossbg {
+        internal static System.Drawing.Bitmap cross_hover {
             get {
-                object obj = ResourceManager.GetObject("crossbg", resourceCulture);
+                object obj = ResourceManager.GetObject("cross_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -319,16 +320,6 @@ namespace tsrvtcnew.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap notes1 {
-            get {
-                object obj = ResourceManager.GetObject("notes1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap pp6 {
             get {
                 object obj = ResourceManager.GetObject("pp6", resourceCulture);
@@ -361,7 +352,7 @@ namespace tsrvtcnew.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap settings_bg {
             get {
-                object obj = ResourceManager.GetObject("settings-bg", resourceCulture);
+                object obj = ResourceManager.GetObject("settings_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -422,7 +413,7 @@ namespace tsrvtcnew.Properties {
         ///* Modify.
         ///* Re-upload as your own.
         ///* Redistibute the code without special permission from the author.
-        ///* Redistibute this program t [rest of string was truncated]&quot;;.
+        ///* Redistibute this program to gain a profit [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string terms {
             get {
