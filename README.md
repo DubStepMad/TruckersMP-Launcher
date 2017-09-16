@@ -10,7 +10,7 @@ Finally I had the outline of the task I had set and completed it (Few Bugs) but 
 
 ## Donate
 
-Donations are much appreciated!
+[Donations](https://www.paypal.me/ConnorNee97) are much appreciated!
 
 ## Download
 
