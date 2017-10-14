@@ -54,6 +54,21 @@ namespace tsrvtcnew
 
             Properties.Settings.Default.ccpanelcheck = false;
             Properties.Settings.Default.Save();
+
+            //Preparing for auto updates.
+           /* string updaterFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string updaterDir = Path.GetDirectoryName(updaterFile);
+            string fullPath = Path.Combine(updaterDir, "Updater.exe");
+
+            if (!File.Exists(Path.Combine(updaterDir, "Updater.exe")))
+            {
+                MessageBox.Show("Program is corrupted, please re-install or repair!");
+                errorsound();
+            }
+            if (fullPath != null)
+            {
+                Process.Start(@"Updater");
+            }*/
         }
 
         protected override void WndProc(ref Message m)
@@ -138,7 +153,7 @@ namespace tsrvtcnew
             RegistryCheck.Read();
         }
 
-        private void btnrgui_Click(object sender, EventArgs e)
+        public static void gui_replace()
         {
             string SourcePath = (Properties.Settings.Default.datapath);
             string DesPath = ("C:/ProgramData/TruckersMP");
@@ -150,7 +165,7 @@ namespace tsrvtcnew
 
             if (fullPath == null)
             {
-                MessageBox.Show("Application has not been installed correctly, please submit a bug report or re-install with admin permissions.");
+                MessageBox.Show("Application must be ran as an Administrator!");
                 errorsound();
                 return;
             }
@@ -163,6 +178,7 @@ namespace tsrvtcnew
                     SearchOption.AllDirectories))
                 File.Copy(newPath, DesPath + newPath.Remove(0, SourcePath.Length), true);
             goodsound();
+            GameHandle.launch();
             return;
         }
 
@@ -339,6 +355,11 @@ namespace tsrvtcnew
         {
             Properties.Settings.Default.message = txtmessage.Text;      //changed from having a save button to it being automatically updated
             Properties.Settings.Default.Save();
+        }
+
+        private void picbcreatedfor_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

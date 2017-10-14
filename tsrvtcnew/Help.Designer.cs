@@ -71,7 +71,7 @@
             this.btnhelpvids.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnhelpvids.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnhelpvids.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnhelpvids.Font = new System.Drawing.Font("Hemi Head Rg", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhelpvids.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnhelpvids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnhelpvids.Location = new System.Drawing.Point(426, 6);
             this.btnhelpvids.Name = "btnhelpvids";
@@ -91,11 +91,11 @@
             this.btn_bf.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_bf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_bf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bf.Font = new System.Drawing.Font("Hemi Head Rg", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_bf.Location = new System.Drawing.Point(413, 32);
+            this.btn_bf.Location = new System.Drawing.Point(413, 29);
             this.btn_bf.Name = "btn_bf";
-            this.btn_bf.Size = new System.Drawing.Size(117, 23);
+            this.btn_bf.Size = new System.Drawing.Size(117, 26);
             this.btn_bf.TabIndex = 27;
             this.btn_bf.Text = "Bugs/Feedback";
             this.btn_bf.UseVisualStyleBackColor = false;
@@ -128,7 +128,7 @@
             this.richTextBox2.Size = new System.Drawing.Size(492, 155);
             this.richTextBox2.TabIndex = 27;
             this.richTextBox2.TabStop = false;
-            this.richTextBox2.Text = "**Testing Stages**";
+            this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
             // 
             // tabPage3
             // 
@@ -222,7 +222,8 @@
             this.richTextBox4.Size = new System.Drawing.Size(492, 155);
             this.richTextBox4.TabIndex = 27;
             this.richTextBox4.TabStop = false;
-            this.richTextBox4.Text = resources.GetString("richTextBox4.Text");
+            this.richTextBox4.Text = "Changes:\n\n*CCPanel is now released. V2.0.\n\n*Automatic updates of the program are " +
+    "now available.\n\n*Improvements of code and performance.\n\n*CiN 2017 Released.";
             // 
             // btn_help_exit
             // 

@@ -121,6 +121,19 @@ namespace tsrvtcnew
                         Process.Start(SteamExe);
                         Thread.Sleep(2000);         //wait is needed to allow steam to update and connect
                     }
+                    }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Steam is not installed!\n\nPlease install Steam to continue!.\n\nWant to do it now? ", "Steam Vailidation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start("http://store.steampowered.com/about/");
+                        Environment.Exit(1);
+                    }
+                    else
+                    {
+                        Environment.Exit(1);
+                    }
                 }
             }
 

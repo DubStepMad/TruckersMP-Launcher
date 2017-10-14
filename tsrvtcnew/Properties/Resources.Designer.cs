@@ -19,7 +19,7 @@ namespace tsrvtcnew.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -121,6 +121,39 @@ namespace tsrvtcnew.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //Please follow the format of the examples below without the &apos;//&apos;, otherwise the program will not work.
+        /////Any spaces after the &apos;:&apos; will display in-game. Any spaces before the &apos;:&apos; will break the function of the program.
+        /////point01:Change Text
+        /////point02:Change Text
+        ///
+        ///supervisor:suptest
+        ///lead:leadtest
+        ///rear:reartest
+        ///
+        ///welcomemessage:Welcome to Dub&apos;s CC Panel verison: 2.0 
+        ///start:
+        ///end:
+        ///
+        ///point01:Test01
+        ///point02:
+        ///point03:
+        ///point04:
+        ///point05:
+        ///point06:
+        ///point07:
+        ///point08:
+        ///point09:
+        ///point10:
+        ///point11:
+        ///poi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ccpoints {
+            get {
+                return ResourceManager.GetString("ccpoints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to **Change Log &amp; Future Updates**
         ///
         ///*This will only open once every new update!*
@@ -146,6 +179,16 @@ namespace tsrvtcnew.Properties {
         internal static string changelog {
             get {
                 return ResourceManager.GetString("changelog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cin_bg {
+            get {
+                object obj = ResourceManager.GetObject("cin_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

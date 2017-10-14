@@ -129,7 +129,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold, Underline</value>
   </data>
   <data name="btnhelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 212</value>
+    <value>6, 137</value>
   </data>
   <data name="btnhelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 18</value>
@@ -148,43 +148,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnhelp.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="pictureBox1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 12</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>378, 97</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>17</value>
   </data>
   <data name="linkLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="linkLabel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Modern No. 20, 9.75pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="linkLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>580, 34</value>
   </data>
   <data name="linkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 15</value>
+    <value>0, 16</value>
   </data>
   <data name="linkLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -199,13 +175,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel2.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="btnfb.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="btnfb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 43</value>
+    <value>425, 3</value>
   </data>
   <data name="btnfb.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 31</value>
@@ -223,13 +199,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnfb.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>590, 4</value>
+    <value>530, 4</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 17</value>
@@ -247,10 +223,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="txtmessage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 143</value>
+    <value>106, 91</value>
   </data>
   <data name="txtmessage.Size" type="System.Drawing.Size, System.Drawing">
     <value>367, 20</value>
@@ -268,19 +244,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtmessage.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="textBox2.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="textBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Rounded MT Bold, 8.25pt</value>
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="textBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
   </data>
   <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 144</value>
+    <value>21, 91</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
@@ -304,13 +280,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="picbauthor.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
   <data name="picbauthor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>434, 18</value>
+    <value>12, 7</value>
   </data>
   <data name="picbauthor.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 14</value>
@@ -328,13 +304,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picbauthor.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="picbcreatedfor.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
   <data name="picbcreatedfor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>434, 38</value>
+    <value>161, 7</value>
   </data>
   <data name="picbcreatedfor.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 14</value>
@@ -352,13 +328,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picbcreatedfor.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="btnmini.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="btnmini.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 4</value>
+    <value>508, 4</value>
   </data>
   <data name="btnmini.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 17</value>
@@ -376,13 +352,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnmini.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="btn_pp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="btn_pp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 84</value>
+    <value>465, 7</value>
   </data>
   <data name="btn_pp.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 25</value>
@@ -400,10 +376,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_pp.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="txttime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 178</value>
+    <value>428, 119</value>
   </data>
   <data name="txttime.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -421,19 +397,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txttime.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="textBox1.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Rounded MT Bold, 8.25pt</value>
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="textBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 179</value>
+    <value>382, 120</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
@@ -454,7 +430,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="button2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -469,7 +445,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 208</value>
+    <value>38, 133</value>
   </data>
   <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -490,19 +466,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="radioButton1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Hemi Head Rg, 8.25pt, style=Italic</value>
+    <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
   </data>
   <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>539, 179</value>
+    <value>485, 97</value>
   </data>
   <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>67, 17</value>
   </data>
   <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -520,22 +496,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="radioButton2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Hemi Head Rg, 8.25pt, style=Italic</value>
+    <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
   </data>
   <data name="radioButton2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>539, 202</value>
+    <value>485, 120</value>
   </data>
   <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 17</value>
+    <value>62, 17</value>
   </data>
   <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -553,7 +529,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="btnccpanel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -568,7 +544,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnccpanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 207</value>
+    <value>73, 132</value>
   </data>
   <data name="btnccpanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 26</value>
@@ -586,55 +562,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnccpanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnrgui.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="btnrgui.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="btnrgui.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Rounded MT Bold, 8.25pt</value>
-  </data>
-  <data name="btnrgui.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnrgui.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 195</value>
-  </data>
-  <data name="btnrgui.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 23</value>
-  </data>
-  <data name="btnrgui.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="btnrgui.Text" xml:space="preserve">
-    <value>Replace GUI</value>
-  </data>
-  <data name="&gt;&gt;btnrgui.Name" xml:space="preserve">
-    <value>btnrgui</value>
-  </data>
-  <data name="&gt;&gt;btnrgui.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnrgui.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnrgui.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnltmp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
   </data>
   <data name="btnltmp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Rounded MT Bold, 8.25pt</value>
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="btnltmp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnltmp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 195</value>
+    <value>232, 117</value>
   </data>
   <data name="btnltmp.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 23</value>
@@ -6883,7 +6823,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>615, 237</value>
+    <value>553, 162</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

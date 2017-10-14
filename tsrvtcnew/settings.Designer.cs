@@ -38,6 +38,7 @@
             this.cb_tb = new System.Windows.Forms.CheckBox();
             this.btn_reset = new System.Windows.Forms.Button();
             this.cb_etssingle = new System.Windows.Forms.CheckBox();
+            this.cb_rgui = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,6 +172,21 @@
             this.cb_etssingle.UseVisualStyleBackColor = false;
             this.cb_etssingle.CheckedChanged += new System.EventHandler(this.cb_etssingle_CheckedChanged);
             // 
+            // cb_rgui
+            // 
+            this.cb_rgui.AutoSize = true;
+            this.cb_rgui.BackColor = System.Drawing.Color.DarkGray;
+            this.cb_rgui.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.cb_rgui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_rgui.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.cb_rgui.Location = new System.Drawing.Point(220, 131);
+            this.cb_rgui.Name = "cb_rgui";
+            this.cb_rgui.Size = new System.Drawing.Size(85, 17);
+            this.cb_rgui.TabIndex = 31;
+            this.cb_rgui.Text = "Replace GUI";
+            this.cb_rgui.UseVisualStyleBackColor = false;
+            this.cb_rgui.CheckedChanged += new System.EventHandler(this.cb_rgui_CheckedChanged);
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +194,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(554, 157);
+            this.Controls.Add(this.cb_rgui);
             this.Controls.Add(this.cb_etssingle);
             this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.cb_tb);
@@ -210,5 +227,6 @@
         public System.Windows.Forms.CheckBox cb_tb;
         private System.Windows.Forms.Button btn_reset;
         public System.Windows.Forms.CheckBox cb_etssingle;
+        public System.Windows.Forms.CheckBox cb_rgui;
     }
 }

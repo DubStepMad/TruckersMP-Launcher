@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnhelp = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.btnfb = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,9 +45,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.btnccpanel = new System.Windows.Forms.Button();
-            this.btnrgui = new System.Windows.Forms.Button();
             this.btnltmp = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbauthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbcreatedfor)).BeginInit();
             this.SuspendLayout();
@@ -66,15 +63,6 @@
             this.btnhelp.Click += new System.EventHandler(this.btnhelp_Click);
             this.btnhelp.MouseLeave += new System.EventHandler(this.btnhelp_Leave);
             this.btnhelp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnhelp_MouseMove);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::tsrvtcnew.Properties.Resources.banner;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
             // linkLabel2
             // 
@@ -142,6 +130,7 @@
             resources.ApplyResources(this.picbcreatedfor, "picbcreatedfor");
             this.picbcreatedfor.Name = "picbcreatedfor";
             this.picbcreatedfor.TabStop = false;
+            this.picbcreatedfor.Click += new System.EventHandler(this.picbcreatedfor_Click);
             this.picbcreatedfor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
             // btnmini
@@ -234,13 +223,6 @@
             this.btnccpanel.MouseLeave += new System.EventHandler(this.btnccpanel_Leave);
             this.btnccpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnccpanel_MouseMove);
             // 
-            // btnrgui
-            // 
-            resources.ApplyResources(this.btnrgui, "btnrgui");
-            this.btnrgui.Name = "btnrgui";
-            this.btnrgui.UseVisualStyleBackColor = true;
-            this.btnrgui.Click += new System.EventHandler(this.btnrgui_Click);
-            // 
             // btnltmp
             // 
             resources.ApplyResources(this.btnltmp, "btnltmp");
@@ -255,7 +237,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Controls.Add(this.btnltmp);
-            this.Controls.Add(this.btnrgui);
             this.Controls.Add(this.btnccpanel);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -271,7 +252,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnfb);
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnhelp);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
@@ -281,7 +261,6 @@
             this.TransparencyKey = System.Drawing.Color.Red;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbauthor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbcreatedfor)).EndInit();
             this.ResumeLayout(false);
@@ -291,7 +270,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnhelp;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button btnfb;
         private System.Windows.Forms.Button button1;
@@ -307,7 +285,6 @@
         public System.Windows.Forms.RadioButton radioButton1;
         public System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button btnccpanel;
-        private System.Windows.Forms.Button btnrgui;
         private System.Windows.Forms.Button btnltmp;
     }
 }

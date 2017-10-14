@@ -21,7 +21,14 @@ namespace tsrvtcnew
 
                         if (Properties.Settings.Default.ETS2Location != null && Properties.Settings.Default.launcherpath != null)
                         {
-                            GameHandle.launch();
+                            if (Properties.Settings.Default.replacegui == true)
+                            {
+                                Form1.gui_replace();
+                            }
+                            else if (Properties.Settings.Default.replacegui == false)
+                            {
+                                GameHandle.launch();
+                            }
                         }
                         else if (Properties.Settings.Default.ETS2Location == null)
                         {

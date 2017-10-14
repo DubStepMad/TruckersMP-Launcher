@@ -43,6 +43,15 @@ namespace tsrvtcnew
             {
                 cb_etssingle.Checked = false;
             }
+
+            if (Properties.Settings.Default.replacegui == true)
+            {
+                cb_rgui.Checked = true;
+            }
+            else
+            {
+                cb_rgui.Checked = false;
+            }
         }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -126,6 +135,7 @@ namespace tsrvtcnew
             Properties.Settings.Default.agreed = false;
             Properties.Settings.Default.launcherpath = "";
             Properties.Settings.Default.message = "";
+            Properties.Settings.Default.replacegui = false;
             Properties.Settings.Default.Save();
 
             MessageBox.Show("All settings have been set to their Default setting.");
@@ -140,6 +150,18 @@ namespace tsrvtcnew
             else
             {
                 Properties.Settings.Default.singleplayer = false;
+            }
+        }
+
+        private void cb_rgui_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_rgui.Checked == true)
+            {
+                Properties.Settings.Default.replacegui = true;
+            }
+            else
+            {
+                Properties.Settings.Default.replacegui = false;
             }
         }
     }

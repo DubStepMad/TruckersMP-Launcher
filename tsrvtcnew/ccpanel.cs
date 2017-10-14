@@ -38,50 +38,63 @@ namespace tsrvtcnew
 
         private void ccpanel_Load(object sender, EventArgs e)
         {
-            var matches = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Euro Truck Simulator 2/profiles", "ccpoints.txt?", SearchOption.AllDirectories);
+            Properties.Settings.Default.ccpanelcheck = true;
+            Properties.Settings.Default.Save();
+
+            Filesearch();
+        }
+
+        private void Filesearch()
+        {
+            var matches = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Euro Truck Simulator 2/profiles", "ccpoints.txt", SearchOption.AllDirectories);
             var ccdir = matches.Take(1);
             foreach (var myscore in ccdir)
             {
                 string myresult = myscore.ToString();
                 ccpath = myresult;
             }
-
-            Properties.Settings.Default.ccpanelcheck = true;
-            Properties.Settings.Default.Save();
-
-
-            string line;
-
             if (matches.Length == 0)
             {
-                MessageBox.Show("Error, ccpoints.txt missing from profile!");
-                return;
+                string createpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Euro Truck Simulator 2/profiles";
+
+                string filename = Path.Combine(createpath, "ccpoints.txt");
+                if (!System.IO.File.Exists(filename))
+                    System.IO.File.WriteAllText(filename, Properties.Resources.ccpoints);
+                Filesearch();
             }
-            if (matches.Length == 1)
+            else if (matches.Length == 1)
             {
-                StreamReader file = new StreamReader(ccpath);
-                while ((line = file.ReadLine()) != null)
+                Loadtext();
+            }
+            else if (matches.Length > 1)
+            {
+                MessageBox.Show("You have more than 1 ccpoints.txt in the profiles folder. \n Remove one from your files folder in the ETS2 folder in Documents!");
+                this.Close();
+            }
+        }
+
+        private void Loadtext()
+        {
+            string line;
+
+            StreamReader file = new StreamReader(ccpath);
+            while ((line = file.ReadLine()) != null)
+            {
+                if (line.StartsWith("supervisor:"))
                 {
-                    if (line.StartsWith("supervisor:"))
-                    {
-                        message = (line.Split(':')[1]);
-                        txtbsuper.Text = message;
-                    }
-                    if (line.StartsWith("lead:"))
-                    {
-                        message = (line.Split(':')[1]);
-                        txtblead.Text = message;
-                    }
-                    if (line.StartsWith("rear:"))
-                    {
-                        message = (line.Split(':')[1]);
-                        txtbrear.Text = message;
-                    }
+                    message = (line.Split(':')[1]);
+                    txtbsuper.Text = message;
                 }
-            }
-            if (matches.Length < 1)
-            {
-                MessageBox.Show("You have more than 1 ccpoints.txt in the profiles folder. Only have 1!");
+                if (line.StartsWith("lead:"))
+                {
+                    message = (line.Split(':')[1]);
+                    txtblead.Text = message;
+                }
+                if (line.StartsWith("rear:"))
+                {
+                    message = (line.Split(':')[1]);
+                    txtbrear.Text = message;
+                }
             }
         }
 
@@ -212,6 +225,7 @@ namespace tsrvtcnew
             {
                 ccpath = path +  "\\Euro Truck Simulator 2\\profiles";
                 Process.Start("explorer.exe", ccpath);
+                this.Close();
             }
             if (path == "")
             {

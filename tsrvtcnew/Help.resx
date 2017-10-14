@@ -117,6 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>To get the CCPanel working follow these simple steps:
+
+[1] Select the point you are on. (Make sure the Message box displays the text).
+[4] Once in-game, press Y to open the chat and then hold Left-Shift + Y to start the the feature.
+[5] To stop, press Y to open chat and hold Left-Shift and Y again.
+
+                                                  *Wait 1 minute before starting again*
+                                                 *You can not Alt-Tab out of the game*</value>
+  </data>
   <data name="richTextBox3.Text" xml:space="preserve">
     <value>To get the Anti-AFK working follow these simple steps:
 
@@ -126,7 +136,8 @@
 [4] Once in-game, press Y to open the chat and then hold Left-Ctrl + Y to start the the feature.
 [5] To stop, press Y to open chat and hold Left-Ctrl and Y again.
 
-                                                  *Wait 1 minute before starting again*</value>
+                                                  *Wait 1 minute before starting again*
+                                                 *You can not Alt-Tab out of the game*</value>
   </data>
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>To replace the GUI follow these steps:
@@ -137,15 +148,6 @@
 
                                         To modify the GUI, go into the settings and click 'Edit'. 
                                            Change the images but keep the same file names.</value>
-  </data>
-  <data name="richTextBox4.Text" xml:space="preserve">
-    <value>Changes:
-
-*Launcher Searches for paths automatically now.
-*Now launches MP through this launcher.
-                    (Does Not Update for now).
-*Now have the option to to modify the GUI.
-*Requires 0 user input to launch or replace. (Apart from pushing a button).</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
