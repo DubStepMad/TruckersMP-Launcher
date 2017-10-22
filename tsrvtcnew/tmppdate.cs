@@ -3,14 +3,15 @@ using System.IO;
 using System.Net;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace tsrvtcnew
 {
-    class Update
+    class tmppdate
     {
-        /*public static void integrityCheck()
+        public static void integrityCheck()
         {
-            JArray liveFiles = new JArray();
+           /* JArray liveFiles = new JArray();
             Dictionary<string, string> localFiles = new Dictionary<string, string>();
             List<string> mismatchedFiles = new List<string>();
 
@@ -102,7 +103,7 @@ namespace tsrvtcnew
             {
                 Console.WriteLine("An error occured comparing files. Cannot check TMP integrity!");
                 return;
-            }
-        }*/
+            }*/
+        }
     }
 }

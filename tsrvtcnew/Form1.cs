@@ -28,10 +28,14 @@ namespace tsrvtcnew
         public static bool setbusy = false;
         public static string Check = "";
         public static bool calc_check;
+        public bool filecheck = false;
+
+
 
         public Form1()
         {
             InitializeComponent();
+
             this.bw = new BackgroundWorker();
             this.bw.DoWork += new DoWorkEventHandler(bw_DoWork);
             this.bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw_RunWorkerCompleted);
@@ -56,19 +60,28 @@ namespace tsrvtcnew
             Properties.Settings.Default.Save();
 
             //Preparing for auto updates.
-           /* string updaterFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string updaterFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
             string updaterDir = Path.GetDirectoryName(updaterFile);
-            string fullPath = Path.Combine(updaterDir, "Updater.exe");
+            string fullPath = Path.Combine(updaterDir, "updater.exe");
 
-            if (!File.Exists(Path.Combine(updaterDir, "Updater.exe")))
+            if (!File.Exists(Path.Combine(updaterDir, "updater.exe")))
             {
                 MessageBox.Show("Program is corrupted, please re-install or repair!");
                 errorsound();
+                filecheck = false;
             }
-            if (fullPath != null)
+            if (File.Exists(Path.Combine(updaterDir, "updater.exe")))
             {
-                Process.Start(@"Updater");
-            }*/
+                filecheck = true;
+            }
+            if (fullPath != null && filecheck == true)
+            {
+                Process.Start(@"updater");
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         protected override void WndProc(ref Message m)
@@ -150,6 +163,11 @@ namespace tsrvtcnew
 
         private void btnltmp_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.replacegui == true)
+            {
+                gui_replace();
+            }
+
             RegistryCheck.Read();
         }
 
@@ -161,9 +179,9 @@ namespace tsrvtcnew
             //gets application directory
             string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
             string exeDir = Path.GetDirectoryName(exeFile);
-            string fullPath = Path.Combine(exeDir, "custom gui");
+            string finalPath = Path.Combine(exeDir, "custom gui");
 
-            if (fullPath == null)
+            if (finalPath == null)
             {
                 MessageBox.Show("Application must be ran as an Administrator!");
                 errorsound();
@@ -178,7 +196,6 @@ namespace tsrvtcnew
                     SearchOption.AllDirectories))
                 File.Copy(newPath, DesPath + newPath.Remove(0, SourcePath.Length), true);
             goodsound();
-            GameHandle.launch();
             return;
         }
 

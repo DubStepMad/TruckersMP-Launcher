@@ -154,35 +154,6 @@ namespace tsrvtcnew.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to **Change Log &amp; Future Updates**
-        ///
-        ///*This will only open once every new update!*
-        ///
-        ///Author: Connor Nee, AKA DubStepMad
-        ///Contact Email: connoratvirgin@gmail.com
-        ///Donate: https://www.paypal.me/ConnorNee97
-        ///
-        ///Date Release: 15/07/2017
-        ///Copyright 2017 All Rights Reserved
-        ///
-        ///
-        ///============== Donate ==============
-        ///If you would like to see future updates and help me make
-        ///that possible please consider to make a donation: 
-        ///https://www.paypal.me/ConnorNee97
-        ///
-        ///
-        ///============ Change Log ============
-        ///* More re-coding.
-        ///* Error handling. [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string changelog {
-            get {
-                return ResourceManager.GetString("changelog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cin_bg {
@@ -347,6 +318,15 @@ namespace tsrvtcnew.Properties {
             get {
                 object obj = ResourceManager.GetObject("linebg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string logs {
+            get {
+                return ResourceManager.GetString("logs", resourceCulture);
             }
         }
         
