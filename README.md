@@ -20,6 +20,9 @@ Download the latest version and/or source code from [here!](https://github.com/D
 
 I appriciate the VTC's Owner (_**Senka Wolf**_) for helping me with design and improvements needed to make this launcher unique and suitable for the public, for supporting me with the development process and dedicating his time to make tutorials to help anyone that uses it.
 
+Also I appriciate (_**Cheese**_) for suppling the custom GUI screenshots and testing before release.
+All images inside the 'custom gui' folder belong to him and I have been given permission to use them, this comes with the installation of the program NOT the source code.
+
 ## Credits
 
 I would like to say a personal thank you to [TheUnknownNo](https://github.com/TheUnknownNO) for helping me make this possible.
