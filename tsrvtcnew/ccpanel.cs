@@ -58,8 +58,8 @@ namespace tsrvtcnew
                 string createpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Euro Truck Simulator 2/profiles";
 
                 string filename = Path.Combine(createpath, "ccpoints.txt");
-                if (!System.IO.File.Exists(filename))
-                    System.IO.File.WriteAllText(filename, Properties.Resources.ccpoints);
+                if (!File.Exists(filename))
+                    File.WriteAllText(filename, Properties.Resources.ccpoints);
                 Filesearch();
             }
             else if (matches.Length == 1)
@@ -68,7 +68,8 @@ namespace tsrvtcnew
             }
             else if (matches.Length > 1)
             {
-                MessageBox.Show("You have more than 1 ccpoints.txt in the profiles folder. \n Remove one from your files folder in the ETS2 folder in Documents!");
+                string error = "You have more than 1 ccpoints.txt in the profiles folder. \n Remove one from your files folder in the ETS2 folder in Documents!";
+                Loghandling.Logerror(error);
                 this.Close();
             }
         }
@@ -105,7 +106,7 @@ namespace tsrvtcnew
         }
 
         private void ccpanel_MouseDown(object sender,
-        System.Windows.Forms.MouseEventArgs e)
+        MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -229,7 +230,8 @@ namespace tsrvtcnew
             }
             if (path == "")
             {
-                MessageBox.Show("Error locating documents folder, please run this program with admin perms!");
+                string error = "Error locating documents folder, try and re-install!";
+                Loghandling.Logerror(error);
             }
         }
     }

@@ -127,7 +127,7 @@ namespace tsrvtcnew
                     DialogResult dialogResult = MessageBox.Show("Steam is not installed!\n\nPlease install Steam to continue!.\n\nWant to do it now? ", "Steam Vailidation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        System.Diagnostics.Process.Start("http://store.steampowered.com/about/");
+                        Process.Start("http://store.steampowered.com/about/");
                         Environment.Exit(1);
                     }
                     else
@@ -144,7 +144,8 @@ namespace tsrvtcnew
             {
                 if (!File.Exists(Path.Combine(Properties.Settings.Default.tbpath, "TB Client.exe")))
                 {
-                    MessageBox.Show("Please install TrucksBook in the default location: C:/Program Files (x86)/TrucksBook Client");
+                    string error = "TrucksBook is not installed";
+                    Loghandling.Logerror(error);
                     Form1.errorsound();
                 }
                 var processes = Process.GetProcessesByName("TB Client");
@@ -194,19 +195,26 @@ namespace tsrvtcnew
             securityAttributes2.nLength = Marshal.SizeOf(securityAttributes2);
 
             //Lets run the game!
-
             if (!CreateProcess(binPath + exe, arguments, ref securityAttributes, ref securityAttributes2, false, 4u, IntPtr.Zero, binPath, ref startupinfo, out processInformation))
+            {
+                string error = "Failed to start game";
+                Loghandling.Logerror(error);
                 return false;
+            }
 
             if (!Inject(processInformation.hProcess, "C:\\ProgramData\\TruckersMP" + dll))
+            {
+                string error = "DLL injection failed";
+                Loghandling.Logerror(error);
                 return false;
+            }
 
             ResumeThread(processInformation.hThread);
             return true;
         }
         private static bool Inject(IntPtr process, string dllPath)
         {
-            if (!System.IO.File.Exists(dllPath))
+            if (!File.Exists(dllPath))
                 return false;
 
             byte[] bytes = Encoding.ASCII.GetBytes(dllPath + "\0");

@@ -32,7 +32,6 @@
             this.txtguidesc = new System.Windows.Forms.TextBox();
             this.txtdatapath = new System.Windows.Forms.TextBox();
             this.btnselect = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnclose = new System.Windows.Forms.Button();
             this.cb_tb = new System.Windows.Forms.CheckBox();
@@ -76,26 +75,6 @@
             this.btnselect.Text = "Edit";
             this.btnselect.UseVisualStyleBackColor = true;
             this.btnselect.Click += new System.EventHandler(this.btnselect_Click);
-            // 
-            // btnsave
-            // 
-            this.btnsave.BackColor = System.Drawing.Color.Transparent;
-            this.btnsave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsave.FlatAppearance.BorderSize = 0;
-            this.btnsave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnsave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.btnsave.Image = global::tsrvtcnew.Properties.Resources.save_icon;
-            this.btnsave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnsave.Location = new System.Drawing.Point(519, 122);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(22, 23);
-            this.btnsave.TabIndex = 20;
-            this.btnsave.UseVisualStyleBackColor = false;
-            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
-            this.btnsave.MouseLeave += new System.EventHandler(this.btnsave_Leave);
-            this.btnsave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnsave_MouseMove);
             // 
             // pictureBox1
             // 
@@ -148,7 +127,7 @@
             this.btn_reset.BackColor = System.Drawing.Color.DarkGray;
             this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reset.ForeColor = System.Drawing.SystemColors.Menu;
-            this.btn_reset.Location = new System.Drawing.Point(458, 125);
+            this.btn_reset.Location = new System.Drawing.Point(499, 125);
             this.btn_reset.Margin = new System.Windows.Forms.Padding(0);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(46, 23);
@@ -200,7 +179,6 @@
             this.Controls.Add(this.cb_tb);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnsave);
             this.Controls.Add(this.txtguidesc);
             this.Controls.Add(this.txtdatapath);
             this.Controls.Add(this.btnselect);
@@ -221,7 +199,6 @@
         private System.Windows.Forms.TextBox txtguidesc;
         private System.Windows.Forms.TextBox txtdatapath;
         private System.Windows.Forms.Button btnselect;
-        private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnclose;
         public System.Windows.Forms.CheckBox cb_tb;

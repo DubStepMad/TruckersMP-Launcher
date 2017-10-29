@@ -235,7 +235,6 @@
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Controls.Add(this.btnltmp);
             this.Controls.Add(this.btnccpanel);
             this.Controls.Add(this.radioButton2);
@@ -253,7 +252,6 @@
             this.Controls.Add(this.btnfb);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.btnhelp);
-            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;

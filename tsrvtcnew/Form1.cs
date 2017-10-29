@@ -66,7 +66,8 @@ namespace tsrvtcnew
 
             if (!File.Exists(Path.Combine(updaterDir, "updater.exe")))
             {
-                MessageBox.Show("Program is corrupted, please re-install or repair!");
+                string error = "Updater.exe not located";
+                Loghandling.Logerror(error);
                 errorsound();
                 filecheck = false;
             }
@@ -141,7 +142,7 @@ namespace tsrvtcnew
         }
 
         private void Form1_MouseDown(object sender,
-        System.Windows.Forms.MouseEventArgs e)
+        MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -213,15 +214,15 @@ namespace tsrvtcnew
         }
         private void btnfb_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("www.facebook.com/TSRVTC/");
+            Process.Start("www.facebook.com/TSRVTC/");
         }
         private void btndiscord_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://discord.gg/VXzCurC");
+            Process.Start("https://discord.gg/VXzCurC");
         }
         private void btn_pp_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.paypal.me/ConnorNee97");
+            Process.Start("https://www.paypal.me/ConnorNee97");
         }
         private void button1_Click(object sender, EventArgs e)
         {

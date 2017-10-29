@@ -59,34 +59,10 @@ namespace tsrvtcnew
             this.Close();
         }
 
-        public void btnsave_Click(object sender, EventArgs e)
-        {
-            if (txtdatapath.Text == "")
-            {
-                MessageBox.Show("Please select gui location before saving!");
-                Form1.errorsound();
-                return;
-            }
-
-            Properties.Settings.Default.datapath = txtdatapath.Text;
-            Properties.Settings.Default.Save();
-
-            Form1.goodsound();
-        }
-
         private void btnselect_Click(object sender, EventArgs e)
         {
             String Dir = Properties.Settings.Default.datapath;
             Process.Start("explorer.exe", Dir);
-        }
-        private void btnsave_Leave(object sender, EventArgs e)
-        {
-            this.btnsave.BackgroundImage = ((Image)(Properties.Resources.leave_img));
-        }
-
-        void btnsave_MouseMove(object sender, MouseEventArgs e)
-        {
-            this.btnsave.BackgroundImage = ((Image)(Properties.Resources.hover_img));
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -122,6 +98,11 @@ namespace tsrvtcnew
                 Properties.Settings.Default.tbchk = true;
                 Properties.Settings.Default.Save();
             }
+            else
+            {
+                Properties.Settings.Default.tbchk = false;
+                Properties.Settings.Default.Save();
+            }
         }
 
         //resets the program to default... no checks so there can't be any errors coming back when resetting to defaults
@@ -139,6 +120,9 @@ namespace tsrvtcnew
             Properties.Settings.Default.Save();
 
             MessageBox.Show("All settings have been set to their Default setting.");
+
+            string error = "Application settings have been restored to default";
+            Loghandling.Logerror(error);
         }
 
         private void cb_etssingle_CheckedChanged(object sender, EventArgs e)
@@ -146,10 +130,12 @@ namespace tsrvtcnew
             if (cb_etssingle.Checked == true)
             {
                 Properties.Settings.Default.singleplayer = true;
+                Properties.Settings.Default.Save();
             }
             else
             {
                 Properties.Settings.Default.singleplayer = false;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -158,10 +144,12 @@ namespace tsrvtcnew
             if (cb_rgui.Checked == true)
             {
                 Properties.Settings.Default.replacegui = true;
+                Properties.Settings.Default.Save();
             }
             else
             {
                 Properties.Settings.Default.replacegui = false;
+                Properties.Settings.Default.Save();
             }
         }
     }

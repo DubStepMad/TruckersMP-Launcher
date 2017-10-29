@@ -25,14 +25,12 @@ namespace tsrvtcnew
                         }
                         else if (Properties.Settings.Default.ETS2Location == null)
                         {
-                            MessageBox.Show("EuroTruck Simulator 2 is not installed on this system.");
-                        }
-                        else if (Properties.Settings.Default.launcherpath == null)
-                        {
-                            MessageBox.Show("The program had trouble locating your TruckersMP location.");
+                            string error = "Euro Truck Simulator 2 is not installed on this system";
+                            Loghandling.Logerror(error);
+                            Environment.Exit(1);
                         }
                     }
-                    else
+                    else if (Properties.Settings.Default.launcherpath == null)
                     {
                         DialogResult dialogResult = MessageBox.Show("TruckersMP has not been installed!\n\nPlease run the TruckersMP installer once.\n\nWant to do it now? ", "TruckersMP gamecheck", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                         if (dialogResult == DialogResult.Yes)
@@ -49,7 +47,8 @@ namespace tsrvtcnew
             }
             catch (Exception e)
             {
-                Console.WriteLine("{0} Exception caught.", e);
+                string error = e.ToString();
+                Loghandling.Logerror(error);
             }
         }
     }
