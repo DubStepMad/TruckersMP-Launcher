@@ -7,14 +7,14 @@ using System.Windows.Forms;
 
 namespace tsrvtcnew
 {
-    public partial class settings : Form
+    public partial class Settings : Form
     {
-        public settings()
+        public Settings()
         {
             InitializeComponent();
         }
 
-        private void settings_Load(object sender, EventArgs e)
+        private void Settings_Load(object sender, EventArgs e)
         {
             //gets application directory
             string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
@@ -54,12 +54,12 @@ namespace tsrvtcnew
             }
         }
 
-        private void btnclose_Click(object sender, EventArgs e)
+        private void Btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnselect_Click(object sender, EventArgs e)
+        private void Btnselect_Click(object sender, EventArgs e)
         {
             String Dir = Properties.Settings.Default.datapath;
             Process.Start("explorer.exe", Dir);
@@ -73,7 +73,7 @@ namespace tsrvtcnew
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void settings_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void Settings_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -82,16 +82,16 @@ namespace tsrvtcnew
             }
         }
 
-        private void btnclose_Leave(object sender, EventArgs e)
+        private void Btnclose_Leave(object sender, EventArgs e)
         {
             this.btnclose.BackgroundImage = ((Image)(Properties.Resources.leave_img));
         }
-        void btnclose_MouseMove(object sender, MouseEventArgs e)
+        void Btnclose_MouseMove(object sender, MouseEventArgs e)
         {
             this.btnclose.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
         }
 
-        private void cb_tb_CheckedChanged(object sender, EventArgs e)
+        private void Cb_tb_CheckedChanged(object sender, EventArgs e)
         {
             if (cb_tb.Checked == true)
             {
@@ -106,7 +106,7 @@ namespace tsrvtcnew
         }
 
         //resets the program to default... no checks so there can't be any errors coming back when resetting to defaults
-        private void btn_reset_Click(object sender, EventArgs e)
+        private void Btn_reset_Click(object sender, EventArgs e)
         {
             cb_tb.Checked = false;
             cb_etssingle.Checked = false;
@@ -125,7 +125,7 @@ namespace tsrvtcnew
             Loghandling.Logerror(error);
         }
 
-        private void cb_etssingle_CheckedChanged(object sender, EventArgs e)
+        private void Cb_etssingle_CheckedChanged(object sender, EventArgs e)
         {
             if (cb_etssingle.Checked == true)
             {
@@ -139,7 +139,7 @@ namespace tsrvtcnew
             }
         }
 
-        private void cb_rgui_CheckedChanged(object sender, EventArgs e)
+        private void Cb_rgui_CheckedChanged(object sender, EventArgs e)
         {
             if (cb_rgui.Checked == true)
             {

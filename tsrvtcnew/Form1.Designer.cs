@@ -46,6 +46,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.btnccpanel = new System.Windows.Forms.Button();
             this.btnltmp = new System.Windows.Forms.Button();
+            this.Btn_dev = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picbauthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbcreatedfor)).BeginInit();
             this.SuspendLayout();
@@ -60,9 +61,9 @@
             this.btnhelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnhelp.Name = "btnhelp";
             this.btnhelp.UseVisualStyleBackColor = false;
-            this.btnhelp.Click += new System.EventHandler(this.btnhelp_Click);
-            this.btnhelp.MouseLeave += new System.EventHandler(this.btnhelp_Leave);
-            this.btnhelp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnhelp_MouseMove);
+            this.btnhelp.Click += new System.EventHandler(this.Btnhelp_Click);
+            this.btnhelp.MouseLeave += new System.EventHandler(this.Btnhelp_Leave);
+            this.btnhelp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnhelp_MouseMove);
             // 
             // linkLabel2
             // 
@@ -82,9 +83,9 @@
             this.btnfb.Image = global::tsrvtcnew.Properties.Resources.fb_icon;
             this.btnfb.Name = "btnfb";
             this.btnfb.UseVisualStyleBackColor = false;
-            this.btnfb.Click += new System.EventHandler(this.btnfb_Click);
-            this.btnfb.MouseLeave += new System.EventHandler(this.btnfb_Leave);
-            this.btnfb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnfb_MouseMove);
+            this.btnfb.Click += new System.EventHandler(this.Btnfb_Click);
+            this.btnfb.MouseLeave += new System.EventHandler(this.Btnfb_Leave);
+            this.btnfb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnfb_MouseMove);
             // 
             // button1
             // 
@@ -97,15 +98,15 @@
             this.button1.Image = global::tsrvtcnew.Properties.Resources.cross;
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseLeave += new System.EventHandler(this.button_Leave);
-            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.Button_Leave);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseMove);
             // 
             // txtmessage
             // 
             resources.ApplyResources(this.txtmessage, "txtmessage");
             this.txtmessage.Name = "txtmessage";
-            this.txtmessage.TextChanged += new System.EventHandler(this.txtmessage_TextChanged);
+            this.txtmessage.TextChanged += new System.EventHandler(this.Txtmessage_TextChanged);
             // 
             // textBox2
             // 
@@ -130,7 +131,6 @@
             resources.ApplyResources(this.picbcreatedfor, "picbcreatedfor");
             this.picbcreatedfor.Name = "picbcreatedfor";
             this.picbcreatedfor.TabStop = false;
-            this.picbcreatedfor.Click += new System.EventHandler(this.picbcreatedfor_Click);
             this.picbcreatedfor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
             // btnmini
@@ -144,9 +144,9 @@
             this.btnmini.Image = global::tsrvtcnew.Properties.Resources.line_icon;
             this.btnmini.Name = "btnmini";
             this.btnmini.UseVisualStyleBackColor = false;
-            this.btnmini.Click += new System.EventHandler(this.btnmini_Click);
-            this.btnmini.MouseLeave += new System.EventHandler(this.button_Leave);
-            this.btnmini.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnmini_MouseMove);
+            this.btnmini.Click += new System.EventHandler(this.Btnmini_Click);
+            this.btnmini.MouseLeave += new System.EventHandler(this.Button_Leave);
+            this.btnmini.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnmini_MouseMove);
             // 
             // btn_pp
             // 
@@ -158,15 +158,15 @@
             this.btn_pp.Image = global::tsrvtcnew.Properties.Resources.pp6;
             this.btn_pp.Name = "btn_pp";
             this.btn_pp.UseVisualStyleBackColor = false;
-            this.btn_pp.Click += new System.EventHandler(this.btn_pp_Click);
-            this.btn_pp.MouseLeave += new System.EventHandler(this.button_Leave);
-            this.btn_pp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button_MouseMove);
+            this.btn_pp.Click += new System.EventHandler(this.Btn_pp_Click);
+            this.btn_pp.MouseLeave += new System.EventHandler(this.Button_Leave);
+            this.btn_pp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Button_MouseMove);
             // 
             // txttime
             // 
             resources.ApplyResources(this.txttime, "txttime");
             this.txttime.Name = "txttime";
-            this.txttime.TextChanged += new System.EventHandler(this.txttime_TextChanged);
+            this.txttime.TextChanged += new System.EventHandler(this.Txttime_TextChanged);
             // 
             // textBox1
             // 
@@ -185,9 +185,9 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseLeave += new System.EventHandler(this.btnsettings_Leave);
-            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnsettings_MouseMove);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.button2.MouseLeave += new System.EventHandler(this.Btnsettings_Leave);
+            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnsettings_MouseMove);
             // 
             // radioButton1
             // 
@@ -197,7 +197,7 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = false;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -207,7 +207,7 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.TabStop = true;
             this.radioButton2.UseVisualStyleBackColor = false;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
             // btnccpanel
             // 
@@ -219,22 +219,35 @@
             this.btnccpanel.Image = global::tsrvtcnew.Properties.Resources.ccpanel_icon;
             this.btnccpanel.Name = "btnccpanel";
             this.btnccpanel.UseVisualStyleBackColor = false;
-            this.btnccpanel.Click += new System.EventHandler(this.btnccpanel_Click);
-            this.btnccpanel.MouseLeave += new System.EventHandler(this.btnccpanel_Leave);
-            this.btnccpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnccpanel_MouseMove);
+            this.btnccpanel.Click += new System.EventHandler(this.Btnccpanel_Click);
+            this.btnccpanel.MouseLeave += new System.EventHandler(this.Btnccpanel_Leave);
+            this.btnccpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnccpanel_MouseMove);
             // 
             // btnltmp
             // 
             resources.ApplyResources(this.btnltmp, "btnltmp");
             this.btnltmp.Name = "btnltmp";
             this.btnltmp.UseVisualStyleBackColor = true;
-            this.btnltmp.Click += new System.EventHandler(this.btnltmp_Click);
+            this.btnltmp.Click += new System.EventHandler(this.Btnltmp_Click);
+            // 
+            // Btn_dev
+            // 
+            this.Btn_dev.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.Btn_dev, "Btn_dev");
+            this.Btn_dev.FlatAppearance.BorderSize = 0;
+            this.Btn_dev.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Btn_dev.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Btn_dev.Image = global::tsrvtcnew.Properties.Resources.settings_img;
+            this.Btn_dev.Name = "Btn_dev";
+            this.Btn_dev.UseVisualStyleBackColor = false;
+            this.Btn_dev.Click += new System.EventHandler(this.Btn_dev_Click);
             // 
             // Form1
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Btn_dev);
             this.Controls.Add(this.btnltmp);
             this.Controls.Add(this.btnccpanel);
             this.Controls.Add(this.radioButton2);
@@ -284,6 +297,7 @@
         public System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button btnccpanel;
         private System.Windows.Forms.Button btnltmp;
+        private System.Windows.Forms.Button Btn_dev;
     }
 }
 

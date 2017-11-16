@@ -60,7 +60,7 @@
             this.btn_tc.TabIndex = 2;
             this.btn_tc.Text = "Terms";
             this.btn_tc.UseVisualStyleBackColor = true;
-            this.btn_tc.Click += new System.EventHandler(this.btn_tc_Click);
+            this.btn_tc.Click += new System.EventHandler(this.Btn_tc_Click);
             // 
             // btn_agree
             // 
@@ -70,7 +70,7 @@
             this.btn_agree.TabIndex = 3;
             this.btn_agree.Text = "Agree";
             this.btn_agree.UseVisualStyleBackColor = true;
-            this.btn_agree.Click += new System.EventHandler(this.btn_agree_Click);
+            this.btn_agree.Click += new System.EventHandler(this.Btn_agree_Click);
             // 
             // btn_disagree
             // 
@@ -80,7 +80,7 @@
             this.btn_disagree.TabIndex = 4;
             this.btn_disagree.Text = "Disagree";
             this.btn_disagree.UseVisualStyleBackColor = true;
-            this.btn_disagree.Click += new System.EventHandler(this.btn_disagree_Click);
+            this.btn_disagree.Click += new System.EventHandler(this.Btn_disagree_Click);
             // 
             // tc
             // 
@@ -95,7 +95,7 @@
             this.Name = "tc";
             this.Text = "tc";
             this.TopMost = true;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.tc_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Tc_FormClosed);
             this.ResumeLayout(false);
 
         }

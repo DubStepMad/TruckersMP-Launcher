@@ -107,16 +107,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\DubStepMad\Downloads\CefSharp51_x32\CefSharp.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\DubStepMad\Desktop\TruckersMP-Launcher-0.17-alpha\Source\lib\Newtonsoft.Json.dll</HintPath>
@@ -214,7 +204,6 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
     <None Include="Properties\app.manifest">
       <SubType>Designer</SubType>
     </None>
@@ -250,16 +239,13 @@
     <Content Include="4_TSRLogo2.ico" />
     <Content Include="9dSsQy0.ico" />
     <AdditionalFiles Include="lib\Newtonsoft.Json.dll" />
-    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\ccpanel.png" />
     <None Include="bin\Debug\ccpoints.txt" />
-    <None Include="Resources\background0.png" />
     <None Include="Resources\fb_icon-h.png" />
     <None Include="Resources\help_icon-h.png" />
     <None Include="Resources\settings_icon-h.png" />
     <None Include="Resources\ccpanel_icon-h.png" />
     <None Include="Resources\ccpanel_icon.png" />
-    <None Include="Resources\help-bg1.png" />
-    <None Include="Resources\helpmenu-bg1.png" />
     <None Include="Resources\help-bg.png" />
     <None Include="Resources\helpmenu-bg.png" />
     <None Include="Resources\settings.png" />
@@ -267,11 +253,8 @@
     <None Include="Resources\notes1.png" />
     <None Include="Resources\notes.png" />
     <None Include="Resources\tab_bg.png" />
-    <None Include="Resources\ccpanel-bg.png" />
-    <None Include="Resources\ccpanel.png" />
     <None Include="Resources\settings_icon.png" />
     <None Include="Resources\dev_icon.png" />
-    <None Include="Resources\discord_icon.png" />
     <None Include="Resources\changelog.txt" />
     <EmbeddedResource Include="Resources\terms.txt" />
     <None Include="Resources\Webp.net-resizeimage.png" />
@@ -294,18 +277,11 @@
     <None Include="Resources\banner.png" />
     <None Include="Resources\createdfor_img.png" />
     <None Include="Resources\author_img.png" />
-    <None Include="Resources\bgnew.png" />
     <None Include="Resources\16119.png" />
     <None Include="Resources\teamspeak_icon.png" />
     <None Include="Resources\hover_img.png" />
     <None Include="Resources\leave_img.png" />
-    <None Include="Resources\ts_icon.png" />
-    <None Include="Resources\tsrvtc_icon.png" />
     <None Include="Resources\social_facebook_box_blue.png" />
-    <None Include="Resources\banner trans v2.png" />
-    <None Include="Resources\banner trans1.png" />
-    <None Include="Resources\BG.png" />
-    <None Include="Resources\banner trans.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="MediaPlayer">

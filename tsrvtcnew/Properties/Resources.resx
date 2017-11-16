@@ -166,9 +166,6 @@
   <data name="pp6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pp6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="good" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sound1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -193,17 +190,11 @@
   <data name="settings_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ccpanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ccpanel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ccpanel_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ccpanel_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ccpanel_icon_h" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ccpanel_icon-h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="helpmenu_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\helpmenu-bg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="help_icon_h" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help_icon-h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,13 +208,16 @@
   <data name="settings_icon_h" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings_icon-h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cin_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ccpoints" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\ccpoints.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="logs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\changelog.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="ccpanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ccpanel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="helpmenu_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helpmenu-bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

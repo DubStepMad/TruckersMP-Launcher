@@ -123,7 +123,7 @@
             this.rb_point1.Tag = "point01:";
             this.rb_point1.Text = "CC Point 1";
             this.rb_point1.UseVisualStyleBackColor = false;
-            this.rb_point1.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point1.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point2
             // 
@@ -137,7 +137,7 @@
             this.rb_point2.Tag = "point02:";
             this.rb_point2.Text = "CC Point 2";
             this.rb_point2.UseVisualStyleBackColor = false;
-            this.rb_point2.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point2.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point3
             // 
@@ -151,7 +151,7 @@
             this.rb_point3.Tag = "point03:";
             this.rb_point3.Text = "CC Point 3";
             this.rb_point3.UseVisualStyleBackColor = false;
-            this.rb_point3.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point3.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point4
             // 
@@ -165,7 +165,7 @@
             this.rb_point4.Tag = "point04:";
             this.rb_point4.Text = "CC Point 4";
             this.rb_point4.UseVisualStyleBackColor = false;
-            this.rb_point4.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point4.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point5
             // 
@@ -179,7 +179,7 @@
             this.rb_point5.Tag = "point05:";
             this.rb_point5.Text = "CC Point 5";
             this.rb_point5.UseVisualStyleBackColor = false;
-            this.rb_point5.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point5.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point6
             // 
@@ -193,7 +193,7 @@
             this.rb_point6.Tag = "point06:";
             this.rb_point6.Text = "CC Point 6";
             this.rb_point6.UseVisualStyleBackColor = false;
-            this.rb_point6.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point6.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point7
             // 
@@ -207,7 +207,7 @@
             this.rb_point7.Tag = "point07:";
             this.rb_point7.Text = "CC Point 7";
             this.rb_point7.UseVisualStyleBackColor = false;
-            this.rb_point7.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point7.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point8
             // 
@@ -221,7 +221,7 @@
             this.rb_point8.Tag = "point08:";
             this.rb_point8.Text = "CC Point 8";
             this.rb_point8.UseVisualStyleBackColor = false;
-            this.rb_point8.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point8.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point9
             // 
@@ -235,7 +235,7 @@
             this.rb_point9.Tag = "point09:";
             this.rb_point9.Text = "CC Point 9";
             this.rb_point9.UseVisualStyleBackColor = false;
-            this.rb_point9.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point9.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point10
             // 
@@ -249,7 +249,7 @@
             this.rb_point10.Tag = "point10:";
             this.rb_point10.Text = "CC Point 10";
             this.rb_point10.UseVisualStyleBackColor = false;
-            this.rb_point10.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point10.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point15
             // 
@@ -263,7 +263,7 @@
             this.rb_point15.Tag = "point15:";
             this.rb_point15.Text = "CC Point 15";
             this.rb_point15.UseVisualStyleBackColor = false;
-            this.rb_point15.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point15.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point14
             // 
@@ -277,7 +277,7 @@
             this.rb_point14.Tag = "point14:";
             this.rb_point14.Text = "CC Point 14";
             this.rb_point14.UseVisualStyleBackColor = false;
-            this.rb_point14.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point14.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point13
             // 
@@ -291,7 +291,7 @@
             this.rb_point13.Tag = "point13:";
             this.rb_point13.Text = "CC Point 13";
             this.rb_point13.UseVisualStyleBackColor = false;
-            this.rb_point13.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point13.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point12
             // 
@@ -305,7 +305,7 @@
             this.rb_point12.Tag = "point12:";
             this.rb_point12.Text = "CC Point 12";
             this.rb_point12.UseVisualStyleBackColor = false;
-            this.rb_point12.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point12.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point11
             // 
@@ -319,7 +319,7 @@
             this.rb_point11.Tag = "point11:";
             this.rb_point11.Text = "CC Point 11";
             this.rb_point11.UseVisualStyleBackColor = false;
-            this.rb_point11.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point11.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point30
             // 
@@ -333,7 +333,7 @@
             this.rb_point30.Tag = "point30:";
             this.rb_point30.Text = "CC Point 30";
             this.rb_point30.UseVisualStyleBackColor = false;
-            this.rb_point30.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point30.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point29
             // 
@@ -347,7 +347,7 @@
             this.rb_point29.Tag = "point29:";
             this.rb_point29.Text = "CC Point 29";
             this.rb_point29.UseVisualStyleBackColor = false;
-            this.rb_point29.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point29.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point28
             // 
@@ -361,7 +361,7 @@
             this.rb_point28.Tag = "point28:";
             this.rb_point28.Text = "CC Point 28";
             this.rb_point28.UseVisualStyleBackColor = false;
-            this.rb_point28.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point28.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point27
             // 
@@ -375,7 +375,7 @@
             this.rb_point27.Tag = "point27:";
             this.rb_point27.Text = "CC Point 27";
             this.rb_point27.UseVisualStyleBackColor = false;
-            this.rb_point27.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point27.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point26
             // 
@@ -389,7 +389,7 @@
             this.rb_point26.Tag = "point26:";
             this.rb_point26.Text = "CC Point 26";
             this.rb_point26.UseVisualStyleBackColor = false;
-            this.rb_point26.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point26.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point25
             // 
@@ -403,7 +403,7 @@
             this.rb_point25.Tag = "point25:";
             this.rb_point25.Text = "CC Point 25";
             this.rb_point25.UseVisualStyleBackColor = false;
-            this.rb_point25.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point25.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point24
             // 
@@ -417,7 +417,7 @@
             this.rb_point24.Tag = "point24:";
             this.rb_point24.Text = "CC Point 24";
             this.rb_point24.UseVisualStyleBackColor = false;
-            this.rb_point24.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point24.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point23
             // 
@@ -431,7 +431,7 @@
             this.rb_point23.Tag = "point23:";
             this.rb_point23.Text = "CC Point 23";
             this.rb_point23.UseVisualStyleBackColor = false;
-            this.rb_point23.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point23.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point22
             // 
@@ -445,7 +445,7 @@
             this.rb_point22.Tag = "point22:";
             this.rb_point22.Text = "CC Point 22";
             this.rb_point22.UseVisualStyleBackColor = false;
-            this.rb_point22.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point22.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point21
             // 
@@ -459,7 +459,7 @@
             this.rb_point21.Tag = "point21:";
             this.rb_point21.Text = "CC Point 21";
             this.rb_point21.UseVisualStyleBackColor = false;
-            this.rb_point21.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point21.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point40
             // 
@@ -473,7 +473,7 @@
             this.rb_point40.Tag = "point40:";
             this.rb_point40.Text = "CC Point 40";
             this.rb_point40.UseVisualStyleBackColor = false;
-            this.rb_point40.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point40.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point39
             // 
@@ -487,7 +487,7 @@
             this.rb_point39.Tag = "point39:";
             this.rb_point39.Text = "CC Point 39";
             this.rb_point39.UseVisualStyleBackColor = false;
-            this.rb_point39.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point39.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point38
             // 
@@ -501,7 +501,7 @@
             this.rb_point38.Tag = "point38:";
             this.rb_point38.Text = "CC Point 38";
             this.rb_point38.UseVisualStyleBackColor = false;
-            this.rb_point38.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point38.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point37
             // 
@@ -515,7 +515,7 @@
             this.rb_point37.Tag = "point37:";
             this.rb_point37.Text = "CC Point 37";
             this.rb_point37.UseVisualStyleBackColor = false;
-            this.rb_point37.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point37.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point36
             // 
@@ -529,7 +529,7 @@
             this.rb_point36.Tag = "point36:";
             this.rb_point36.Text = "CC Point 36";
             this.rb_point36.UseVisualStyleBackColor = false;
-            this.rb_point36.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point36.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point35
             // 
@@ -543,7 +543,7 @@
             this.rb_point35.Tag = "point35:";
             this.rb_point35.Text = "CC Point 35";
             this.rb_point35.UseVisualStyleBackColor = false;
-            this.rb_point35.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point35.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point34
             // 
@@ -557,7 +557,7 @@
             this.rb_point34.Tag = "point34:";
             this.rb_point34.Text = "CC Point 34";
             this.rb_point34.UseVisualStyleBackColor = false;
-            this.rb_point34.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point34.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point33
             // 
@@ -571,7 +571,7 @@
             this.rb_point33.Tag = "point33:";
             this.rb_point33.Text = "CC Point 33";
             this.rb_point33.UseVisualStyleBackColor = false;
-            this.rb_point33.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point33.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point32
             // 
@@ -585,7 +585,7 @@
             this.rb_point32.Tag = "point32:";
             this.rb_point32.Text = "CC Point 32";
             this.rb_point32.UseVisualStyleBackColor = false;
-            this.rb_point32.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point32.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point31
             // 
@@ -599,7 +599,7 @@
             this.rb_point31.Tag = "point31:";
             this.rb_point31.Text = "CC Point 31";
             this.rb_point31.UseVisualStyleBackColor = false;
-            this.rb_point31.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point31.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point50
             // 
@@ -613,7 +613,7 @@
             this.rb_point50.Tag = "point50:";
             this.rb_point50.Text = "CC Point 50";
             this.rb_point50.UseVisualStyleBackColor = false;
-            this.rb_point50.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point50.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point49
             // 
@@ -627,7 +627,7 @@
             this.rb_point49.Tag = "point49:";
             this.rb_point49.Text = "CC Point 49";
             this.rb_point49.UseVisualStyleBackColor = false;
-            this.rb_point49.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point49.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point48
             // 
@@ -641,7 +641,7 @@
             this.rb_point48.Tag = "point48:";
             this.rb_point48.Text = "CC Point 48";
             this.rb_point48.UseVisualStyleBackColor = false;
-            this.rb_point48.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point48.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point47
             // 
@@ -655,7 +655,7 @@
             this.rb_point47.Tag = "point47:";
             this.rb_point47.Text = "CC Point 47";
             this.rb_point47.UseVisualStyleBackColor = false;
-            this.rb_point47.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point47.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point46
             // 
@@ -669,7 +669,7 @@
             this.rb_point46.Tag = "point46:";
             this.rb_point46.Text = "CC Point 46";
             this.rb_point46.UseVisualStyleBackColor = false;
-            this.rb_point46.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point46.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point45
             // 
@@ -683,7 +683,7 @@
             this.rb_point45.Tag = "point45:";
             this.rb_point45.Text = "CC Point 45";
             this.rb_point45.UseVisualStyleBackColor = false;
-            this.rb_point45.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point45.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point44
             // 
@@ -697,7 +697,7 @@
             this.rb_point44.Tag = "point44:";
             this.rb_point44.Text = "CC Point 44";
             this.rb_point44.UseVisualStyleBackColor = false;
-            this.rb_point44.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point44.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point43
             // 
@@ -711,7 +711,7 @@
             this.rb_point43.Tag = "point43:";
             this.rb_point43.Text = "CC Point 43";
             this.rb_point43.UseVisualStyleBackColor = false;
-            this.rb_point43.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point43.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point42
             // 
@@ -725,7 +725,7 @@
             this.rb_point42.Tag = "point42:";
             this.rb_point42.Text = "CC Point 42";
             this.rb_point42.UseVisualStyleBackColor = false;
-            this.rb_point42.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point42.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_point41
             // 
@@ -739,7 +739,7 @@
             this.rb_point41.Tag = "point41:";
             this.rb_point41.Text = "CC Point 41";
             this.rb_point41.UseVisualStyleBackColor = false;
-            this.rb_point41.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_point41.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // txtb_message
             // 
@@ -779,9 +779,9 @@
             this.btnmini.Size = new System.Drawing.Size(17, 17);
             this.btnmini.TabIndex = 53;
             this.btnmini.UseVisualStyleBackColor = false;
-            this.btnmini.Click += new System.EventHandler(this.btnmini_Click);
-            this.btnmini.MouseLeave += new System.EventHandler(this.btnmini_Leave);
-            this.btnmini.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnmini_MouseMove);
+            this.btnmini.Click += new System.EventHandler(this.Btnmini_Click);
+            this.btnmini.MouseLeave += new System.EventHandler(this.Btnmini_Leave);
+            this.btnmini.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnmini_MouseMove);
             // 
             // button1
             // 
@@ -798,9 +798,9 @@
             this.button1.Size = new System.Drawing.Size(17, 17);
             this.button1.TabIndex = 52;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_Leave);
-            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.Button1_Leave);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseMove);
             // 
             // tabControl1
             // 
@@ -882,7 +882,7 @@
             this.radioButton15.Tag = "point16:";
             this.radioButton15.Text = "CC Point 16";
             this.radioButton15.UseVisualStyleBackColor = false;
-            this.radioButton15.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.radioButton15.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // radioButton13
             // 
@@ -896,7 +896,7 @@
             this.radioButton13.Tag = "point17:";
             this.radioButton13.Text = "CC Point 17";
             this.radioButton13.UseVisualStyleBackColor = false;
-            this.radioButton13.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.radioButton13.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // radioButton12
             // 
@@ -910,7 +910,7 @@
             this.radioButton12.Tag = "point18:";
             this.radioButton12.Text = "CC Point 18";
             this.radioButton12.UseVisualStyleBackColor = false;
-            this.radioButton12.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.radioButton12.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // radioButton10
             // 
@@ -924,7 +924,7 @@
             this.radioButton10.Tag = "point19:";
             this.radioButton10.Text = "CC Point 19";
             this.radioButton10.UseVisualStyleBackColor = false;
-            this.radioButton10.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.radioButton10.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // radioButton8
             // 
@@ -938,7 +938,7 @@
             this.radioButton8.Tag = "point20:";
             this.radioButton8.Text = "CC Point 20";
             this.radioButton8.UseVisualStyleBackColor = false;
-            this.radioButton8.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // tabPage3
             // 
@@ -1011,7 +1011,7 @@
             this.rb_welcome.Tag = "welcomemessage";
             this.rb_welcome.Text = "Welcome Message";
             this.rb_welcome.UseVisualStyleBackColor = false;
-            this.rb_welcome.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_welcome.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_start
             // 
@@ -1025,7 +1025,7 @@
             this.rb_start.Tag = "start";
             this.rb_start.Text = "CC Start";
             this.rb_start.UseVisualStyleBackColor = false;
-            this.rb_start.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_start.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // rb_end
             // 
@@ -1039,7 +1039,7 @@
             this.rb_end.Tag = "end";
             this.rb_end.Text = "CC End";
             this.rb_end.UseVisualStyleBackColor = false;
-            this.rb_end.CheckedChanged += new System.EventHandler(this.anyRadioButton_CheckedChanged);
+            this.rb_end.CheckedChanged += new System.EventHandler(this.AnyRadioButton_CheckedChanged);
             // 
             // richTextBox1
             // 
@@ -1160,7 +1160,7 @@
             this.vtn_ccp_edit.TabIndex = 65;
             this.vtn_ccp_edit.Text = "Edit CC Points";
             this.vtn_ccp_edit.UseVisualStyleBackColor = false;
-            this.vtn_ccp_edit.Click += new System.EventHandler(this.vtn_ccp_edit_Click);
+            this.vtn_ccp_edit.Click += new System.EventHandler(this.Vtn_ccp_edit_Click);
             // 
             // ccpanel
             // 
@@ -1190,9 +1190,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ccpanel";
             this.Text = "ccpanel";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ccpanel_FormClosing);
-            this.Load += new System.EventHandler(this.ccpanel_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ccpanel_MouseDown);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Ccpanel_FormClosing);
+            this.Load += new System.EventHandler(this.Ccpanel_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Ccpanel_MouseDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

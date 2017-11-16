@@ -79,9 +79,9 @@
             this.btnhelpvids.TabIndex = 26;
             this.btnhelpvids.Text = "Tutorials";
             this.btnhelpvids.UseVisualStyleBackColor = false;
-            this.btnhelpvids.Click += new System.EventHandler(this.btnhelpvids_Click);
-            this.btnhelpvids.MouseLeave += new System.EventHandler(this.btnhelpvids_Leave);
-            this.btnhelpvids.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnhelpvids_MouseMove);
+            this.btnhelpvids.Click += new System.EventHandler(this.Btnhelpvids_Click);
+            this.btnhelpvids.MouseLeave += new System.EventHandler(this.Btnhelpvids_Leave);
+            this.btnhelpvids.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnhelpvids_MouseMove);
             // 
             // btn_bf
             // 
@@ -99,9 +99,9 @@
             this.btn_bf.TabIndex = 27;
             this.btn_bf.Text = "Bugs/Feedback";
             this.btn_bf.UseVisualStyleBackColor = false;
-            this.btn_bf.Click += new System.EventHandler(this.btn_bf_Click);
-            this.btn_bf.MouseLeave += new System.EventHandler(this.btn_bf_Leave);
-            this.btn_bf.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_bf_MouseMove);
+            this.btn_bf.Click += new System.EventHandler(this.Btn_bf_Click);
+            this.btn_bf.MouseLeave += new System.EventHandler(this.Btn_bf_Leave);
+            this.btn_bf.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_bf_MouseMove);
             // 
             // tabPage4
             // 
@@ -240,9 +240,9 @@
             this.btn_help_exit.Size = new System.Drawing.Size(17, 17);
             this.btn_help_exit.TabIndex = 53;
             this.btn_help_exit.UseVisualStyleBackColor = false;
-            this.btn_help_exit.Click += new System.EventHandler(this.btn_help_exit_Click);
-            this.btn_help_exit.MouseLeave += new System.EventHandler(this.btn_help_exit_Leave);
-            this.btn_help_exit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_help_exit_MouseMove);
+            this.btn_help_exit.Click += new System.EventHandler(this.Btn_help_exit_Click);
+            this.btn_help_exit.MouseLeave += new System.EventHandler(this.Btn_help_exit_Leave);
+            this.btn_help_exit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_help_exit_MouseMove);
             // 
             // Help
             // 

@@ -31,12 +31,12 @@ namespace tsrvtcnew
             InitializeComponent();
 
             this.bw = new BackgroundWorker();
-            this.bw.DoWork += new DoWorkEventHandler(bw_DoWork);
-            this.bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw_RunWorkerCompleted);
+            this.bw.DoWork += new DoWorkEventHandler(Bw_DoWork);
+            this.bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Bw_RunWorkerCompleted);
             RegisterHotKey(this.Handle, ccpanel_hotmey_ID, 4, (int)Keys.Y);
         }
 
-        private void ccpanel_Load(object sender, EventArgs e)
+        private void Ccpanel_Load(object sender, EventArgs e)
         {
             Properties.Settings.Default.ccpanelcheck = true;
             Properties.Settings.Default.Save();
@@ -99,13 +99,13 @@ namespace tsrvtcnew
             }
         }
 
-        private void ccpanel_FormClosing(object sender, FormClosingEventArgs e)
+        private void Ccpanel_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.ccpanelcheck = false;
             Properties.Settings.Default.Save();
         }
 
-        private void ccpanel_MouseDown(object sender,
+        private void Ccpanel_MouseDown(object sender,
         MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -133,7 +133,7 @@ namespace tsrvtcnew
 
                 if (!bw.IsBusy && setbusy == false)
                 {
-                    Form1.goodsound();
+                    Form1.Goodsound();
                     this.bw.RunWorkerAsync();
                     this.bw.WorkerSupportsCancellation = true;
                 }
@@ -141,20 +141,20 @@ namespace tsrvtcnew
                 {
                     setbusy = false;
                     this.bw.CancelAsync();
-                    Form1.truckhorn();
+                    Form1.Truckhorn();
                     return;
                 }
             }
             base.WndProc(ref m);
         }
 
-        private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void Bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             setbusy = false;
             this.bw.CancelAsync();
         }
 
-        private void bw_DoWork(object sender, DoWorkEventArgs e)
+        private void Bw_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker worker = (BackgroundWorker)sender;
             for (int i = 0; i < 100; ++i)
@@ -166,13 +166,13 @@ namespace tsrvtcnew
                 }
                 else
                 {
-                    timer.ccpanel_action(); //Keyboard input and custom wait delay
+                    Timer.Ccpanel_action(); //Keyboard input and custom wait delay
                 }
             }
         }
 
         //radio button passes tag which shortens this code by 49... can't believe I copied this 50 times and this is what it is now
-        private void anyRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void AnyRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton radio = (RadioButton)sender;
             string lineStart = (string)radio.Tag;
@@ -193,32 +193,32 @@ namespace tsrvtcnew
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void btnmini_Click(object sender, EventArgs e)
+        private void Btnmini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        private void button1_Leave(object sender, EventArgs e)
+        private void Button1_Leave(object sender, EventArgs e)
         {
             this.button1.BackgroundImage = ((Image)(Properties.Resources.leave_img));
         }
-        void button1_MouseMove(object sender, MouseEventArgs e)
+        void Button1_MouseMove(object sender, MouseEventArgs e)
         {
             this.button1.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
         }
-        private void btnmini_Leave(object sender, EventArgs e)
+        private void Btnmini_Leave(object sender, EventArgs e)
         {
             this.btnmini.BackgroundImage = ((Image)(Properties.Resources.leave_img));
         }
-        void btnmini_MouseMove(object sender, MouseEventArgs e)
+        void Btnmini_MouseMove(object sender, MouseEventArgs e)
         {
             this.btnmini.BackgroundImage = ((Image)(Properties.Resources.line_icon));
         }
 
-        private void vtn_ccp_edit_Click(object sender, EventArgs e)
+        private void Vtn_ccp_edit_Click(object sender, EventArgs e)
         {
             string path = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
 

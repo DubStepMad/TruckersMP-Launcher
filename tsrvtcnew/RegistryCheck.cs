@@ -21,7 +21,7 @@ namespace tsrvtcnew
 
                         if (Properties.Settings.Default.ETS2Location != null && Properties.Settings.Default.launcherpath != null)
                         {
-                            GameHandle.launch();
+                            GameHandle.Launch();
                         }
                         else if (Properties.Settings.Default.ETS2Location == null)
                         {

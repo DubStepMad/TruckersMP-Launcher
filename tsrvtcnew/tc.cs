@@ -10,7 +10,7 @@ namespace tsrvtcnew
             InitializeComponent();
         }
 
-        private void btn_tc_Click(object sender, EventArgs e)
+        private void Btn_tc_Click(object sender, EventArgs e)
         {
             string filename = "terms.txt";
             if (!System.IO.File.Exists(filename))
@@ -20,20 +20,20 @@ namespace tsrvtcnew
             System.Diagnostics.Process.Start(filename);
         }
 
-        private void btn_agree_Click(object sender, EventArgs e)
+        private void Btn_agree_Click(object sender, EventArgs e)
         {
             this.Close();
             Properties.Settings.Default.agreed = true;
             Properties.Settings.Default.Save();
         }
 
-        private void btn_disagree_Click(object sender, EventArgs e)
+        private void Btn_disagree_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
         }
 
-        private void tc_FormClosed(object sender, FormClosedEventArgs e)
+        private void Tc_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Properties.Settings.Default.agreed == false)
             {

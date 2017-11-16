@@ -1,6 +1,6 @@
 ﻿namespace tsrvtcnew
 {
-    partial class settings
+    partial class Settings
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settings));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.txtguidesc = new System.Windows.Forms.TextBox();
             this.txtdatapath = new System.Windows.Forms.TextBox();
             this.btnselect = new System.Windows.Forms.Button();
@@ -74,7 +74,7 @@
             this.btnselect.TabIndex = 14;
             this.btnselect.Text = "Edit";
             this.btnselect.UseVisualStyleBackColor = true;
-            this.btnselect.Click += new System.EventHandler(this.btnselect_Click);
+            this.btnselect.Click += new System.EventHandler(this.Btnselect_Click);
             // 
             // pictureBox1
             // 
@@ -87,7 +87,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(167, 36);
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.settings_MouseDown);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Settings_MouseDown);
             // 
             // btnclose
             // 
@@ -103,9 +103,9 @@
             this.btnclose.Size = new System.Drawing.Size(27, 25);
             this.btnclose.TabIndex = 26;
             this.btnclose.UseVisualStyleBackColor = false;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
-            this.btnclose.MouseLeave += new System.EventHandler(this.btnclose_Leave);
-            this.btnclose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnclose_MouseMove);
+            this.btnclose.Click += new System.EventHandler(this.Btnclose_Click);
+            this.btnclose.MouseLeave += new System.EventHandler(this.Btnclose_Leave);
+            this.btnclose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnclose_MouseMove);
             // 
             // cb_tb
             // 
@@ -120,7 +120,7 @@
             this.cb_tb.TabIndex = 28;
             this.cb_tb.Text = "TrucksBook";
             this.cb_tb.UseVisualStyleBackColor = false;
-            this.cb_tb.CheckedChanged += new System.EventHandler(this.cb_tb_CheckedChanged);
+            this.cb_tb.CheckedChanged += new System.EventHandler(this.Cb_tb_CheckedChanged);
             // 
             // btn_reset
             // 
@@ -134,7 +134,7 @@
             this.btn_reset.TabIndex = 29;
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = false;
-            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
+            this.btn_reset.Click += new System.EventHandler(this.Btn_reset_Click);
             // 
             // cb_etssingle
             // 
@@ -149,7 +149,7 @@
             this.cb_etssingle.TabIndex = 30;
             this.cb_etssingle.Text = "ETS 2 Single Player";
             this.cb_etssingle.UseVisualStyleBackColor = false;
-            this.cb_etssingle.CheckedChanged += new System.EventHandler(this.cb_etssingle_CheckedChanged);
+            this.cb_etssingle.CheckedChanged += new System.EventHandler(this.Cb_etssingle_CheckedChanged);
             // 
             // cb_rgui
             // 
@@ -164,7 +164,7 @@
             this.cb_rgui.TabIndex = 31;
             this.cb_rgui.Text = "Replace GUI";
             this.cb_rgui.UseVisualStyleBackColor = false;
-            this.cb_rgui.CheckedChanged += new System.EventHandler(this.cb_rgui_CheckedChanged);
+            this.cb_rgui.CheckedChanged += new System.EventHandler(this.Cb_rgui_CheckedChanged);
             // 
             // settings
             // 
@@ -186,8 +186,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "settings";
             this.Text = "settings";
-            this.Load += new System.EventHandler(this.settings_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.settings_MouseDown);
+            this.Load += new System.EventHandler(this.Settings_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Settings_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -107,7 +107,7 @@ namespace tsrvtcnew
             Release = 32768
         }
 
-        public static bool launch()
+        public static bool Launch()
         {
             if (Process.GetProcessesByName("Steam").Length == 0)
             {
@@ -146,7 +146,7 @@ namespace tsrvtcnew
                 {
                     string error = "TrucksBook is not installed";
                     Loghandling.Logerror(error);
-                    Form1.errorsound();
+                    Form1.Errorsound();
                 }
                 var processes = Process.GetProcessesByName("TB Client");
 
@@ -225,7 +225,6 @@ namespace tsrvtcnew
             IntPtr intPtr = VirtualAllocEx(process, IntPtr.Zero, (IntPtr)bytes.Length, (AllocationType)12288, MemoryProtection.ReadWrite);
             IntPtr zero = IntPtr.Zero;
             IntPtr arg_A8_1 = intPtr;
-            IntPtr intPtr3;
 
 
             if (moduleHandle == IntPtr.Zero || procAddress == IntPtr.Zero || intPtr == IntPtr.Zero)
@@ -236,7 +235,7 @@ namespace tsrvtcnew
             if ((int)zero != bytes.Length)
                 return false;
 
-            IntPtr intPtr2 = CreateRemoteThread(process, IntPtr.Zero, 0u, procAddress, intPtr, 0u, out intPtr3);
+            IntPtr intPtr2 = CreateRemoteThread(process, IntPtr.Zero, 0u, procAddress, intPtr, 0u, out IntPtr intPtr3);
             if (intPtr2 == IntPtr.Zero)
                 return false;
 

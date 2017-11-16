@@ -156,16 +156,6 @@ namespace tsrvtcnew.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cin_bg {
-            get {
-                object obj = ResourceManager.GetObject("cin_bg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap createdfor_img {
             get {
                 object obj = ResourceManager.GetObject("createdfor_img", resourceCulture);
@@ -346,16 +336,6 @@ namespace tsrvtcnew.Properties {
         internal static System.Drawing.Bitmap pp6 {
             get {
                 object obj = ResourceManager.GetObject("pp6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap save_icon {
-            get {
-                object obj = ResourceManager.GetObject("save_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

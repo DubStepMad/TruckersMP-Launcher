@@ -4,14 +4,31 @@ using System.Net;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace tsrvtcnew
 {
-    class tmppdate
+    class Tmppdate
     {
-        public static void integrityCheck()
+        protected static string MD5(string fileName)
         {
-           /* JArray liveFiles = new JArray();
+            FileStream file = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] retVal = md5.ComputeHash(file);
+            file.Close();
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < retVal.Length; i++)
+            {
+                sb.Append(retVal[i].ToString("x2"));
+            }
+            return sb.ToString();
+        }
+
+        public static void IntegrityCheck()
+        {
+
+            JArray liveFiles = new JArray();
             Dictionary<string, string> localFiles = new Dictionary<string, string>();
             List<string> mismatchedFiles = new List<string>();
 
@@ -33,7 +50,7 @@ namespace tsrvtcnew
 
             try
             {
-                var files = System.IO.Directory.GetFiles(Properties.Settings.Default.launcherpath, "*.*", System.IO.SearchOption.AllDirectories);
+                var files = Directory.GetFiles(Properties.Settings.Default.launcherpath, "*.*", System.IO.SearchOption.AllDirectories);
                 foreach (var file in files)
                 {
                     FileInfo info = new FileInfo(file);
@@ -62,18 +79,9 @@ namespace tsrvtcnew
                         mismatchedFiles.Add(filePath);
                         continue;
                     }
-
-                    string localHash = localFiles[filePath];
-
-                    if (!(filePath.Contains("ui") || filePath.Contains("fonts")))
-                    {
-                        if ((string)file["Md5"] != localHash)
-                            mismatchedFiles.Add(filePath);
-
-                        continue;
-                    }
                     else
                     {
+                        string localHash = localFiles[filePath];
                         string[] s = filePath.Split('.');
                         string backupFile = s[0] + "_backup." + s[1];
 
@@ -103,7 +111,65 @@ namespace tsrvtcnew
             {
                 Console.WriteLine("An error occured comparing files. Cannot check TMP integrity!");
                 return;
-            }*/
+            }
+        }
+        private static void update(List<string> mismatchedFiles, bool runGame = false, String game = "")
+        {
+            try
+            {
+                System.Threading.ThreadPool.QueueUserWorkItem(async delegate
+                {
+                    foreach (var file in mismatchedFiles)
+                    {
+                        string downloadFile = (file.Replace("_backup", "")).Replace("\\", "/");
+                        string[] s = file.Split('\\');
+                        string fileName = s[(s.Length - 1)];
+
+                        if (!Directory.Exists(Properties.Settings.Default.launcherpath))
+                        {
+                            Directory.CreateDirectory(Properties.Settings.Default.launcherpath);
+                        }
+
+                        if (s.Length == 3)
+                        {
+                            if (!Directory.Exists(Properties.Settings.Default.launcherpath + "\\" + s[1]))
+                                Directory.CreateDirectory(Properties.Settings.Default.launcherpath + "\\" + s[1]);
+                        }
+
+                        if (s.Length == 4)
+                        {
+                            if (!Directory.Exists(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2]))
+                                Directory.CreateDirectory(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2]);
+                        }
+
+                        if (s.Length == 5)
+                        {
+                            if (!Directory.Exists(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2] + "\\" + s[3]))
+                                Directory.CreateDirectory(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2] + "\\" + s[3]);
+                        }
+
+                        if (s.Length == 6)
+                        {
+                            if (!Directory.Exists(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2] + "\\" + s[3] + "\\" + s[4]))
+                                Directory.CreateDirectory(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2] + "\\" + s[3] + "\\" + s[4]);
+                        }
+
+                        using (WebClient downloadClient = new WebClient())
+                        {
+                            downloadClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(delegate (object sender, DownloadProgressChangedEventArgs e)
+                            {
+                            });
+
+                            await downloadClient.DownloadFileTaskAsync(new Uri("http://download.ets2mp.com/files" + downloadFile), Properties.Settings.Default.launcherpath + file);
+                        }
+                    }
+                });
+            }
+            catch (Exception a)
+            {
+                string error = a.ToString();
+                Loghandling.Logerror(error);
+            }
         }
     }
 }

@@ -24,58 +24,55 @@ namespace tsrvtcnew
 
         public const int MYACTION_HOTKEY_ID = 1;
 
+        //variables
         public static int timeconvert;
         public static bool setbusy = false;
         public static string Check = "";
         public static bool calc_check;
-        public bool filecheck = false;
-
-
+        public bool filecheck = false; //checks for updater.exe
 
         public Form1()
         {
             InitializeComponent();
 
             this.bw = new BackgroundWorker();
-            this.bw.DoWork += new DoWorkEventHandler(bw_DoWork);
-            this.bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw_RunWorkerCompleted);
+            this.bw.DoWork += new DoWorkEventHandler(Bw_DoWork);
+            this.bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Bw_RunWorkerCompleted);
 
             txtmessage.Text = Properties.Settings.Default.message;
 
-            // Modifier keys codes: Alt = 1, Ctrl = 2, Shift = 4, Win = 8
-            // Compute the addition of each combination of the keys you want to be pressed
-            // ALT+CTRL = 1 + 2 = 3 , CTRL+SHIFT = 2 + 4 = 6...
+            //Ctrl + Y modifier
             RegisterHotKey(this.Handle, MYACTION_HOTKEY_ID, 2, (int)Keys.Y);
         }
 
-        private void Form1_Load(object sender, System.EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.agreed == false)
             {
-                tc tc = new tsrvtcnew.tc();
+                tc tc = new tc();
                 tc.ShowDialog();
             }
 
             Properties.Settings.Default.ccpanelcheck = false;
             Properties.Settings.Default.Save();
 
-            //Preparing for auto updates.
-            string updaterFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            //checks for updater.exe, needed to be a seperate program for performance reasons
+            string updaterFile = (new Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
             string updaterDir = Path.GetDirectoryName(updaterFile);
             string fullPath = Path.Combine(updaterDir, "updater.exe");
 
             if (!File.Exists(Path.Combine(updaterDir, "updater.exe")))
             {
-                string error = "Updater.exe not located";
+                string error = "Updater.exe not located, re-install program!";
                 Loghandling.Logerror(error);
-                errorsound();
+                Errorsound();
                 filecheck = false;
             }
-            if (File.Exists(Path.Combine(updaterDir, "updater.exe")))
+            else if (File.Exists(Path.Combine(updaterDir, "updater.exe")))
             {
                 filecheck = true;
             }
-            if (fullPath != null && filecheck == true)
+            else if (fullPath != null && filecheck == true)
             {
                 Process.Start(@"updater");
             }
@@ -85,62 +82,71 @@ namespace tsrvtcnew
             }
         }
 
+        //creates new thread to run the looped process, this also has a few important checks
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == 0x0312 && m.WParam.ToInt32() == MYACTION_HOTKEY_ID && Properties.Settings.Default.ccpanelcheck == false)
             {
                 Clipboard.SetText(txtmessage.Text);
 
-                Thread.Sleep(1000);
+                Thread.Sleep(1000); // sleep needed to allow time to copy text from text box otherwise it won't
 
-                if (!bw.IsBusy && setbusy == false)
+                if (!bw.IsBusy && setbusy == false) //2 flags needed since both need to come back false
                 {
-                    goodsound();
+                    Goodsound();
                     this.bw.RunWorkerAsync();
                     this.bw.WorkerSupportsCancellation = true;
                 }
-                if (setbusy == true)
+                else if (setbusy == true) //checks only one variable is true, bw.Isbusy could be checked if true too
                 {
                     setbusy = false;
                     this.bw.CancelAsync();
-                    truckhorn();
+                    Truckhorn();
                     return;
                 }
-                if (timeconvert <= 0 )
+                else if (timeconvert <= 0 ) //check to make sure the time entered does not equal 0 and cause spamming in-game chat
                 {
                     setbusy = false;
                     this.bw.CancelAsync();
-                    truckhorn();
+                    Truckhorn();
                     MessageBox.Show("Please enter a number into the timer field above 0!");
                     return;
+                }
+                else
+                {
+                    MessageBox.Show("Something I was too drunk to bother handling as an error");
+                    Environment.Exit(1);
                 }
             }
             base.WndProc(ref m);
         }
 
-        private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        //method called when the background worker needs to be cancelled correctly without a dead end stop
+        private void Bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             setbusy = false;
             this.bw.CancelAsync();
         }
 
-        private void bw_DoWork(object sender, DoWorkEventArgs e)
+        //method called within to start the new thread and compelte the task
+        private void Bw_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker worker = (BackgroundWorker)sender;
             for (int i = 0; i < 100; ++i)
             {
-                if (worker.CancellationPending == true)
+                if (worker.CancellationPending == true) //check to see if the background worker is already active
                 {
                     e.Cancel = true;
                     break;
                 }
                 else
                 {
-                    timer.calculate(); //Keyboard input and custom wait delay
+                    Timer.Calculate(); //Keyboard input and custom wait delay
                 }
             }
         }
 
+        //allows the form to be moved
         private void Form1_MouseDown(object sender,
         MouseEventArgs e)
         {
@@ -154,7 +160,7 @@ namespace tsrvtcnew
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
-        public bool start_message { get; private set; }
+        public bool Start_message { get; private set; }
 
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd,
@@ -162,30 +168,30 @@ namespace tsrvtcnew
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void btnltmp_Click(object sender, EventArgs e)
+        private void Btnltmp_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.replacegui == true)
             {
-                gui_replace();
+                Gui_replace();
             }
 
             RegistryCheck.Read();
         }
 
-        public static void gui_replace()
+        public static void Gui_replace()
         {
             string SourcePath = (Properties.Settings.Default.datapath);
             string DesPath = ("C:/ProgramData/TruckersMP");
 
             //gets application directory
-            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeFile = (new Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
             string exeDir = Path.GetDirectoryName(exeFile);
             string finalPath = Path.Combine(exeDir, "custom gui");
 
             if (finalPath == null)
             {
                 MessageBox.Show("Application must be ran as an Administrator!");
-                errorsound();
+                Errorsound();
                 return;
             }
 
@@ -196,122 +202,122 @@ namespace tsrvtcnew
             foreach (String newPath in Directory.GetFiles(SourcePath, "*.*",
                     SearchOption.AllDirectories))
                 File.Copy(newPath, DesPath + newPath.Remove(0, SourcePath.Length), true);
-            goodsound();
+            Goodsound();
             return;
         }
 
         //small button functions
         //button hover overs and resets
-        private void btnhelp_Click(object sender, EventArgs e)
+        private void Btnhelp_Click(object sender, EventArgs e)
         {
-            Help hp = new tsrvtcnew.Help();
+            Help hp = new Help();
             hp.ShowDialog();
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
-            settings ss = new tsrvtcnew.settings();
+            Settings ss = new Settings();
             ss.ShowDialog();
         }
-        private void btnfb_Click(object sender, EventArgs e)
+        private void Btnfb_Click(object sender, EventArgs e)
         {
             Process.Start("www.facebook.com/TSRVTC/");
         }
-        private void btndiscord_Click(object sender, EventArgs e)
+        private void Btndiscord_Click(object sender, EventArgs e)
         {
             Process.Start("https://discord.gg/VXzCurC");
         }
-        private void btn_pp_Click(object sender, EventArgs e)
+        private void Btn_pp_Click(object sender, EventArgs e)
         {
             Process.Start("https://www.paypal.me/ConnorNee97");
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        private void button1_Leave(object sender, EventArgs e)
+        private void Button1_Leave(object sender, EventArgs e)
         {
             this.button1.BackgroundImage = ((Image)(Properties.Resources.leave_img));
         }
-        void button1_MouseMove(object sender, MouseEventArgs e)
+        void Button1_MouseMove(object sender, MouseEventArgs e)
         {
             this.button1.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
         }
-        private void btnmini_Click(object sender, EventArgs e)
+        private void Btnmini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        private void btnmini_Leave(object sender, EventArgs e)
+        private void Btnmini_Leave(object sender, EventArgs e)
         {
             this.btnmini.BackgroundImage = ((Image)(Properties.Resources.leave_img));
         }
-        void btnmini_MouseMove(object sender, MouseEventArgs e)
+        void Btnmini_MouseMove(object sender, MouseEventArgs e)
         {
             this.btnmini.BackgroundImage = ((Image)(Properties.Resources.line_icon));
         }
-        private void button_MouseMove(object sender, MouseEventArgs e)
+        private void Button_MouseMove(object sender, MouseEventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
 
             button.BackgroundImage = ((Image)(Properties.Resources.hover_img));
         }
-        private void button_Leave(object sender, EventArgs e)
+        private void Button_Leave(object sender, EventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
 
             button.BackgroundImage = ((Image)(Properties.Resources.leave_img));
         }
-        private void btnccpanel_MouseMove(object sender, MouseEventArgs e)
+        private void Btnccpanel_MouseMove(object sender, MouseEventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
 
             button.Image = ((Image)(Properties.Resources.ccpanel_icon_h));
         }
-        private void btnccpanel_Leave(object sender, EventArgs e)
+        private void Btnccpanel_Leave(object sender, EventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
 
             button.Image = ((Image)(Properties.Resources.ccpanel_icon));
         }
-        private void btnhelp_MouseMove(object sender, MouseEventArgs e)
+        private void Btnhelp_MouseMove(object sender, MouseEventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
 
             button.BackgroundImage = ((Image)(Properties.Resources.help_icon_h));
         }
-        private void btnhelp_Leave(object sender, EventArgs e)
+        private void Btnhelp_Leave(object sender, EventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
 
             button.BackgroundImage = ((Image)(Properties.Resources.help_icon));
         }
-        private void btnfb_MouseMove(object sender, MouseEventArgs e)
+        private void Btnfb_MouseMove(object sender, MouseEventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
 
             button.Image = ((Image)(Properties.Resources.fb_icon_h));
         }
-        private void btnfb_Leave(object sender, EventArgs e)
+        private void Btnfb_Leave(object sender, EventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
 
             button.Image = ((Image)(Properties.Resources.fb_icon));
         }
-        private void btnsettings_MouseMove(object sender, MouseEventArgs e)
+        private void Btnsettings_MouseMove(object sender, MouseEventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
 
             button.BackgroundImage = ((Image)(Properties.Resources.settings_icon_h));
         }
-        private void btnsettings_Leave(object sender, EventArgs e)
+        private void Btnsettings_Leave(object sender, EventArgs e)
         {
             var button = sender as Button;
             if (button == null) return;
@@ -320,64 +326,64 @@ namespace tsrvtcnew
         }
 
         //audio for events
-        public static void goodsound()
+        public static void Goodsound()
         {
-            SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.good); //sound for process completed
+            SoundPlayer audio = new SoundPlayer(Properties.Resources.good); //sound for process completed
             audio.Play();
         }
-        public static void errorsound()
+        public static void Errorsound()
         {
-            SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.error); //sound for error
+            SoundPlayer audio = new SoundPlayer(Properties.Resources.error); //sound for error
             audio.Play();
         }
-        public static void truckhorn()
+        public static void Truckhorn()
         {
-            SoundPlayer audio = new SoundPlayer(tsrvtcnew.Properties.Resources.truck_horn); //sound for truck horn
+            SoundPlayer audio = new SoundPlayer(Properties.Resources.truck_horn); //sound for truck horn
             audio.Play();
         }
 
-        //timer checks, this must stay false unless user changes through the program
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        //timer checks
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e) //timer in (seconds)
         {
             if (radioButton1.Checked)
             {
                 radioButton2.Checked = false;
-                timer.min = 0;
+                Timer.Min = 0;
                 calc_check = false;
             }
         }
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton2_CheckedChanged(object sender, EventArgs e) //timer in (minutes)
         {
             if (radioButton2.Checked)
             {
                 radioButton1.Checked = false;
-                timer.min = 60;
+                Timer.Min = 60;
                 calc_check = true;
             }
         }
 
         //opens cconvoy control panel... 
-        private void btnccpanel_Click(object sender, EventArgs e)
+        private void Btnccpanel_Click(object sender, EventArgs e)
         {
             ccpanel newf = new ccpanel();
             newf.Show();
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void txttime_TextChanged(object sender, EventArgs e)
+        private void Txttime_TextChanged(object sender, EventArgs e)
         {
             timeconvert = Int32.Parse(txttime.Text);                //changed from having a set button to it being automatically updated
         }
 
-        private void txtmessage_TextChanged(object sender, EventArgs e)
+        private void Txtmessage_TextChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.message = txtmessage.Text;      //changed from having a save button to it being automatically updated
             Properties.Settings.Default.Save();
         }
 
-        private void picbcreatedfor_Click(object sender, EventArgs e)
+        private void Btn_dev_Click(object sender, EventArgs e)
         {
-
+            Tmppdate.IntegrityCheck();
         }
     }
 }
