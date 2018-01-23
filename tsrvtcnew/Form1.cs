@@ -29,7 +29,6 @@ namespace tsrvtcnew
         public static bool setbusy = false;
         public static string Check = "";
         public static bool calc_check;
-        public bool filecheck = false; //checks for updater.exe
 
         public Form1()
         {
@@ -53,6 +52,8 @@ namespace tsrvtcnew
                 tc.ShowDialog();
             }
 
+            Tmppdate.IntegrityCheck();
+
             Properties.Settings.Default.ccpanelcheck = false;
             Properties.Settings.Default.Save();
 
@@ -61,24 +62,21 @@ namespace tsrvtcnew
             string updaterDir = Path.GetDirectoryName(updaterFile);
             string fullPath = Path.Combine(updaterDir, "updater.exe");
 
-            if (!File.Exists(Path.Combine(updaterDir, "updater.exe")))
+            if (!File.Exists(fullPath))
             {
                 string error = "Updater.exe not located, re-install program!";
                 Loghandling.Logerror(error);
                 Errorsound();
-                filecheck = false;
             }
-            else if (File.Exists(Path.Combine(updaterDir, "updater.exe")))
+            else if (File.Exists(Path.Combine(updaterDir, "updater.exe")) && fullPath != null)
             {
-                filecheck = true;
-            }
-            else if (fullPath != null && filecheck == true)
-            {
-                Process.Start(@"updater");
+                Process.Start(@"updater.exe");
             }
             else
             {
-                Application.Exit();
+                string error = "Error reading paths!!";
+                Loghandling.Logerror(error);
+                Errorsound();
             }
         }
 
@@ -379,11 +377,6 @@ namespace tsrvtcnew
         {
             Properties.Settings.Default.message = txtmessage.Text;      //changed from having a save button to it being automatically updated
             Properties.Settings.Default.Save();
-        }
-
-        private void Btn_dev_Click(object sender, EventArgs e)
-        {
-            Tmppdate.IntegrityCheck();
         }
     }
 }

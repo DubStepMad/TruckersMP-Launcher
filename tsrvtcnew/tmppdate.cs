@@ -32,7 +32,7 @@ namespace tsrvtcnew
             Dictionary<string, string> localFiles = new Dictionary<string, string>();
             List<string> mismatchedFiles = new List<string>();
 
-            using (System.Net.WebClient client = new WebClient())
+            using (WebClient client = new WebClient())
             {
                 try
                 {
@@ -50,7 +50,7 @@ namespace tsrvtcnew
 
             try
             {
-                var files = Directory.GetFiles(Properties.Settings.Default.launcherpath, "*.*", System.IO.SearchOption.AllDirectories);
+                var files = Directory.GetFiles(Properties.Settings.Default.launcherpath, "*.*", SearchOption.AllDirectories);
                 foreach (var file in files)
                 {
                     FileInfo info = new FileInfo(file);
@@ -101,10 +101,7 @@ namespace tsrvtcnew
 
                             continue;
                         }
-
                     }
-
-
                 }
             }
             catch
@@ -112,8 +109,10 @@ namespace tsrvtcnew
                 Console.WriteLine("An error occured comparing files. Cannot check TMP integrity!");
                 return;
             }
+            Update(mismatchedFiles);
         }
-        private static void update(List<string> mismatchedFiles, bool runGame = false, String game = "")
+
+        private static void Update(List<string> mismatchedFiles)
         {
             try
             {

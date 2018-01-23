@@ -46,7 +46,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.btnccpanel = new System.Windows.Forms.Button();
             this.btnltmp = new System.Windows.Forms.Button();
-            this.Btn_dev = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picbauthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbcreatedfor)).BeginInit();
             this.SuspendLayout();
@@ -230,24 +229,11 @@
             this.btnltmp.UseVisualStyleBackColor = true;
             this.btnltmp.Click += new System.EventHandler(this.Btnltmp_Click);
             // 
-            // Btn_dev
-            // 
-            this.Btn_dev.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.Btn_dev, "Btn_dev");
-            this.Btn_dev.FlatAppearance.BorderSize = 0;
-            this.Btn_dev.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Btn_dev.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Btn_dev.Image = global::tsrvtcnew.Properties.Resources.settings_img;
-            this.Btn_dev.Name = "Btn_dev";
-            this.Btn_dev.UseVisualStyleBackColor = false;
-            this.Btn_dev.Click += new System.EventHandler(this.Btn_dev_Click);
-            // 
             // Form1
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Btn_dev);
             this.Controls.Add(this.btnltmp);
             this.Controls.Add(this.btnccpanel);
             this.Controls.Add(this.radioButton2);
@@ -297,7 +283,6 @@
         public System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button btnccpanel;
         private System.Windows.Forms.Button btnltmp;
-        private System.Windows.Forms.Button Btn_dev;
     }
 }
 

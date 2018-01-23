@@ -222,8 +222,8 @@
             this.richTextBox4.Size = new System.Drawing.Size(492, 155);
             this.richTextBox4.TabIndex = 27;
             this.richTextBox4.TabStop = false;
-            this.richTextBox4.Text = "Changes:\n\n*Performance Improvements\n\n*Removed useless code\n\n*Custom error logging" +
-    "\n\n*Fix for permantly ticked TrucksBook button";
+            this.richTextBox4.Text = "Changes:\n\n*Performance Improvements\n\n*Auto update is back and working!\n\n*Auto upd" +
+    "ate of TMP files introduced\n\n*GUI re-design";
             // 
             // btn_help_exit
             // 

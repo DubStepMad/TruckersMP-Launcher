@@ -8,16 +8,16 @@ using System.Windows.Forms;
 
 namespace updater
 {
-    class updatehandle
+    class Updatehandle
     {
         //FTP related variables
-        public static  string _ftpURL = "ftp://ts3rgc.com";             //Host URL or address of the FTP server
-        public static string _UserName = "dub";                 //User Name of the FTP server
-        public static string _Password = "tsrvtc";              //Password of the FTP server
+        public static  string _ftpURL = "ftp://ftp.tsrvtc.com";        //Host URL or address of the FTP server
+        public static string _UserName = "launcher@tsrvtc.com";         //User Name of the FTP server
+        public static string _Password = "TSRVTC23012017";              //Password of the FTP server
         public static string _ftpDirectory = "updatecheck";          //The directory in FTP server where the files are present
-        public static string _ftpupdateDirectory = "files";
-        public static string _FileName = "updatecheck.txt";             //File name, which one will be downloaded
-        public static string _updateFile = "TSR-VTC.exe";
+        public static string _ftpupdateDirectory = "files";          //The directory in FTP server where the updated files are present
+        public static string _FileName = "updatecheck.txt";          //File name which checks the current version
+        public static string _updateFile = "TSR-VTC.exe";            //The updated file name
 
         //checks
         public static bool ftpCheck = false;
@@ -30,7 +30,7 @@ namespace updater
 
         public static void Run()
         {
-                string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+                string exeFile = (new Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
                 string updatecheckfile = Path.GetDirectoryName(exeFile);
 
                 string _LocalDirectory = updatecheckfile;  //Local directory where the files will be downloaded
@@ -65,7 +65,7 @@ namespace updater
             {
                 string error = ex.ToString();
                 Loghandling.Logerror(error);
-                return;
+                Application.Exit();
             }
 
             Filecheck();
@@ -119,26 +119,35 @@ namespace updater
                         }
                         else
                         {
-                            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+                            string exeFile = (new Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
                             string updatecheckfile = Path.GetDirectoryName(exeFile);
 
                             string _LocalDirectory = updatecheckfile;  //Local directory where the files will be downloaded
 
-                            DownloadUpdate(_ftpURL, _UserName, _Password, _ftpupdateDirectory, _updateFile, _LocalDirectory);
+                            DownloadUpdate(_ftpURL, _UserName, _Password, _ftpDirectory, _ftpupdateDirectory, _updateFile, _LocalDirectory);
                         }
                     }
+                }
+                else
+                {
+                    string exeFile = (new Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+                    string updatecheckfile = Path.GetDirectoryName(exeFile);
+
+                    string _LocalDirectory = updatecheckfile;  //Local directory where the files will be downloaded
+
+                    DownloadUpdate(_ftpURL, _UserName, _Password, _ftpDirectory, _ftpupdateDirectory, _updateFile, _LocalDirectory);
                 }
             }
         }
 
-        public static void DownloadUpdate(string ftpURL, string UserName, string Password, string ftpupdateDirectory, string updateFile, string LocalDirectory)
+        public static void DownloadUpdate(string ftpURL, string UserName, string Password, string ftpDirectory,  string ftpupdateDirectory, string updateFile, string LocalDirectory)
         {
             Form1.flag = true;
 
             Form1.Form1_Load1();
             try
             {
-                FtpWebRequest requestFileDownload = (FtpWebRequest)WebRequest.Create(ftpURL + "/" + ftpupdateDirectory + "/" + updateFile);
+                FtpWebRequest requestFileDownload = (FtpWebRequest)WebRequest.Create(ftpURL + "/" + ftpDirectory + "/" + ftpupdateDirectory + "/" + updateFile);
                 requestFileDownload.Credentials = new NetworkCredential(UserName, Password);
                 requestFileDownload.Method = WebRequestMethods.Ftp.DownloadFile;
                 FtpWebResponse responseFileDownload = (FtpWebResponse)requestFileDownload.GetResponse();
@@ -170,6 +179,7 @@ namespace updater
             {
                 Form1.Form1_Load1();
                 Process.Start("cmd.exe", "/c taskkill /F /IM tsrvtgui.exe");
+                Application.Exit();
             }
             catch (Exception ex)
             {
