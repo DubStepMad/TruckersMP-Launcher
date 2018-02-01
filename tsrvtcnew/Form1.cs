@@ -52,7 +52,7 @@ namespace tsrvtcnew
                 tc.ShowDialog();
             }
 
-            Tmppdate.IntegrityCheck();
+            /*Tmppdate.IntegrityCheck();*/
 
             Properties.Settings.Default.ccpanelcheck = false;
             Properties.Settings.Default.Save();
