@@ -82,15 +82,6 @@ namespace tsrvtcnew
             }
         }
 
-        private void Btnclose_Leave(object sender, EventArgs e)
-        {
-            this.btnclose.BackgroundImage = ((Image)(Properties.Resources.leave_img));
-        }
-        void Btnclose_MouseMove(object sender, MouseEventArgs e)
-        {
-            this.btnclose.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
-        }
-
         private void Cb_tb_CheckedChanged(object sender, EventArgs e)
         {
             if (cb_tb.Checked == true)

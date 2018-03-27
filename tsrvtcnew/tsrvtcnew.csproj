@@ -107,6 +107,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\DubStepMad\Downloads\CefSharp51_x32\CefSharp.WinForms.dll</HintPath>
     </Reference>
+    <Reference Include="Devart.Data.Linq, Version=4.8.1423.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\DubStepMad\Desktop\TruckersMP-Launcher-0.17-alpha\Source\lib\Newtonsoft.Json.dll</HintPath>
@@ -114,6 +116,8 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -131,12 +135,6 @@
     </Compile>
     <Compile Include="ccpanel.Designer.cs">
       <DependentUpon>ccpanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ccpEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ccpEdit.Designer.cs">
-      <DependentUpon>ccpEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -177,9 +175,6 @@
     <Compile Include="tmppdate.cs" />
     <EmbeddedResource Include="ccpanel.resx">
       <DependentUpon>ccpanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ccpEdit.resx">
-      <DependentUpon>ccpEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.en.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -238,7 +233,10 @@
   <ItemGroup>
     <Content Include="4_TSRLogo2.ico" />
     <Content Include="9dSsQy0.ico" />
-    <AdditionalFiles Include="lib\Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="lib\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\terms1.txt" />
     <None Include="Resources\ccpanel.png" />
     <None Include="bin\Debug\ccpoints.txt" />
     <None Include="Resources\fb_icon-h.png" />

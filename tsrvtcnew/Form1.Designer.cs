@@ -39,13 +39,12 @@
             this.picbcreatedfor = new System.Windows.Forms.PictureBox();
             this.btnmini = new System.Windows.Forms.Button();
             this.btn_pp = new System.Windows.Forms.Button();
-            this.txttime = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.btnccpanel = new System.Windows.Forms.Button();
             this.btnltmp = new System.Windows.Forms.Button();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.picbauthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbcreatedfor)).BeginInit();
             this.SuspendLayout();
@@ -161,19 +160,6 @@
             this.btn_pp.MouseLeave += new System.EventHandler(this.Button_Leave);
             this.btn_pp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Button_MouseMove);
             // 
-            // txttime
-            // 
-            resources.ApplyResources(this.txttime, "txttime");
-            this.txttime.Name = "txttime";
-            this.txttime.TextChanged += new System.EventHandler(this.Txttime_TextChanged);
-            // 
-            // textBox1
-            // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -229,18 +215,27 @@
             this.btnltmp.UseVisualStyleBackColor = true;
             this.btnltmp.Click += new System.EventHandler(this.Btnltmp_Click);
             // 
+            // radioButton3
+            // 
+            resources.ApplyResources(this.radioButton3, "radioButton3");
+            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton3.ForeColor = System.Drawing.Color.Black;
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.TabStop = true;
+            this.radioButton3.UseVisualStyleBackColor = false;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.btnltmp);
             this.Controls.Add(this.btnccpanel);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txttime);
             this.Controls.Add(this.btn_pp);
             this.Controls.Add(this.btnmini);
             this.Controls.Add(this.picbcreatedfor);
@@ -275,14 +270,13 @@
         private System.Windows.Forms.PictureBox picbcreatedfor;
 		private System.Windows.Forms.Button btnmini;
         private System.Windows.Forms.Button btn_pp;
-        private System.Windows.Forms.TextBox txttime;
-        private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.TextBox txtmessage;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.RadioButton radioButton1;
         public System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button btnccpanel;
         private System.Windows.Forms.Button btnltmp;
+        public System.Windows.Forms.RadioButton radioButton3;
     }
 }
 

@@ -130,13 +130,11 @@
   <data name="richTextBox3.Text" xml:space="preserve">
     <value>To get the Anti-AFK working follow these simple steps:
 
-[1] Type your message into the message box.
-[2] Select the time you wish to have 'Seconds' or 'Minutes.
-[3] Enter a time delay you wish to use. 
-[4] Once in-game, press Y to open the chat and then hold Left-Ctrl + Y to start the the feature.
-[5] To stop, press Y to open chat and hold Left-Ctrl and Y again.
+[1] Tick AFK button.
+[2] Once in-game, press Y to open the chat and then hold Left-Ctrl + Y to start the the feature.
+[3] To stop, press Y to open chat and hold Left-Ctrl and Y again.
 
-                                                  *Wait 1 minute before starting again*
+                                                  *Wait a few minutes before starting again*
                                                  *You can not Alt-Tab out of the game*</value>
   </data>
   <data name="richTextBox1.Text" xml:space="preserve">
@@ -148,6 +146,27 @@
 
                                         To modify the GUI, go into the settings and click 'Edit'. 
                                            Change the images but keep the same file names.</value>
+  </data>
+  <data name="richTextBox5.Text" xml:space="preserve">
+    <value>To get the Advertisement working follow these simple steps:
+
+[1] Tick Advertisement button.
+[2] Once in-game, press Y to open the chat and then hold Left-Ctrl + Y to start the the feature.
+[3] To stop, press Y to open chat and hold Left-Ctrl and Y again.
+
+                                                  *Wait a few minutes before starting again*
+                                                 *You can not Alt-Tab out of the game*</value>
+  </data>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value>To get the Custom Message working follow these simple steps:
+
+[1] Tick Advertisement button.
+[2] Type message into the box.
+[3] Once in-game, press Y to open the chat and then hold Left-Ctrl + Y to start the the feature.
+[4] To stop, press Y to open chat and hold Left-Ctrl and Y again.
+
+                                                  *Wait a few minutes before starting again*
+                                                 *You can not Alt-Tab out of the game*</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -34,18 +34,6 @@ namespace tsrvtcnew
             this.Close();
         }
 
-        //transparent background for when the user leaves the hovering button
-        private void Btn_help_exit_Leave(object sender, EventArgs e)
-        {
-            this.btn_help_exit.BackgroundImage = Properties.Resources.leave_img;
-        }
-
-        //hover-over image for basic buttons
-        void Btn_help_exit_MouseMove(object sender, MouseEventArgs e)
-        {
-            this.btn_help_exit.BackgroundImage = Properties.Resources.cross_hover;
-        }
-
         //tutorial button controls
         private void Btnhelpvids_Click(object sender, EventArgs e)
         {

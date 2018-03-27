@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Drawing;
-using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Threading;
 using System.ComponentModel;
-using System.Linq;
-using System.Diagnostics;
+using MySql.Data.MySqlClient;
 
 namespace tsrvtcnew
 {
@@ -34,47 +32,46 @@ namespace tsrvtcnew
             this.bw.DoWork += new DoWorkEventHandler(Bw_DoWork);
             this.bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(Bw_RunWorkerCompleted);
             RegisterHotKey(this.Handle, ccpanel_hotmey_ID, 4, (int)Keys.Y);
+
         }
 
         private void Ccpanel_Load(object sender, EventArgs e)
         {
             Properties.Settings.Default.ccpanelcheck = true;
             Properties.Settings.Default.Save();
-
-            Filesearch();
         }
 
-        private void Filesearch()
+        private void LoadDataBaseValue(string point)
         {
-            var matches = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Euro Truck Simulator 2/profiles", "ccpoints.txt", SearchOption.AllDirectories);
-            var ccdir = matches.Take(1);
-            foreach (var myscore in ccdir)
+            try
             {
-                string myresult = myscore.ToString();
-                ccpath = myresult;
+                MySqlConnection connectionMySQL = new MySqlConnection("server=185.44.78.200;uid=tsrvtcco_client;password=PhjMKiZEW0I2oxSFDP;database=tsrvtcco_tsr-vtc;");
+                try
+                {
+                    connectionMySQL.Open();
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM points WHERE uid=" + point, connectionMySQL);
+                    MySqlDataReader rdr = cmd.ExecuteReader();
+                    rdr.Read();
+                    message = rdr.GetString("message");
+                    txtb_message.Text = "**TSRV CONVOY** " + message;
+                    message = txtb_message.Text.ToString();
+                    rdr.Close();
+                    connectionMySQL.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
-            if (matches.Length == 0)
-            {
-                string createpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Euro Truck Simulator 2/profiles";
+            catch (Exception es)
 
-                string filename = Path.Combine(createpath, "ccpoints.txt");
-                if (!File.Exists(filename))
-                    File.WriteAllText(filename, Properties.Resources.ccpoints);
-                Filesearch();
-            }
-            else if (matches.Length == 1)
             {
-                Loadtext();
-            }
-            else if (matches.Length > 1)
-            {
-                string error = "You have more than 1 ccpoints.txt in the profiles folder. \n Remove one from your files folder in the ETS2 folder in Documents!";
-                Loghandling.Logerror(error);
-                this.Close();
+                MessageBox.Show(es.Message);
             }
         }
 
-        private void Loadtext()
+        // Needs to be added to the database
+       /* private void Loadtext()
         {
             string line;
 
@@ -97,7 +94,7 @@ namespace tsrvtcnew
                     txtbrear.Text = message;
                 }
             }
-        }
+        }*/
 
         private void Ccpanel_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -171,26 +168,12 @@ namespace tsrvtcnew
             }
         }
 
-        //radio button passes tag which shortens this code by 49... can't believe I copied this 50 times and this is what it is now
+        //radio button passes tag
         private void AnyRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton radio = (RadioButton)sender;
-            string lineStart = (string)radio.Tag;
-            ReadLineAndDisplayText(lineStart);
-        }
-        private void ReadLineAndDisplayText(string lineStart)
-        {
-            string line;
-
-            StreamReader file = new StreamReader(ccpath);
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.StartsWith(lineStart))
-                {
-                    message = (line.Split(':')[1]);
-                    txtb_message.Text = message;
-                }
-            }
+            string point = (string)radio.Tag;
+            LoadDataBaseValue(point);
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -216,23 +199,6 @@ namespace tsrvtcnew
         void Btnmini_MouseMove(object sender, MouseEventArgs e)
         {
             this.btnmini.BackgroundImage = ((Image)(Properties.Resources.line_icon));
-        }
-
-        private void Vtn_ccp_edit_Click(object sender, EventArgs e)
-        {
-            string path = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-
-            if (path != "")
-            {
-                ccpath = path +  "\\Euro Truck Simulator 2\\profiles";
-                Process.Start("explorer.exe", ccpath);
-                this.Close();
-            }
-            if (path == "")
-            {
-                string error = "Error locating documents folder, try and re-install!";
-                Loghandling.Logerror(error);
-            }
         }
     }
 }

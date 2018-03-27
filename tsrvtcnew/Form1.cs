@@ -52,7 +52,7 @@ namespace tsrvtcnew
                 tc.ShowDialog();
             }
 
-            /*Tmppdate.IntegrityCheck();*/
+            Tmppdate.IntegrityCheck();
 
             Properties.Settings.Default.ccpanelcheck = false;
             Properties.Settings.Default.Save();
@@ -92,28 +92,31 @@ namespace tsrvtcnew
                 if (!bw.IsBusy && setbusy == false) //2 flags needed since both need to come back false
                 {
                     Goodsound();
-                    this.bw.RunWorkerAsync();
-                    this.bw.WorkerSupportsCancellation = true;
+                    setbusy = true;
+                    bw.RunWorkerAsync();
+                    bw.WorkerSupportsCancellation = true;
                 }
-                else if (setbusy == true) //checks only one variable is true, bw.Isbusy could be checked if true too
+                else if (bw.IsBusy && setbusy == true) //checks only one variable is true, bw.Isbusy could be checked if true too
                 {
                     setbusy = false;
-                    this.bw.CancelAsync();
+                    bw.CancelAsync();
                     Truckhorn();
                     return;
                 }
                 else if (timeconvert <= 0 ) //check to make sure the time entered does not equal 0 and cause spamming in-game chat
                 {
                     setbusy = false;
-                    this.bw.CancelAsync();
+                    bw.CancelAsync();
                     Truckhorn();
                     MessageBox.Show("Please enter a number into the timer field above 0!");
                     return;
                 }
                 else
                 {
-                    MessageBox.Show("Something I was too drunk to bother handling as an error");
-                    Environment.Exit(1);
+                    MessageBox.Show("Known issue trying to be fixed, please re-start the application");
+                    string error = "Background Worker Exit Failed!";
+                    Loghandling.Logerror(error);
+                    Errorsound();
                 }
             }
             base.WndProc(ref m);
@@ -132,13 +135,14 @@ namespace tsrvtcnew
             BackgroundWorker worker = (BackgroundWorker)sender;
             for (int i = 0; i < 100; ++i)
             {
-                if (worker.CancellationPending == true) //check to see if the background worker is already active
+                if ((worker.CancellationPending == true)) //check to see if the background worker is already active
                 {
                     e.Cancel = true;
-                    break;
+                    this.bw.CancelAsync();
                 }
                 else
                 {
+
                     Timer.Calculate(); //Keyboard input and custom wait delay
                 }
             }
@@ -345,7 +349,12 @@ namespace tsrvtcnew
         {
             if (radioButton1.Checked)
             {
+                Properties.Settings.Default.message = txtmessage.Text;      //changed from having a save button to it being automatically updated
+                Properties.Settings.Default.Save();
+
                 radioButton2.Checked = false;
+                radioButton3.Checked = false;
+                timeconvert = 5;
                 Timer.Min = 0;
                 calc_check = false;
             }
@@ -354,7 +363,30 @@ namespace tsrvtcnew
         {
             if (radioButton2.Checked)
             {
+                string advertisement = "Looking to join a VTC? Come and join us on DISCORD @ discord.tsrvtc.com  and speak to an examiner!";
+
+                txtmessage.Text = advertisement;
+                Properties.Settings.Default.message = advertisement;      //changed from having a save button to it being automatically updated
+                Properties.Settings.Default.Save();
+
                 radioButton1.Checked = false;
+                radioButton3.Checked = false;
+                timeconvert = 7;
+                Timer.Min = 60;
+                calc_check = true;
+            }
+        }
+        private void RadioButton3_CheckedChanged(object sender, EventArgs e) //timer in (minutes)
+        {
+            if (radioButton3.Checked)
+            {
+                string afk = "/p";
+
+                txtmessage.Text = afk;
+
+                radioButton1.Checked = false;
+                radioButton2.Checked = false;
+                timeconvert = 7;
                 Timer.Min = 60;
                 calc_check = true;
             }
@@ -366,11 +398,6 @@ namespace tsrvtcnew
             ccpanel newf = new ccpanel();
             newf.Show();
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void Txttime_TextChanged(object sender, EventArgs e)
-        {
-            timeconvert = Int32.Parse(txttime.Text);                //changed from having a set button to it being automatically updated
         }
 
         private void Txtmessage_TextChanged(object sender, EventArgs e)
