@@ -52,6 +52,7 @@ namespace tsrvtcnew
                 tc.ShowDialog();
             }
 
+            RegistryCheck.Read();
             Tmppdate.IntegrityCheck();
 
             Properties.Settings.Default.ccpanelcheck = false;
@@ -177,7 +178,7 @@ namespace tsrvtcnew
                 Gui_replace();
             }
 
-            RegistryCheck.Read();
+            GameHandle.Launch();
         }
 
         public static void Gui_replace()

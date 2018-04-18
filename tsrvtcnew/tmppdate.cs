@@ -50,14 +50,14 @@ namespace tsrvtcnew
 
             try
             {
-                var files = Directory.GetFiles(Properties.Settings.Default.launcherpath, "*.*", SearchOption.AllDirectories);
+                var files = Directory.GetFiles("C:/ProgramData/TruckersMP", "*.*", SearchOption.AllDirectories);
                 foreach (var file in files)
                 {
                     FileInfo info = new FileInfo(file);
 
                     string key = info.FullName;
                     var checksum = MD5(key);
-                    key = key.Replace(Properties.Settings.Default.launcherpath, "");
+                    key = key.Replace("C:/ProgramData/TruckersMP", "");
 
                     localFiles.Add(key, checksum);
                     step = step + 1;
@@ -85,9 +85,9 @@ namespace tsrvtcnew
                         string[] s = filePath.Split('.');
                         string backupFile = s[0] + "_backup." + s[1];
 
-                        if (File.Exists(Properties.Settings.Default.launcherpath + backupFile))
+                        if (File.Exists("C:/ProgramData/TruckersMP" + backupFile))
                         {
-                            string backupHash = MD5(Properties.Settings.Default.launcherpath + backupFile);
+                            string backupHash = MD5("C:/ProgramData/TruckersMP" + backupFile);
 
                             if ((string)file["Md5"] != backupHash)
                                 mismatchedFiles.Add(backupFile);
@@ -124,33 +124,33 @@ namespace tsrvtcnew
                         string[] s = file.Split('\\');
                         string fileName = s[(s.Length - 1)];
 
-                        if (!Directory.Exists(Properties.Settings.Default.launcherpath))
+                        if (!Directory.Exists("C:/ProgramData/TruckersMP"))
                         {
-                            Directory.CreateDirectory(Properties.Settings.Default.launcherpath);
+                            Directory.CreateDirectory("C:/ProgramData/TruckersMP");
                         }
 
                         if (s.Length == 3)
                         {
-                            if (!Directory.Exists(Properties.Settings.Default.launcherpath + "\\" + s[1]))
-                                Directory.CreateDirectory(Properties.Settings.Default.launcherpath + "\\" + s[1]);
+                            if (!Directory.Exists("C:/ProgramData/TruckersMP" + "\\" + s[1]))
+                                Directory.CreateDirectory("C:/ProgramData/TruckersMP" + "\\" + s[1]);
                         }
 
                         if (s.Length == 4)
                         {
-                            if (!Directory.Exists(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2]))
-                                Directory.CreateDirectory(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2]);
+                            if (!Directory.Exists("C:/ProgramData/TruckersMP" + "\\" + s[1] + "\\" + s[2]))
+                                Directory.CreateDirectory("C:/ProgramData/TruckersMP" + "\\" + s[1] + "\\" + s[2]);
                         }
 
                         if (s.Length == 5)
                         {
-                            if (!Directory.Exists(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2] + "\\" + s[3]))
-                                Directory.CreateDirectory(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2] + "\\" + s[3]);
+                            if (!Directory.Exists("C:/ProgramData/TruckersMP" + "\\" + s[1] + "\\" + s[2] + "\\" + s[3]))
+                                Directory.CreateDirectory("C:/ProgramData/TruckersMP" + "\\" + s[1] + "\\" + s[2] + "\\" + s[3]);
                         }
 
                         if (s.Length == 6)
                         {
-                            if (!Directory.Exists(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2] + "\\" + s[3] + "\\" + s[4]))
-                                Directory.CreateDirectory(Properties.Settings.Default.launcherpath + "\\" + s[1] + "\\" + s[2] + "\\" + s[3] + "\\" + s[4]);
+                            if (!Directory.Exists("C:/ProgramData/TruckersMP" + "\\" + s[1] + "\\" + s[2] + "\\" + s[3] + "\\" + s[4]))
+                                Directory.CreateDirectory("C:/ProgramData/TruckersMP" + "\\" + s[1] + "\\" + s[2] + "\\" + s[3] + "\\" + s[4]);
                         }
 
                         using (WebClient downloadClient = new WebClient())
@@ -159,7 +159,7 @@ namespace tsrvtcnew
                             {
                             });
 
-                            await downloadClient.DownloadFileTaskAsync(new Uri("http://download.ets2mp.com/files" + downloadFile), Properties.Settings.Default.launcherpath + file);
+                            await downloadClient.DownloadFileTaskAsync(new Uri("http://download.ets2mp.com/files" + downloadFile), "C:/ProgramData/TruckersMP" + file);
                         }
                     }
                 });

@@ -283,8 +283,8 @@
             this.richTextBox4.Size = new System.Drawing.Size(492, 155);
             this.richTextBox4.TabIndex = 27;
             this.richTextBox4.TabStop = false;
-            this.richTextBox4.Text = "Changes:\n\n*Auto update of TMP files fixed and working.\n*Installer for MYSQL Conne" +
-    "cter added.\nTerms and Conditions updated.";
+            this.richTextBox4.Text = "Changes:\n\n*Directory changed for the TMP updates.\n* Code improvements.\n*.EXE name" +
+    " changed.";
             // 
             // Help
             // 

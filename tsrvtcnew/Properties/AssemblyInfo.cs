@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("tsrvtcgui")]
+[assembly: AssemblyTitle("TSR-VTC Custom Launcher")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("TSR-VTC")]
-[assembly: AssemblyProduct("TSR-VTC Launcher")]
-[assembly: AssemblyCopyright("Copyright © 2017 DubStepMad")]
+[assembly: AssemblyProduct("TSR-VTC Custom Launcher")]
+[assembly: AssemblyCopyright("Copyright © 2018 DubStepMad")]
 [assembly: AssemblyTrademark("DSM")]
 [assembly: AssemblyCulture("")]
 

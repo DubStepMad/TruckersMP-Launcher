@@ -374,16 +374,17 @@ namespace tsrvtcnew.Properties {
         ///Contact Email: connoratvirgin@gmail.com
         ///Donate: https://www.paypal.me/ConnorNee97
         ///
-        ///Date Release: 15/07/2017
-        ///Copyright 2017 All Rights Reserved
+        ///First Date Release: 15/07/2017
+        ///Current Date Release: 27/03/2018
+        ///Version: 2.1.1
+        ///
+        ///Copyright 2017 - 2018 All Rights Reserved
         ///
         ///I release this program as free of charge, anyone trying to gain a profit or/and claming as there own will be dealt with lawfully.
         ///You must not do the following:
         ///
-        ///* Modify.
         ///* Re-upload as your own.
-        ///* Redistibute the code without special permission from the author.
-        ///* Redistibute this program to gain a profit [rest of string was truncated]&quot;;.
+        ///* Redistibute the code as is or take large chuncks and cla [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string terms {
             get {
