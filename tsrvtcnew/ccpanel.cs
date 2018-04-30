@@ -45,7 +45,7 @@ namespace tsrvtcnew
         {
             try
             {
-                MySqlConnection connectionMySQL = new MySqlConnection("server=185.44.78.200;uid=tsrvtcco_client;password=PhjMKiZEW0I2oxSFDP;database=tsrvtcco_tsr-vtc;");
+                MySqlConnection connectionMySQL = new MySqlConnection("server=185.44.78.200;uid=senkawol_client;password=PhjMKiZEW0I2oxSFDP;database=senkawol_tsr-vtc;");
                 try
                 {
                     connectionMySQL.Open();

@@ -11,10 +11,10 @@ namespace updater
     class Updatehandle
     {
         //FTP related variables
-        public static  string _ftpURL = "ftp://ftp.tsrvtc.com";        //Host URL or address of the FTP server
+        public static  string _ftpURL = "ftp://ftp.senkawolf.com";        //Host URL or address of the FTP server
         public static string _UserName = "launcher@tsrvtc.com";         //User Name of the FTP server
         public static string _Password = "TSRVTC23012017";              //Password of the FTP server
-        public static string _ftpDirectory = "updatecheck";          //The directory in FTP server where the files are present
+        public static string _ftpDirectory = "othersites/tsrvtc/updatecheck";          //The directory in FTP server where the files are present
         public static string _ftpupdateDirectory = "files";          //The directory in FTP server where the updated files are present
         public static string _FileName = "updatecheck.txt";          //File name which checks the current version
         public static string _updateFile = "TSR-VTC.exe";            //The updated file name
