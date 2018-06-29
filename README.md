@@ -2,7 +2,7 @@
 
 ## Launcher Info
 
-The launcher idea came to me after the TSRVTC wanting many features, yet they were in seperate applications. I assigned myself the task to fulfill what the VTC wanted but with one program.
+The launcher idea came to me after the WTLVTC wanting many features, yet they were in seperate applications. I assigned myself the task to fulfill what the VTC wanted but with one program.
 
 After much thinking and planning, I began to do what I learned in college. I made the GUI of the launcher first and planned out what each function was needed. Now this was a big task for me, I was and still am, new to C# and Winforms but I was so dedicated to achieve my task I began to research many hours on stackoverflow and other resources that I came across. Some people who gave me help were nice and some.. well lets say I wish I never bothered.
 
@@ -13,6 +13,16 @@ As I am the only developer and still new some updates will have fixes and change
 I hope you enjoy using the application/source code for your own use. P.S. read the License agreement!
 
 No help will be given to others who wish to use the source code since I don't have time for it.
+
+## Images
+#Main Menu
+<img src="https://www.senkawolf.com/othersites/dubstepmad/i/uploads/00.09.29-30.06.18.png" alt="Main Menu"/>
+
+#Settings Menu
+<img src="https://www.senkawolf.com/othersites/dubstepmad/i/uploads/00.11.19-30.06.18.png" alt="Main Menu"/>
+
+#Help Menu
+<img src="https://www.senkawolf.com/othersites/dubstepmad/i/uploads/00.10.54-30.06.18.png" alt="Main Menu"/>
 
 ## Donate
 
