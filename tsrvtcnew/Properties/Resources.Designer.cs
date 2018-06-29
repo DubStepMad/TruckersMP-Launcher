@@ -73,19 +73,9 @@ namespace tsrvtcnew.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap banner {
+        internal static System.Drawing.Bitmap black_strip {
             get {
-                object obj = ResourceManager.GetObject("banner", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bgnew {
-            get {
-                object obj = ResourceManager.GetObject("bgnew", resourceCulture);
+                object obj = ResourceManager.GetObject("black_strip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,16 +113,6 @@ namespace tsrvtcnew.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap createdfor_img {
-            get {
-                object obj = ResourceManager.GetObject("createdfor_img", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap cross {
             get {
                 object obj = ResourceManager.GetObject("cross", resourceCulture);
@@ -151,41 +131,11 @@ namespace tsrvtcnew.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dev_icon {
-            get {
-                object obj = ResourceManager.GetObject("dev_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream error {
             get {
                 return ResourceManager.GetStream("error", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap fb_icon {
-            get {
-                object obj = ResourceManager.GetObject("fb_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap fb_icon_h {
-            get {
-                object obj = ResourceManager.GetObject("fb_icon_h", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -224,16 +174,6 @@ namespace tsrvtcnew.Properties {
         internal static System.Drawing.Bitmap helpmenu {
             get {
                 object obj = ResourceManager.GetObject("helpmenu", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap helpmenu_bg {
-            get {
-                object obj = ResourceManager.GetObject("helpmenu_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -300,29 +240,9 @@ namespace tsrvtcnew.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pp6 {
-            get {
-                object obj = ResourceManager.GetObject("pp6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap settings {
             get {
                 object obj = ResourceManager.GetObject("settings", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap settings_bg {
-            get {
-                object obj = ResourceManager.GetObject("settings_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,16 +263,6 @@ namespace tsrvtcnew.Properties {
         internal static System.Drawing.Bitmap settings_icon_h {
             get {
                 object obj = ResourceManager.GetObject("settings_icon_h", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap settings_img {
-            get {
-                object obj = ResourceManager.GetObject("settings_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -398,6 +308,16 @@ namespace tsrvtcnew.Properties {
         internal static System.IO.UnmanagedMemoryStream truck_horn {
             get {
                 return ResourceManager.GetStream("truck_horn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wtl_logo {
+            get {
+                object obj = ResourceManager.GetObject("wtl_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

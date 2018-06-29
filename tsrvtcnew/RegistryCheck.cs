@@ -16,18 +16,19 @@ namespace tsrvtcnew
                     if (key != null)
                     {
                         Properties.Settings.Default.ETS2Location = (string)key.GetValue("InstallLocationETS2");
+                        Properties.Settings.Default.ATSLocation = (string)key.GetValue("InstallLocationATS");
                         Properties.Settings.Default.launcherpath = (string)key.GetValue("InstallDir");
                         Properties.Settings.Default.Save();
 
-                        if (Properties.Settings.Default.ETS2Location != null && Properties.Settings.Default.launcherpath != null)
-                        {
-                            return;
-                        }
-                        else if (Properties.Settings.Default.ETS2Location == null)
+                        if (Properties.Settings.Default.ETS2Location == null)
                         {
                             string error = "Euro Truck Simulator 2 is not installed on this system";
                             Loghandling.Logerror(error);
-                            Environment.Exit(1);
+                        }
+                        if (Properties.Settings.Default.ATSLocation == null)
+                        {
+                            string error = "American Truck Simulator is not installed on this system";
+                            Loghandling.Logerror(error);
                         }
                     }
                     else if (Properties.Settings.Default.launcherpath == null)

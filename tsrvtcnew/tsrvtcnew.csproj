@@ -8,8 +8,8 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>tsrvtcnew</RootNamespace>
-    <AssemblyName>TSR-VTC Launcher</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AssemblyName>WTL-VTC Launcher</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -32,9 +32,10 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -233,13 +234,16 @@
   <ItemGroup>
     <Content Include="4_TSRLogo2.ico" />
     <Content Include="9dSsQy0.ico" />
+    <Content Include="wtl_logo_icon.ico" />
+    <None Include="Resources\wtl_logo.png" />
+    <None Include="Resources\part1.png" />
+    <None Include="Resources\black-strip.png" />
     <EmbeddedResource Include="lib\Newtonsoft.Json.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="Resources\terms1.txt" />
     <None Include="Resources\ccpanel.png" />
     <None Include="bin\Debug\ccpoints.txt" />
-    <None Include="Resources\fb_icon-h.png" />
     <None Include="Resources\help_icon-h.png" />
     <None Include="Resources\settings_icon-h.png" />
     <None Include="Resources\ccpanel_icon-h.png" />
@@ -252,13 +256,11 @@
     <None Include="Resources\notes.png" />
     <None Include="Resources\tab_bg.png" />
     <None Include="Resources\settings_icon.png" />
-    <None Include="Resources\dev_icon.png" />
     <None Include="Resources\changelog.txt" />
     <EmbeddedResource Include="Resources\terms.txt" />
     <None Include="Resources\Webp.net-resizeimage.png" />
     <None Include="Resources\help_icon.png" />
     <None Include="Resources\settings_img.png" />
-    <None Include="Resources\bgnew.jpg" />
     <None Include="Resources\helpmenutext-1.png" />
     <None Include="Resources\helpmenu.png" />
     <None Include="Resources\truck_horn.wav" />
@@ -266,14 +268,11 @@
     <None Include="Resources\sound1.wav" />
     <None Include="Resources\error1.wav" />
     <None Include="Resources\sound1.mp3" />
-    <None Include="Resources\pp6.png" />
     <None Include="Resources\save_icon.png" />
     <None Include="Resources\linebg.png" />
     <None Include="Resources\line_icon.png" />
     <None Include="Resources\cross-512.png" />
     <None Include="Resources\crossbg.png" />
-    <None Include="Resources\banner.png" />
-    <None Include="Resources\createdfor_img.png" />
     <None Include="Resources\author_img.png" />
     <None Include="Resources\16119.png" />
     <None Include="Resources\teamspeak_icon.png" />

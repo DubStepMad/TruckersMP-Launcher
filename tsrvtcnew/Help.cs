@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace tsrvtcnew
@@ -60,6 +61,20 @@ namespace tsrvtcnew
         private void Btn_bf_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://goo.gl/forms/MCuur032uOhz77wM2");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Mouse1_Leave(object sender, EventArgs e)
+        {
+            this.button1.BackgroundImage = ((Image)(Properties.Resources.leave_img));
+        }
+        void Button1_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.button1.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
         }
     }
 }

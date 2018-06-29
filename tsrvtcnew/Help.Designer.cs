@@ -43,8 +43,8 @@
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -52,7 +52,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -61,7 +61,7 @@
             this.pictureBox1.BackgroundImage = global::tsrvtcnew.Properties.Resources.helpmenu;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(181, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(181, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 31);
             this.pictureBox1.TabIndex = 24;
@@ -78,7 +78,7 @@
             this.btnhelpvids.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnhelpvids.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnhelpvids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnhelpvids.Location = new System.Drawing.Point(8, 12);
+            this.btnhelpvids.Location = new System.Drawing.Point(8, 34);
             this.btnhelpvids.Name = "btnhelpvids";
             this.btnhelpvids.Size = new System.Drawing.Size(95, 23);
             this.btnhelpvids.TabIndex = 26;
@@ -98,7 +98,7 @@
             this.btn_bf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_bf.Location = new System.Drawing.Point(372, 12);
+            this.btn_bf.Location = new System.Drawing.Point(372, 34);
             this.btn_bf.Name = "btn_bf";
             this.btn_bf.Size = new System.Drawing.Size(117, 26);
             this.btn_bf.TabIndex = 27;
@@ -197,8 +197,7 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 44);
+            this.tabControl1.Location = new System.Drawing.Point(2, 63);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(500, 154);
@@ -258,33 +257,36 @@
             this.richTextBox6.TabStop = false;
             this.richTextBox6.Text = resources.GetString("richTextBox6.Text");
             // 
-            // tabPage2
+            // button1
             // 
-            this.tabPage2.Controls.Add(this.richTextBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(492, 128);
-            this.tabPage2.TabIndex = 4;
-            this.tabPage2.Text = "Change Log";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::tsrvtcnew.Properties.Resources.cross;
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(479, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(17, 17);
+            this.button1.TabIndex = 48;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.Mouse1_Leave);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseMove);
             // 
-            // richTextBox4
+            // pictureBox2
             // 
-            this.richTextBox4.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richTextBox4.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox4.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.ReadOnly = true;
-            this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox4.ShortcutsEnabled = false;
-            this.richTextBox4.ShowSelectionMargin = true;
-            this.richTextBox4.Size = new System.Drawing.Size(492, 155);
-            this.richTextBox4.TabIndex = 27;
-            this.richTextBox4.TabStop = false;
-            this.richTextBox4.Text = "Changes:\n\n*Directory changed for the TMP updates.\n* Code improvements.\n*.EXE name" +
-    " changed.";
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::tsrvtcnew.Properties.Resources.black_strip;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(501, 22);
+            this.pictureBox2.TabIndex = 49;
+            this.pictureBox2.TabStop = false;
             // 
             // Help
             // 
@@ -292,14 +294,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(525, 205);
+            this.ClientSize = new System.Drawing.Size(501, 224);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_bf);
             this.Controls.Add(this.btnhelpvids);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Help";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -312,7 +316,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,11 +332,11 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.RichTextBox richTextBox5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

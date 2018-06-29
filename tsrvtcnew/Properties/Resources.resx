@@ -130,15 +130,6 @@
   <data name="linebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\linebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dev_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dev_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fb_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\social_facebook_box_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,14 +154,8 @@
   <data name="tab_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tab_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pp6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pp6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="good" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sound1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="createdfor_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\createdfor_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="truck_horn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\truck_horn.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -184,12 +169,6 @@
   <data name="hover_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hover_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bgnew" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bgnew.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ccpanel_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ccpanel_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,22 +178,19 @@
   <data name="help_icon_h" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help_icon-h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings-bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fb_icon_h" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fb_icon-h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="settings_icon_h" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings_icon-h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ccpanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ccpanel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="helpmenu_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\helpmenu-bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\terms1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="black_strip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black-strip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wtl_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wtl_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

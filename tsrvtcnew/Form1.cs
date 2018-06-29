@@ -173,12 +173,44 @@ namespace tsrvtcnew
 
         private void Btnltmp_Click(object sender, EventArgs e)
         {
+            string game = "ETS";
+
             if (Properties.Settings.Default.replacegui == true)
             {
                 Gui_replace();
             }
+            else if (Directory.Exists("C:/ProgramData/TruckersMP/data/ats_mod"))
+            {
+                Directory.Delete("C:/ProgramData/TruckersMP/data/ats_mod", true);
+                Directory.Delete("C:/ProgramData/TruckersMP/data/ets2_mod", true);
+                Directory.Delete("C:/ProgramData/TruckersMP/data/shared_mod", true);
+            }
+            else
+            {
 
-            GameHandle.Launch();
+            }
+            GameHandle.Launch(game);
+        }
+
+        private void btn_ats_Click(object sender, EventArgs e)
+        {
+            string game = "ATS";
+
+            if (Properties.Settings.Default.replacegui == true)
+            {
+                Gui_replace();
+            }
+            else if (Directory.Exists("C:/ProgramData/TruckersMP/data/ats_mod"))
+            {
+                Directory.Delete("C:/ProgramData/TruckersMP/data/ats_mod", true);
+                Directory.Delete("C:/ProgramData/TruckersMP/data/ets2_mod", true);
+                Directory.Delete("C:/ProgramData/TruckersMP/data/shared_mod", true);
+            }
+            else
+            {
+
+            }
+            GameHandle.Launch(game);
         }
 
         public static void Gui_replace()
@@ -223,7 +255,7 @@ namespace tsrvtcnew
         }
         private void Btnfb_Click(object sender, EventArgs e)
         {
-            Process.Start("www.facebook.com/TSRVTC/");
+            Process.Start("www.wtlvtc.com");
         }
         private void Btndiscord_Click(object sender, EventArgs e)
         {
@@ -298,20 +330,6 @@ namespace tsrvtcnew
             if (button == null) return;
 
             button.BackgroundImage = ((Image)(Properties.Resources.help_icon));
-        }
-        private void Btnfb_MouseMove(object sender, MouseEventArgs e)
-        {
-            var button = sender as Button;
-            if (button == null) return;
-
-            button.Image = ((Image)(Properties.Resources.fb_icon_h));
-        }
-        private void Btnfb_Leave(object sender, EventArgs e)
-        {
-            var button = sender as Button;
-            if (button == null) return;
-
-            button.Image = ((Image)(Properties.Resources.fb_icon));
         }
         private void Btnsettings_MouseMove(object sender, MouseEventArgs e)
         {
@@ -405,6 +423,11 @@ namespace tsrvtcnew
         {
             Properties.Settings.Default.message = txtmessage.Text;      //changed from having a save button to it being automatically updated
             Properties.Settings.Default.Save();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

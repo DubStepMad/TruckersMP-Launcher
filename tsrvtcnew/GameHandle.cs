@@ -107,11 +107,13 @@ namespace tsrvtcnew
             Release = 32768
         }
 
-        public static bool Launch()
+        public static bool Launch(string game)
         {
             if (Process.GetProcessesByName("Steam").Length == 0)
             {
-                using (var hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
+                bool gamerun = false;
+
+                using (var hklm = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64))
                 using (var steamkey = hklm.OpenSubKey(@"SOFTWARE\Valve\Steam"))
                 if (steamkey != null)
                 {
@@ -119,7 +121,14 @@ namespace tsrvtcnew
                     if (SteamExe != null)
                     {
                         Process.Start(SteamExe);
-                        Thread.Sleep(2000);         //wait is needed to allow steam to update and connect
+                            while (gamerun == false)
+                            {
+                                if(Process.GetProcessesByName("Steam").Length != 0)
+                                {
+                                    gamerun = true;
+                                    Thread.Sleep(40000);
+                                }
+                            }
                     }
                     }
                 else
@@ -137,7 +146,8 @@ namespace tsrvtcnew
                 }
             }
 
-            String gamelocation = Properties.Settings.Default.ETS2Location;
+            String ETSlocation = Properties.Settings.Default.ETS2Location;
+            String ATSlocation = Properties.Settings.Default.ATSLocation;
 
             //allows a user who has trucksbook installed, run it before launching the game and connecting to MP
             if (Properties.Settings.Default.tbchk == true)
@@ -159,7 +169,7 @@ namespace tsrvtcnew
 
             if (Properties.Settings.Default.singleplayer == true)
             {
-                Process.Start(gamelocation + "\\bin\\win_x64\\eurotrucks2.exe");
+                Process.Start(ETSlocation + "\\bin\\win_x64\\eurotrucks2.exe");
                 Environment.Exit(0);
             }
 
@@ -170,14 +180,24 @@ namespace tsrvtcnew
             String mplocation = Properties.Settings.Default.launcherpath;
 
             //Lets get our games straight
-            if (Properties.Settings.Default.ETS2Location !=null)
+            if (game == "ETS")
             {
                 Environment.SetEnvironmentVariable("SteamGameId", "227300");
                 Environment.SetEnvironmentVariable("SteamAppID", "227300");
 
-                binPath = gamelocation + "\\bin\\win_x64";
+                binPath = ETSlocation + "\\bin\\win_x64";
                 exe = "\\eurotrucks2.exe";
                 dll = "\\core_ets2mp.dll";
+                arguments += " -64bit";
+            }
+            else if(game == "ATS")
+            {
+                Environment.SetEnvironmentVariable("SteamGameId", "270880");
+                Environment.SetEnvironmentVariable("SteamAppID", "270880");
+
+                binPath = ATSlocation + "\\bin\\win_x64";
+                exe = "\\amtrucks.exe";
+                dll = "\\core_atsmp.dll";
                 arguments += " -64bit";
             }
             else

@@ -35,18 +35,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtmessage = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.picbauthor = new System.Windows.Forms.PictureBox();
-            this.picbcreatedfor = new System.Windows.Forms.PictureBox();
             this.btnmini = new System.Windows.Forms.Button();
-            this.btn_pp = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.btnccpanel = new System.Windows.Forms.Button();
             this.btnltmp = new System.Windows.Forms.Button();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.picbauthor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbcreatedfor)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_ats = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnhelp
@@ -78,21 +76,19 @@
             this.btnfb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnfb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnfb, "btnfb");
-            this.btnfb.Image = global::tsrvtcnew.Properties.Resources.fb_icon;
+            this.btnfb.Image = global::tsrvtcnew.Properties.Resources.wtl_logo;
             this.btnfb.Name = "btnfb";
             this.btnfb.UseVisualStyleBackColor = false;
             this.btnfb.Click += new System.EventHandler(this.Btnfb_Click);
-            this.btnfb.MouseLeave += new System.EventHandler(this.Btnfb_Leave);
-            this.btnfb.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnfb_MouseMove);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.button1, "button1");
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::tsrvtcnew.Properties.Resources.cross;
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
@@ -113,52 +109,20 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             // 
-            // picbauthor
-            // 
-            this.picbauthor.BackColor = System.Drawing.Color.Transparent;
-            this.picbauthor.BackgroundImage = global::tsrvtcnew.Properties.Resources.author_img;
-            resources.ApplyResources(this.picbauthor, "picbauthor");
-            this.picbauthor.Name = "picbauthor";
-            this.picbauthor.TabStop = false;
-            this.picbauthor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            // 
-            // picbcreatedfor
-            // 
-            this.picbcreatedfor.BackColor = System.Drawing.Color.Transparent;
-            this.picbcreatedfor.BackgroundImage = global::tsrvtcnew.Properties.Resources.createdfor_img;
-            resources.ApplyResources(this.picbcreatedfor, "picbcreatedfor");
-            this.picbcreatedfor.Name = "picbcreatedfor";
-            this.picbcreatedfor.TabStop = false;
-            this.picbcreatedfor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            // 
             // btnmini
             // 
-            this.btnmini.BackColor = System.Drawing.Color.Transparent;
+            this.btnmini.BackColor = System.Drawing.Color.Black;
             this.btnmini.FlatAppearance.BorderSize = 0;
             this.btnmini.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnmini.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnmini, "btnmini");
-            this.btnmini.ForeColor = System.Drawing.Color.Transparent;
+            this.btnmini.ForeColor = System.Drawing.Color.Black;
             this.btnmini.Image = global::tsrvtcnew.Properties.Resources.line_icon;
             this.btnmini.Name = "btnmini";
             this.btnmini.UseVisualStyleBackColor = false;
             this.btnmini.Click += new System.EventHandler(this.Btnmini_Click);
             this.btnmini.MouseLeave += new System.EventHandler(this.Button_Leave);
             this.btnmini.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnmini_MouseMove);
-            // 
-            // btn_pp
-            // 
-            this.btn_pp.BackColor = System.Drawing.Color.Transparent;
-            this.btn_pp.FlatAppearance.BorderSize = 0;
-            this.btn_pp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_pp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btn_pp, "btn_pp");
-            this.btn_pp.Image = global::tsrvtcnew.Properties.Resources.pp6;
-            this.btn_pp.Name = "btn_pp";
-            this.btn_pp.UseVisualStyleBackColor = false;
-            this.btn_pp.Click += new System.EventHandler(this.Btn_pp_Click);
-            this.btn_pp.MouseLeave += new System.EventHandler(this.Button_Leave);
-            this.btn_pp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Button_MouseMove);
             // 
             // button2
             // 
@@ -210,9 +174,10 @@
             // 
             // btnltmp
             // 
+            this.btnltmp.BackColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.btnltmp, "btnltmp");
             this.btnltmp.Name = "btnltmp";
-            this.btnltmp.UseVisualStyleBackColor = true;
+            this.btnltmp.UseVisualStyleBackColor = false;
             this.btnltmp.Click += new System.EventHandler(this.Btnltmp_Click);
             // 
             // radioButton3
@@ -225,27 +190,45 @@
             this.radioButton3.UseVisualStyleBackColor = false;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::tsrvtcnew.Properties.Resources.black_strip;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            // 
+            // btn_ats
+            // 
+            this.btn_ats.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.btn_ats, "btn_ats");
+            this.btn_ats.Name = "btn_ats";
+            this.btn_ats.UseVisualStyleBackColor = false;
+            this.btn_ats.Click += new System.EventHandler(this.btn_ats_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.btn_ats);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.btnltmp);
             this.Controls.Add(this.btnccpanel);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn_pp);
             this.Controls.Add(this.btnmini);
-            this.Controls.Add(this.picbcreatedfor);
-            this.Controls.Add(this.picbauthor);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtmessage);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnfb);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.btnhelp);
+            this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -253,8 +236,7 @@
             this.TransparencyKey = System.Drawing.Color.Red;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.picbauthor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbcreatedfor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,10 +248,7 @@
         private System.Windows.Forms.Button btnfb;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox picbauthor;
-        private System.Windows.Forms.PictureBox picbcreatedfor;
 		private System.Windows.Forms.Button btnmini;
-        private System.Windows.Forms.Button btn_pp;
         public System.Windows.Forms.TextBox txtmessage;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.RadioButton radioButton1;
@@ -277,6 +256,8 @@
         private System.Windows.Forms.Button btnccpanel;
         private System.Windows.Forms.Button btnltmp;
         public System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_ats;
     }
 }
 

@@ -143,5 +143,19 @@ namespace tsrvtcnew
                 Properties.Settings.Default.Save();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Mouse1_Leave(object sender, EventArgs e)
+        {
+            this.button1.BackgroundImage = ((Image)(Properties.Resources.leave_img));
+        }
+        void Button1_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.button1.BackgroundImage = ((Image)(Properties.Resources.cross_hover));
+        }
     }
 }
