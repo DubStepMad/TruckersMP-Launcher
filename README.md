@@ -15,13 +15,13 @@ I hope you enjoy using the application/source code for your own use. P.S. read t
 No help will be given to others who wish to use the source code since I don't have time for it.
 
 ## Images
-# Main Menu
+### Main Menu
 <img src="https://www.senkawolf.com/othersites/dubstepmad/i/uploads/00.09.29-30.06.18.png" alt="Main Menu"/>
 
-# Settings Menu
+### Settings Menu
 <img src="https://www.senkawolf.com/othersites/dubstepmad/i/uploads/00.11.19-30.06.18.png" alt="Main Menu"/>
 
-# Help Menu
+### Help Menu
 <img src="https://www.senkawolf.com/othersites/dubstepmad/i/uploads/00.10.54-30.06.18.png" alt="Main Menu"/>
 
 ## Donate
