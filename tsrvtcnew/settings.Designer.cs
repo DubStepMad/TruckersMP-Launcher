@@ -46,7 +46,7 @@
             // 
             this.txtguidesc.BackColor = System.Drawing.Color.DarkGray;
             this.txtguidesc.Enabled = false;
-            this.txtguidesc.Font = new System.Drawing.Font("Hemi Head Rg", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtguidesc.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtguidesc.ForeColor = System.Drawing.Color.Black;
             this.txtguidesc.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtguidesc.Location = new System.Drawing.Point(7, 56);
@@ -69,11 +69,11 @@
             // btnselect
             // 
             this.btnselect.BackColor = System.Drawing.Color.DarkGray;
-            this.btnselect.Font = new System.Drawing.Font("Hemi Head Rg", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnselect.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnselect.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnselect.Location = new System.Drawing.Point(399, 93);
+            this.btnselect.Location = new System.Drawing.Point(399, 91);
             this.btnselect.Name = "btnselect";
-            this.btnselect.Size = new System.Drawing.Size(39, 19);
+            this.btnselect.Size = new System.Drawing.Size(39, 23);
             this.btnselect.TabIndex = 14;
             this.btnselect.Text = "Edit";
             this.btnselect.UseVisualStyleBackColor = false;
@@ -98,11 +98,11 @@
             this.cb_tb.BackColor = System.Drawing.Color.DarkGray;
             this.cb_tb.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.cb_tb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_tb.Font = new System.Drawing.Font("Hemi Head Rg", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_tb.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.cb_tb.ForeColor = System.Drawing.Color.Black;
             this.cb_tb.Location = new System.Drawing.Point(7, 91);
             this.cb_tb.Name = "cb_tb";
-            this.cb_tb.Size = new System.Drawing.Size(89, 17);
+            this.cb_tb.Size = new System.Drawing.Size(90, 20);
             this.cb_tb.TabIndex = 28;
             this.cb_tb.Text = "TrucksBook";
             this.cb_tb.UseVisualStyleBackColor = false;
@@ -111,7 +111,7 @@
             // btn_reset
             // 
             this.btn_reset.BackColor = System.Drawing.Color.DarkGray;
-            this.btn_reset.Font = new System.Drawing.Font("Hemi Head Rg", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reset.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.btn_reset.ForeColor = System.Drawing.Color.Black;
             this.btn_reset.Location = new System.Drawing.Point(441, 91);
             this.btn_reset.Margin = new System.Windows.Forms.Padding(0);
@@ -128,11 +128,11 @@
             this.cb_etssingle.BackColor = System.Drawing.Color.DarkGray;
             this.cb_etssingle.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.cb_etssingle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_etssingle.Font = new System.Drawing.Font("Hemi Head Rg", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_etssingle.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.cb_etssingle.ForeColor = System.Drawing.Color.Black;
             this.cb_etssingle.Location = new System.Drawing.Point(102, 91);
             this.cb_etssingle.Name = "cb_etssingle";
-            this.cb_etssingle.Size = new System.Drawing.Size(129, 17);
+            this.cb_etssingle.Size = new System.Drawing.Size(126, 20);
             this.cb_etssingle.TabIndex = 30;
             this.cb_etssingle.Text = "ETS 2 Single Player";
             this.cb_etssingle.UseVisualStyleBackColor = false;
@@ -144,11 +144,11 @@
             this.cb_rgui.BackColor = System.Drawing.Color.DarkGray;
             this.cb_rgui.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.cb_rgui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_rgui.Font = new System.Drawing.Font("Hemi Head Rg", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_rgui.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.cb_rgui.ForeColor = System.Drawing.Color.Black;
             this.cb_rgui.Location = new System.Drawing.Point(237, 91);
             this.cb_rgui.Name = "cb_rgui";
-            this.cb_rgui.Size = new System.Drawing.Size(84, 17);
+            this.cb_rgui.Size = new System.Drawing.Size(90, 20);
             this.cb_rgui.TabIndex = 31;
             this.cb_rgui.Text = "Custom GUI";
             this.cb_rgui.UseVisualStyleBackColor = false;

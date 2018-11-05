@@ -117,16 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox2.Text" xml:space="preserve">
-    <value>To get the CCPanel working follow these simple steps:
-
-[1] Select the point you are on. (Make sure the Message box displays the text).
-[4] Once in-game, press Y to open the chat and then hold Left-Shift + Y to start the the feature.
-[5] To stop, press Y to open chat and hold Left-Shift and Y again.
-
-                                                  *Wait 1 minute before starting again*
-                                                 *You can not Alt-Tab out of the game*</value>
-  </data>
   <data name="richTextBox3.Text" xml:space="preserve">
     <value>To get the Anti-AFK working follow these simple steps:
 
@@ -134,7 +124,7 @@
 [2] Once in-game, press Y to open the chat and then hold Left-Ctrl + Y to start the the feature.
 [3] To stop, press Y to open chat and hold Left-Ctrl and Y again.
 
-                                                  *Wait a few minutes before starting again*
+                                              *Wait a few minutes before starting again*
                                                  *You can not Alt-Tab out of the game*</value>
   </data>
   <data name="richTextBox1.Text" xml:space="preserve">
@@ -154,7 +144,7 @@
 [2] Once in-game, press Y to open the chat and then hold Left-Ctrl + Y to start the the feature.
 [3] To stop, press Y to open chat and hold Left-Ctrl and Y again.
 
-                                                  *Wait a few minutes before starting again*
+                                              *Wait a few minutes before starting again*
                                                  *You can not Alt-Tab out of the game*</value>
   </data>
   <data name="richTextBox6.Text" xml:space="preserve">
@@ -165,7 +155,7 @@
 [3] Once in-game, press Y to open the chat and then hold Left-Ctrl + Y to start the the feature.
 [4] To stop, press Y to open chat and hold Left-Ctrl and Y again.
 
-                                                  *Wait a few minutes before starting again*
+                                              *Wait a few minutes before starting again*
                                                  *You can not Alt-Tab out of the game*</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

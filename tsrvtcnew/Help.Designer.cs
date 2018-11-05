@@ -32,8 +32,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnhelpvids = new System.Windows.Forms.Button();
             this.btn_bf = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -46,7 +44,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -76,7 +73,7 @@
             this.btnhelpvids.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnhelpvids.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnhelpvids.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnhelpvids.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhelpvids.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnhelpvids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnhelpvids.Location = new System.Drawing.Point(8, 34);
             this.btnhelpvids.Name = "btnhelpvids";
@@ -96,7 +93,7 @@
             this.btn_bf.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_bf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_bf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bf.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.btn_bf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_bf.Location = new System.Drawing.Point(372, 34);
             this.btn_bf.Name = "btn_bf";
@@ -107,33 +104,6 @@
             this.btn_bf.Click += new System.EventHandler(this.Btn_bf_Click);
             this.btn_bf.MouseLeave += new System.EventHandler(this.Btn_bf_Leave);
             this.btn_bf.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_bf_MouseMove);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.richTextBox2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(492, 128);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "CC Panel";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richTextBox2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox2.ShortcutsEnabled = false;
-            this.richTextBox2.ShowSelectionMargin = true;
-            this.richTextBox2.Size = new System.Drawing.Size(492, 155);
-            this.richTextBox2.TabIndex = 27;
-            this.richTextBox2.TabStop = false;
-            this.richTextBox2.Text = resources.GetString("richTextBox2.Text");
             // 
             // tabPage3
             // 
@@ -150,7 +120,7 @@
             // 
             this.richTextBox3.BackColor = System.Drawing.SystemColors.Menu;
             this.richTextBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richTextBox3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox3.Location = new System.Drawing.Point(0, 0);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.ReadOnly = true;
@@ -177,7 +147,7 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
@@ -196,7 +166,6 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(2, 63);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -218,7 +187,7 @@
             // 
             this.richTextBox5.BackColor = System.Drawing.SystemColors.Menu;
             this.richTextBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richTextBox5.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox5.Location = new System.Drawing.Point(0, 0);
             this.richTextBox5.Name = "richTextBox5";
             this.richTextBox5.ReadOnly = true;
@@ -245,7 +214,7 @@
             // 
             this.richTextBox6.BackColor = System.Drawing.SystemColors.Menu;
             this.richTextBox6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richTextBox6.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox6.Location = new System.Drawing.Point(0, 0);
             this.richTextBox6.Name = "richTextBox6";
             this.richTextBox6.ReadOnly = true;
@@ -310,7 +279,6 @@
             this.Text = "Help";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Help_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage4.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -325,13 +293,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnhelpvids;
         private System.Windows.Forms.Button btn_bf;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.RichTextBox richTextBox5;
         private System.Windows.Forms.TabPage tabPage6;

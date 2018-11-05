@@ -39,11 +39,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.btnccpanel = new System.Windows.Forms.Button();
             this.btnltmp = new System.Windows.Forms.Button();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_ats = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,20 +158,6 @@
             this.radioButton2.UseVisualStyleBackColor = false;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
-            // btnccpanel
-            // 
-            this.btnccpanel.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.btnccpanel, "btnccpanel");
-            this.btnccpanel.FlatAppearance.BorderSize = 0;
-            this.btnccpanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnccpanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnccpanel.Image = global::tsrvtcnew.Properties.Resources.ccpanel_icon;
-            this.btnccpanel.Name = "btnccpanel";
-            this.btnccpanel.UseVisualStyleBackColor = false;
-            this.btnccpanel.Click += new System.EventHandler(this.Btnccpanel_Click);
-            this.btnccpanel.MouseLeave += new System.EventHandler(this.Btnccpanel_Leave);
-            this.btnccpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btnccpanel_MouseMove);
-            // 
             // btnltmp
             // 
             this.btnltmp.BackColor = System.Drawing.Color.Gray;
@@ -208,16 +194,24 @@
             this.btn_ats.UseVisualStyleBackColor = false;
             this.btn_ats.Click += new System.EventHandler(this.btn_ats_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_ats);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.btnltmp);
-            this.Controls.Add(this.btnccpanel);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button2);
@@ -253,11 +247,11 @@
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.RadioButton radioButton1;
         public System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button btnccpanel;
         private System.Windows.Forms.Button btnltmp;
         public System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_ats;
+        private System.Windows.Forms.Button button3;
     }
 }
 

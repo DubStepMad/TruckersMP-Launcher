@@ -253,7 +253,7 @@
     <value>False</value>
   </data>
   <data name="textBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Hemi Head Rg, 8.25pt, style=Italic</value>
+    <value>Microsoft YaHei UI, 8.25pt, style=Bold</value>
   </data>
   <data name="textBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
@@ -349,13 +349,13 @@
     <value>True</value>
   </data>
   <data name="radioButton1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Hemi Head Rg, 8.25pt, style=Italic</value>
+    <value>Microsoft YaHei UI, 8.25pt, style=Bold</value>
   </data>
   <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>262, 75</value>
   </data>
   <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 17</value>
+    <value>72, 20</value>
   </data>
   <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -379,7 +379,7 @@
     <value>True</value>
   </data>
   <data name="radioButton2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Hemi Head Rg, 8.25pt, style=Italic</value>
+    <value>Microsoft YaHei UI, 8.25pt, style=Bold</value>
   </data>
   <data name="radioButton2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -388,7 +388,7 @@
     <value>177, 75</value>
   </data>
   <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
+    <value>77, 20</value>
   </data>
   <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -408,39 +408,6 @@
   <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="btnccpanel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnccpanel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnccpanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold, Underline</value>
-  </data>
-  <data name="btnccpanel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnccpanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 84</value>
-  </data>
-  <data name="btnccpanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 26</value>
-  </data>
-  <data name="btnccpanel.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;btnccpanel.Name" xml:space="preserve">
-    <value>btnccpanel</value>
-  </data>
-  <data name="&gt;&gt;btnccpanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnccpanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnccpanel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="btnltmp.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -448,7 +415,7 @@
     <value>System</value>
   </data>
   <data name="btnltmp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Hemi Head Rg, 8.25pt, style=Italic</value>
+    <value>Microsoft YaHei UI, 8.25pt, style=Bold</value>
   </data>
   <data name="btnltmp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -475,13 +442,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnltmp.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="radioButton3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="radioButton3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Hemi Head Rg, 8.25pt, style=Italic</value>
+    <value>Microsoft YaHei UI, 8.25pt, style=Bold</value>
   </data>
   <data name="radioButton3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -490,7 +457,7 @@
     <value>344, 75</value>
   </data>
   <data name="radioButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
+    <value>48, 20</value>
   </data>
   <data name="radioButton3.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -508,7 +475,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pictureBox1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -544,7 +511,7 @@
     <value>System</value>
   </data>
   <data name="btn_ats.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Hemi Head Rg, 8.25pt, style=Italic</value>
+    <value>Microsoft YaHei UI, 8.25pt, style=Bold</value>
   </data>
   <data name="btn_ats.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -571,6 +538,42 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_ats.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="button3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 6pt, style=Bold</value>
+  </data>
+  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 90</value>
+  </data>
+  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 23</value>
+  </data>
+  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Download CC Profile</value>
+  </data>
+  <data name="&gt;&gt;button3.Name" xml:space="preserve">
+    <value>button3</value>
+  </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

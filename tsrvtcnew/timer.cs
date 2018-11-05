@@ -41,7 +41,7 @@ namespace tsrvtcnew
             System.Threading.Thread.Sleep(final);
         }
 
-        public static void Ccpanel_action()
+        /*public static void Ccpanel_action()
         {
             ccpanel.setbusy = true;
             SendKeys.SendWait("y");
@@ -49,6 +49,6 @@ namespace tsrvtcnew
             SendKeys.SendWait("^v");
             SendKeys.SendWait("{ENTER}");
             System.Threading.Thread.Sleep(15000);
-        }
+        }*/
     }
 }

@@ -17,7 +17,7 @@ namespace updater
         public static string _ftpDirectory = "updatecheck";          //The directory in FTP server where the files are present
         public static string _ftpupdateDirectory = "files";          //The directory in FTP server where the updated files are present
         public static string _FileName = "updatecheck.txt";          //File name which checks the current version
-        public static string _updateFile = "WTL-VTC.exe";            //The updated file name
+        public static string _updateFile = "VFS Truckers MP Launcher.exe";            //The updated file name
 
         //checks
         public static bool ftpCheck = false;
@@ -30,7 +30,7 @@ namespace updater
 
         public static void Run()
         {
-                string exeFile = (new Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+                string exeFile = Assembly.GetEntryAssembly().Location;
                 string updatecheckfile = Path.GetDirectoryName(exeFile);
 
                 string _LocalDirectory = updatecheckfile;  //Local directory where the files will be downloaded
@@ -73,7 +73,7 @@ namespace updater
 
         private static void Filecheck()
         {
-            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeFile = Assembly.GetEntryAssembly().Location;
             string exeDir = Path.GetDirectoryName(exeFile);
             string ucpath = Path.Combine(exeDir, "updatecheck.txt");
 
@@ -102,7 +102,7 @@ namespace updater
         {
 
             using (var hklm = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64))
-            using (var key = hklm.OpenSubKey(@"SOFTWARE\VirtualFleet.Systems\WTL-VTC_Launcher"))
+            using (var key = hklm.OpenSubKey(@"SOFTWARE\Virtual Fleet Systems\WTL Launcher"))
             {
                 if (key != null)
                 {
@@ -173,12 +173,12 @@ namespace updater
                 return;
             }
 
-            Process.Start("TSR-VTC.exe");
+            Process.Start("VFS Truckers MP Launcher.exe");
 
             try
             {
                 Form1.Form1_Load1();
-                Process.Start("cmd.exe", "/c taskkill /F /IM tsrvtgui.exe");
+                Process.Start("cmd.exe", "/c taskkill /F /IM WTL-VTC Launcher.exe");
                 Application.Exit();
             }
             catch (Exception ex)

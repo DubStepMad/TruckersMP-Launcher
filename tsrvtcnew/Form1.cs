@@ -59,7 +59,7 @@ namespace tsrvtcnew
             Properties.Settings.Default.Save();
 
             //checks for updater.exe, needed to be a seperate program for performance reasons
-            string updaterFile = (new Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string updaterFile = Assembly.GetEntryAssembly().Location;
             string updaterDir = Path.GetDirectoryName(updaterFile);
             string fullPath = Path.Combine(updaterDir, "updater.exe");
 
@@ -255,7 +255,7 @@ namespace tsrvtcnew
         }
         private void Btnfb_Click(object sender, EventArgs e)
         {
-            Process.Start("www.wtlvtc.com");
+            Process.Start("http://wtlvtc.com");
         }
         private void Btndiscord_Click(object sender, EventArgs e)
         {
@@ -368,6 +368,7 @@ namespace tsrvtcnew
         {
             if (radioButton1.Checked)
             {
+                txtmessage.Text = "";
                 Properties.Settings.Default.message = txtmessage.Text;      //changed from having a save button to it being automatically updated
                 Properties.Settings.Default.Save();
 
@@ -382,7 +383,7 @@ namespace tsrvtcnew
         {
             if (radioButton2.Checked)
             {
-                string advertisement = "Looking to join a VTC? Come and join us on DISCORD @ discord.tsrvtc.com  and speak to an examiner!";
+                string advertisement = "Looking to join a VTC? Come and join us on DISCORD @ discord.wtlvtc.com and speak to an examiner!";
 
                 txtmessage.Text = advertisement;
                 Properties.Settings.Default.message = advertisement;      //changed from having a save button to it being automatically updated
@@ -411,14 +412,6 @@ namespace tsrvtcnew
             }
         }
 
-        //opens cconvoy control panel... 
-        private void Btnccpanel_Click(object sender, EventArgs e)
-        {
-            ccpanel newf = new ccpanel();
-            newf.Show();
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void Txtmessage_TextChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.message = txtmessage.Text;      //changed from having a save button to it being automatically updated
@@ -428,6 +421,11 @@ namespace tsrvtcnew
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Profile.Run();
         }
     }
 }

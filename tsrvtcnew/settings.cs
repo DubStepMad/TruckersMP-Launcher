@@ -17,7 +17,7 @@ namespace tsrvtcnew
         private void Settings_Load(object sender, EventArgs e)
         {
             //gets application directory
-            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeFile = (new Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
             string exeDir = Path.GetDirectoryName(exeFile);
             string fullPath = Path.Combine(exeDir, "custom gui");
 
@@ -73,7 +73,7 @@ namespace tsrvtcnew
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void Settings_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void Settings_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
