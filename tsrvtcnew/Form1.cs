@@ -86,12 +86,12 @@ namespace tsrvtcnew
         {
             if (m.Msg == 0x0312 && m.WParam.ToInt32() == MYACTION_HOTKEY_ID && Properties.Settings.Default.ccpanelcheck == false)
             {
-                Clipboard.SetText(txtmessage.Text);
-
-                Thread.Sleep(1000); // sleep needed to allow time to copy text from text box otherwise it won't
-
                 if (!bw.IsBusy && setbusy == false) //2 flags needed since both need to come back false
                 {
+                    Clipboard.SetText(txtmessage.Text);
+
+                    Thread.Sleep(1000); // sleep needed to allow time to copy text from text box otherwise it won't
+
                     Goodsound();
                     setbusy = true;
                     bw.RunWorkerAsync();
@@ -114,7 +114,7 @@ namespace tsrvtcnew
                 }
                 else
                 {
-                    MessageBox.Show("Known issue trying to be fixed, please re-start the application");
+                    MessageBox.Show("Known issue trying to be fixed, please re-start the application or wait 5 minutes.");
                     string error = "Background Worker Exit Failed!";
                     Loghandling.Logerror(error);
                     Errorsound();
@@ -374,7 +374,7 @@ namespace tsrvtcnew
 
                 radioButton2.Checked = false;
                 radioButton3.Checked = false;
-                timeconvert = 5;
+                timeconvert = 7;
                 Timer.Min = 0;
                 calc_check = false;
             }

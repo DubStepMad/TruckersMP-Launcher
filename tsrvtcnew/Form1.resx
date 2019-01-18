@@ -129,7 +129,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold, Underline</value>
   </data>
   <data name="btnhelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 89</value>
+    <value>467, 62</value>
   </data>
   <data name="btnhelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 18</value>
@@ -184,7 +184,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnfb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>465, 85</value>
+    <value>467, 25</value>
   </data>
   <data name="btnfb.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 31</value>
@@ -229,10 +229,10 @@
     <value>10</value>
   </data>
   <data name="txtmessage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 53</value>
+    <value>98, 37</value>
   </data>
   <data name="txtmessage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 20</value>
+    <value>354, 20</value>
   </data>
   <data name="txtmessage.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -259,7 +259,7 @@
     <value>Off</value>
   </data>
   <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 53</value>
+    <value>27, 37</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 21</value>
@@ -322,7 +322,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 85</value>
+    <value>467, 89</value>
   </data>
   <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -352,7 +352,7 @@
     <value>Microsoft YaHei UI, 8.25pt, style=Bold</value>
   </data>
   <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 75</value>
+    <value>253, 59</value>
   </data>
   <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 20</value>
@@ -385,7 +385,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 75</value>
+    <value>168, 59</value>
   </data>
   <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 20</value>
@@ -421,10 +421,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnltmp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 22</value>
+    <value>271, 89</value>
   </data>
   <data name="btnltmp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 23</value>
+    <value>80, 23</value>
   </data>
   <data name="btnltmp.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -454,7 +454,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 75</value>
+    <value>335, 59</value>
   </data>
   <data name="radioButton3.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
@@ -517,10 +517,10 @@
     <value>NoControl</value>
   </data>
   <data name="btn_ats.Location" type="System.Drawing.Point, System.Drawing">
-    <value>393, 22</value>
+    <value>185, 89</value>
   </data>
   <data name="btn_ats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 23</value>
+    <value>80, 23</value>
   </data>
   <data name="btn_ats.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -553,7 +553,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 90</value>
+    <value>12, 89</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 23</value>

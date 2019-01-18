@@ -22,7 +22,6 @@ namespace tsrvtcnew
                 Timers();
                 return;
             }
-
             if (Form1.calc_check == true)
             {
                 int delay = Form1.timeconvert;
@@ -40,15 +39,5 @@ namespace tsrvtcnew
             SendKeys.SendWait("{ENTER}");
             System.Threading.Thread.Sleep(final);
         }
-
-        /*public static void Ccpanel_action()
-        {
-            ccpanel.setbusy = true;
-            SendKeys.SendWait("y");
-            SendKeys.SendWait("{BACKSPACE}");
-            SendKeys.SendWait("^v");
-            SendKeys.SendWait("{ENTER}");
-            System.Threading.Thread.Sleep(15000);
-        }*/
     }
 }
